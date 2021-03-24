@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="FB_Knipperlicht" Id="{5522ac49-2c9a-44ba-99d5-1fb1584aec47}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Knipperlicht
+VAR_INPUT
+	Enable : BOOL;	(* activatie knipperlicht*)
+	OnTime : TIME;  (* tijd dat de lamp aan is *)
+	OfTime : TIME;  (* tijd dat de lamp uit is *)
+	CyclesReset : BOOL;
+END_VAR
+
+VAR_OUTPUT
+	Q: BOOL;		(* het knipperlicht *)
+	Freq: REAL;		(* de knipperfrequentie *)
+	Duty: REAL;     (* de verhouding aan/totale-tijd *)
+	Cycles: REAL;	(* Hoeveelheid cycles voltooid *)
+END_VAR
+
+VAR
+	Counter : BOOL;
+	R_TRIG : R_TRIG;
+	tOnTime: TOF;
+	tOfTime: TON;
+	tTotalTime: TIME; 
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF Enable THEN
+	tTotalTime := OnTime + OfTime;
+	Duty := (TIME_TO_REAL(OnTime)/(TIME_TO_REAL(OnTime)+TIME_TO_REAL(OfTime))*100);
+	Freq := 1000 / (TIME_TO_REAL(OnTime)+TIME_TO_REAL(OfTime));
+	
+	IF NOT(TIME_TO_REAL(OnTime + OfTime) = 0) THEN
+		tOnTime(IN:= NOT tOfTime.Q  , PT:= OnTime, Q=>Q);
+		tOfTime(IN:= tOntime.Q 	    , PT:= OfTime, Q=>Q);
+	END_IF
+	
+	R_TRIG(CLK:= Q, Q=> Counter);
+	Cycles := Cycles + BOOL_TO_REAL(Counter);
+	IF CyclesReset THEN
+		Cycles := 0;
+	END_IF
+ELSE
+	Q := FALSE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="FB_Knipperlicht">
+      <LineId Id="57" Count="4" />
+      <LineId Id="94" Count="1" />
+      <LineId Id="97" Count="0" />
+      <LineId Id="96" Count="0" />
+      <LineId Id="64" Count="7" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

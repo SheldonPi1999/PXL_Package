@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="Open_Toilet" Id="{55ef2539-5a1d-4756-8b6d-98b36143087f}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Open_Toilet
+VAR
+	TOF : TOF;
+END_VAR
+
+VAR_INPUT
+	SW1 : BOOL; // SWITCH 1
+	SW2 : BOOL; // SWITCH 2
+	SW3 : BOOL; // SWITCH 3
+END_VAR
+
+VAR_OUTPUT
+	Q00 : BOOL; // VENTILATOR
+	Q01 : BOOL; // LAMP 1
+	Q02 : BOOL; // LAMP 2
+	Q03 : BOOL; // LAMP 3
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[TOF(IN:= SW1 OR SW2 OR SW3, PT:= T#5S, Q=> Q00);]]></ST>
+    </Implementation>
+    <LineIds Name="Open_Toilet">
+      <LineId Id="68" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

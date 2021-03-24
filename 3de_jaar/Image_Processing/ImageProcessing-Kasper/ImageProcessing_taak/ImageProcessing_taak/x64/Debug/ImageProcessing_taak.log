@@ -1,0 +1,8 @@
+﻿  ImageProcessing_taak.cpp
+D:\GitHub\ImageProcessing\ImageProcessing_taak\ImageProcessing_taak\ImageProcessing_taak.cpp(67,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\GitHub\ImageProcessing\ImageProcessing_taak\ImageProcessing_taak\ImageProcessing_taak.cpp(73,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\GitHub\ImageProcessing\ImageProcessing_taak\ImageProcessing_taak\ImageProcessing_taak.cpp(79,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\GitHub\ImageProcessing\ImageProcessing_taak\ImageProcessing_taak\ImageProcessing_taak.cpp(97,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\GitHub\ImageProcessing\ImageProcessing_taak\ImageProcessing_taak\ImageProcessing_taak.cpp(107,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\GitHub\ImageProcessing\ImageProcessing_taak\ImageProcessing_taak\ImageProcessing_taak.cpp(138,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  ImageProcessing_taak.vcxproj -> D:\GitHub\ImageProcessing\ImageProcessing_taak\x64\Debug\ImageProcessing_taak.exe

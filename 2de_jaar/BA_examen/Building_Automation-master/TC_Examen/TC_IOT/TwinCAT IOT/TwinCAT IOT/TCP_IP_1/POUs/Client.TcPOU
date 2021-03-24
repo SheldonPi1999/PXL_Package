@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="Client" Id="{b2bed43f-96e7-4353-a4a3-c4f9e7e0d9a6}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Client
+
+VAR
+	FB_ClientServerConnection: FB_ClientServerConnection;
+	FB_SocketReceive: FB_SocketReceive;
+	
+	FB_SocketSend:FB_SocketSend;
+	fbDataExchaTON: TON;
+	sFromServer: T_MaxString;
+END_VAR
+
+VAR_INPUT
+	RECEIVE    : BYTE;
+	pSrc       : POINTER TO BYTE := ADR(RECEIVE);
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[FB_ClientServerConnection(
+	sSrvNetID:= '',				// String dat het AMS netwerk-adres van de TwinCAT TCP/IP connectie server bevat. (Local pc == empty string).
+	nMode:= 0, 					// Additional Parameter flag.
+	sRemoteHost:= '', 			// IP-Adres van (IPv4) van de remote server als string. (Local pc == empty string).
+	nRemotePort:= 200,		    // IP-port number voor de remote server. 
+	bEnable:= TRUE,				// Zolang deze INPUT = TRUE probeert het systeem een connectie aan te gaan in 'bepaalde intervallen' totdat een connectie is aangegaan.
+	tReconnect:= T#1S);			// Cycle bepaalde intervallen
+
+IF FB_ClientServerConnection.eState = eSOCKET_CONNECTED THEN
+	fbDataExchaTON( IN := TRUE, PT := T#1S );
+
+	FB_SocketReceive(
+		sSrvNetId:= '', 
+		hSocket:= FB_ClientServerConnection.hSocket, 
+		cbLen:= 8, 
+		pDest:= pSrc, 
+		bExecute:= TRUE, 
+		tTimeout:= T#10S);
+END_IF
+
+		]]></ST>
+    </Implementation>
+    <LineIds Name="Client">
+      <LineId Id="50" Count="0" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="41" Count="4" />
+      <LineId Id="128" Count="1" />
+      <LineId Id="191" Count="1" />
+      <LineId Id="130" Count="6" />
+      <LineId Id="151" Count="0" />
+      <LineId Id="165" Count="0" />
+      <LineId Id="179" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

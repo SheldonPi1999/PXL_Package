@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun  1 12:06:48 2020" VIVADOVERSION="2019.2">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:minized:part0:1.2" DEVICE="7z007s" NAME="design_1" PACKAGE="clg225" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" NAME="LED_GREEN" SIGIS="undef" SIGNAME="VHDL_0_LED_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="VHDL_0" PORT="LED_1"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/VHDL_0" HWVERSION="1.0" INSTANCE="VHDL_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="VHDL" VLNV="xilinx.com:module_ref:VHDL:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_VHDL_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk_65MHz" SIGIS="undef" SIGNAME="vhdlnoclk_0_clk65MHz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vhdlnoclk_0" PORT="clk65MHz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="LED_1" SIGIS="undef" SIGNAME="VHDL_0_LED_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LED_GREEN"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/vhdlnoclk_0" HWVERSION="1.0" INSTANCE="vhdlnoclk_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="vhdlnoclk" VLNV="xilinx.com:module_ref:vhdlnoclk:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_vhdlnoclk_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="clk65MHz" SIGIS="undef" SIGNAME="vhdlnoclk_0_clk65MHz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VHDL_0" PORT="clk_65MHz"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

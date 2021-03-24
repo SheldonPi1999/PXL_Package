@@ -1,0 +1,40 @@
+09:00:25 **** Incremental Build of configuration Debug for project Minized_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Minized_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:141:32: warning: pointer targets in passing argument 2 of 'xTaskCreate' differ in signedness [-Wpointer-sign]
+      xTaskCreate( prvLed_Task, ( signed char * ) "LED_TASK",
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:64:
+../../Minized_test_bsp/ps7_cortexa9_0/include/task.h:322:13: note: expected 'const char * const' but argument is of type 'signed char *'
+  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+             ^~~~~~~~~~~
+../src/freertos_hello_world.c:149:30: warning: pointer targets in passing argument 1 of 'xTimerCreate' differ in signedness [-Wpointer-sign]
+      xTimer = xTimerCreate ( (const signed char *) "LedTimer",
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/freertos_hello_world.c:67:
+../../Minized_test_bsp/ps7_cortexa9_0/include/timers.h:228:16: note: expected 'const char * const' but argument is of type 'const signed char *'
+  TimerHandle_t xTimerCreate( const char * const pcTimerName,   /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+                ^~~~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: Minized_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Minized_test_bsp/ps7_cortexa9_0/lib -o "Minized_test.elf"  ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: Minized_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Minized_test.elf  |tee "Minized_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84760	   3376	  89456	 177592	  2b5b8	Minized_test.elf
+'Finished building: Minized_test.elf.size'
+' '
+09:00:35 **** Incremental Build of configuration Debug for project Minized_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

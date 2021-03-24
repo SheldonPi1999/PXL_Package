@@ -1,0 +1,645 @@
+16:07:14 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\eFPGA\7_6_VERDER\temp_xsdb_launch_script.tcl
+16:07:15 INFO  : XSCT server has started successfully.
+16:07:17 INFO  : plnx-install-location is set to ''
+16:07:17 INFO  : Successfully done setting XSCT server connection channel  
+16:07:17 INFO  : Successfully done query RDI_DATADIR 
+16:07:17 INFO  : Successfully done setting workspace for the tool. 
+16:07:18 INFO  : Registering command handlers for Vitis TCF services
+16:18:48 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/7_6_VERDER/7_6_VERDER/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+16:18:48 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/7_6_VERDER/7_6_VERDER/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+16:19:00 INFO  : (SwPlaform) Successfully done setParamInSpec 
+16:19:01 INFO  : (SwPlaform) Successfully done setParamInSpec 
+16:19:02 INFO  : (SwPlatform) Successfully done update_mss 
+16:19:03 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/7_6_VERDER/7_6_VERDER/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+16:23:02 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:23:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:23:12 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+16:23:12 INFO  : 'jtag frequency' command is executed.
+16:23:12 INFO  : Context for 'APU' is selected.
+16:23:12 INFO  : System reset is completed.
+16:23:16 INFO  : 'after 3000' command is executed.
+16:23:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+16:23:18 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit"
+16:23:18 INFO  : Context for 'APU' is selected.
+16:23:18 INFO  : Hardware design information is loaded from 'C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa'.
+16:23:18 INFO  : 'configparams force-mem-access 1' command is executed.
+16:23:18 INFO  : Context for 'APU' is selected.
+16:23:18 INFO  : Sourcing of 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl' is done.
+16:23:19 INFO  : 'ps7_init' command is executed.
+16:23:19 INFO  : 'ps7_post_config' command is executed.
+16:23:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:23:20 INFO  : The application 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:23:20 INFO  : 'configparams force-mem-access 0' command is executed.
+16:23:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:23:20 INFO  : Memory regions updated for context APU
+16:23:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:23:21 INFO  : 'con' command is executed.
+16:23:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:23:21 INFO  : Launch script is exported to file 'C:\eFPGA\7_6_VERDER\.sdk\launch_scripts\single_application_debug\debugger_7_6_verder_app-default.tcl'
+16:24:21 INFO  : Disconnected from the channel tcfchan#2.
+16:24:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:24:22 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+16:24:22 INFO  : 'jtag frequency' command is executed.
+16:24:22 INFO  : Context for 'APU' is selected.
+16:24:22 INFO  : System reset is completed.
+16:24:25 INFO  : 'after 3000' command is executed.
+16:24:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+16:24:26 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit"
+16:24:26 INFO  : Context for 'APU' is selected.
+16:24:26 INFO  : Hardware design information is loaded from 'C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa'.
+16:24:26 INFO  : 'configparams force-mem-access 1' command is executed.
+16:24:26 INFO  : Context for 'APU' is selected.
+16:24:26 INFO  : Sourcing of 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl' is done.
+16:24:27 INFO  : 'ps7_init' command is executed.
+16:24:27 INFO  : 'ps7_post_config' command is executed.
+16:24:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:24:27 INFO  : The application 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:24:27 INFO  : 'configparams force-mem-access 0' command is executed.
+16:24:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:24:27 INFO  : Memory regions updated for context APU
+16:24:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:24:27 INFO  : 'con' command is executed.
+16:24:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:24:27 INFO  : Launch script is exported to file 'C:\eFPGA\7_6_VERDER\.sdk\launch_scripts\single_application_debug\debugger_7_6_verder_app-default.tcl'
+16:24:42 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:24:48 INFO  : Disconnected from the channel tcfchan#3.
+16:24:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:24:50 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+16:24:50 INFO  : 'jtag frequency' command is executed.
+16:24:50 INFO  : Context for 'APU' is selected.
+16:24:50 INFO  : System reset is completed.
+16:24:53 INFO  : 'after 3000' command is executed.
+16:24:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+16:24:54 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit"
+16:24:54 INFO  : Context for 'APU' is selected.
+16:24:54 INFO  : Hardware design information is loaded from 'C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa'.
+16:24:54 INFO  : 'configparams force-mem-access 1' command is executed.
+16:24:54 INFO  : Context for 'APU' is selected.
+16:24:54 INFO  : Sourcing of 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl' is done.
+16:24:54 INFO  : 'ps7_init' command is executed.
+16:24:54 INFO  : 'ps7_post_config' command is executed.
+16:24:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:24:55 INFO  : The application 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:24:55 INFO  : 'configparams force-mem-access 0' command is executed.
+16:24:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:24:55 INFO  : Memory regions updated for context APU
+16:24:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:24:55 INFO  : 'con' command is executed.
+16:24:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:24:55 INFO  : Launch script is exported to file 'C:\eFPGA\7_6_VERDER\.sdk\launch_scripts\single_application_debug\debugger_7_6_verder_app-default.tcl'
+16:26:19 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:27:21 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:27:29 INFO  : Disconnected from the channel tcfchan#4.
+16:27:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:27:30 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+16:27:30 INFO  : 'jtag frequency' command is executed.
+16:27:30 INFO  : Context for 'APU' is selected.
+16:27:30 INFO  : System reset is completed.
+16:27:33 INFO  : 'after 3000' command is executed.
+16:27:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+16:27:35 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit"
+16:27:35 INFO  : Context for 'APU' is selected.
+16:27:35 INFO  : Hardware design information is loaded from 'C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa'.
+16:27:35 INFO  : 'configparams force-mem-access 1' command is executed.
+16:27:35 INFO  : Context for 'APU' is selected.
+16:27:35 INFO  : Sourcing of 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl' is done.
+16:27:35 INFO  : 'ps7_init' command is executed.
+16:27:35 INFO  : 'ps7_post_config' command is executed.
+16:27:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:27:35 INFO  : The application 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:27:35 INFO  : 'configparams force-mem-access 0' command is executed.
+16:27:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:27:35 INFO  : Memory regions updated for context APU
+16:27:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:27:35 INFO  : 'con' command is executed.
+16:27:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:27:35 INFO  : Launch script is exported to file 'C:\eFPGA\7_6_VERDER\.sdk\launch_scripts\single_application_debug\debugger_7_6_verder_app-default.tcl'
+16:47:05 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:47:25 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:47:44 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:48:35 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:49:15 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:49:33 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:49:42 INFO  : Disconnected from the channel tcfchan#5.
+16:49:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:49:43 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+16:49:43 INFO  : 'jtag frequency' command is executed.
+16:49:43 INFO  : Context for 'APU' is selected.
+16:49:43 INFO  : System reset is completed.
+16:49:46 INFO  : 'after 3000' command is executed.
+16:49:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+16:49:47 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit"
+16:49:47 INFO  : Context for 'APU' is selected.
+16:49:47 INFO  : Hardware design information is loaded from 'C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa'.
+16:49:47 INFO  : 'configparams force-mem-access 1' command is executed.
+16:49:47 INFO  : Context for 'APU' is selected.
+16:49:47 INFO  : Sourcing of 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl' is done.
+16:49:48 INFO  : 'ps7_init' command is executed.
+16:49:48 INFO  : 'ps7_post_config' command is executed.
+16:49:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:49:48 INFO  : The application 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:49:48 INFO  : 'configparams force-mem-access 0' command is executed.
+16:49:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:49:48 INFO  : Memory regions updated for context APU
+16:49:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:49:48 INFO  : 'con' command is executed.
+16:49:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:49:48 INFO  : Launch script is exported to file 'C:\eFPGA\7_6_VERDER\.sdk\launch_scripts\single_application_debug\debugger_7_6_verder_app-default.tcl'
+16:51:03 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:51:08 INFO  : Disconnected from the channel tcfchan#6.
+16:51:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:51:09 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+16:51:09 INFO  : 'jtag frequency' command is executed.
+16:51:09 INFO  : Context for 'APU' is selected.
+16:51:09 INFO  : System reset is completed.
+16:51:12 INFO  : 'after 3000' command is executed.
+16:51:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+16:51:13 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit"
+16:51:14 INFO  : Context for 'APU' is selected.
+16:51:14 INFO  : Hardware design information is loaded from 'C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa'.
+16:51:14 INFO  : 'configparams force-mem-access 1' command is executed.
+16:51:14 INFO  : Context for 'APU' is selected.
+16:51:14 INFO  : Sourcing of 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl' is done.
+16:51:14 INFO  : 'ps7_init' command is executed.
+16:51:14 INFO  : 'ps7_post_config' command is executed.
+16:51:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:51:14 INFO  : The application 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:51:14 INFO  : 'configparams force-mem-access 0' command is executed.
+16:51:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:51:14 INFO  : Memory regions updated for context APU
+16:51:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:51:14 INFO  : 'con' command is executed.
+16:51:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:51:14 INFO  : Launch script is exported to file 'C:\eFPGA\7_6_VERDER\.sdk\launch_scripts\single_application_debug\debugger_7_6_verder_app-default.tcl'
+16:51:35 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:51:42 INFO  : Disconnected from the channel tcfchan#7.
+16:51:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:51:43 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+16:51:43 INFO  : 'jtag frequency' command is executed.
+16:51:43 INFO  : Context for 'APU' is selected.
+16:51:43 INFO  : System reset is completed.
+16:51:46 INFO  : 'after 3000' command is executed.
+16:51:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+16:51:47 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit"
+16:51:47 INFO  : Context for 'APU' is selected.
+16:51:47 INFO  : Hardware design information is loaded from 'C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa'.
+16:51:47 INFO  : 'configparams force-mem-access 1' command is executed.
+16:51:47 INFO  : Context for 'APU' is selected.
+16:51:47 INFO  : Sourcing of 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl' is done.
+16:51:48 INFO  : 'ps7_init' command is executed.
+16:51:48 INFO  : 'ps7_post_config' command is executed.
+16:51:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:51:48 INFO  : The application 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:51:48 INFO  : 'configparams force-mem-access 0' command is executed.
+16:51:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:51:48 INFO  : Memory regions updated for context APU
+16:51:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:51:48 INFO  : 'con' command is executed.
+16:51:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:51:48 INFO  : Launch script is exported to file 'C:\eFPGA\7_6_VERDER\.sdk\launch_scripts\single_application_debug\debugger_7_6_verder_app-default.tcl'
+16:52:03 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:52:07 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:52:11 INFO  : Disconnected from the channel tcfchan#8.
+16:52:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:52:12 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+16:52:12 INFO  : 'jtag frequency' command is executed.
+16:52:12 INFO  : Context for 'APU' is selected.
+16:52:12 INFO  : System reset is completed.
+16:52:15 INFO  : 'after 3000' command is executed.
+16:52:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+16:52:16 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit"
+16:52:17 INFO  : Context for 'APU' is selected.
+16:52:17 INFO  : Hardware design information is loaded from 'C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa'.
+16:52:17 INFO  : 'configparams force-mem-access 1' command is executed.
+16:52:17 INFO  : Context for 'APU' is selected.
+16:52:17 INFO  : Sourcing of 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl' is done.
+16:52:17 INFO  : 'ps7_init' command is executed.
+16:52:17 INFO  : 'ps7_post_config' command is executed.
+16:52:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:52:17 INFO  : The application 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:52:17 INFO  : 'configparams force-mem-access 0' command is executed.
+16:52:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:52:17 INFO  : Memory regions updated for context APU
+16:52:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:52:17 INFO  : 'con' command is executed.
+16:52:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:52:17 INFO  : Launch script is exported to file 'C:\eFPGA\7_6_VERDER\.sdk\launch_scripts\single_application_debug\debugger_7_6_verder_app-default.tcl'
+16:53:33 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:55:00 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:55:17 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:55:24 INFO  : Disconnected from the channel tcfchan#9.
+16:55:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:55:26 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+16:55:26 INFO  : 'jtag frequency' command is executed.
+16:55:26 INFO  : Context for 'APU' is selected.
+16:55:26 INFO  : System reset is completed.
+16:55:29 INFO  : 'after 3000' command is executed.
+16:55:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+16:55:30 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit"
+16:55:30 INFO  : Context for 'APU' is selected.
+16:55:30 INFO  : Hardware design information is loaded from 'C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa'.
+16:55:30 INFO  : 'configparams force-mem-access 1' command is executed.
+16:55:30 INFO  : Context for 'APU' is selected.
+16:55:30 INFO  : Sourcing of 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl' is done.
+16:55:30 INFO  : 'ps7_init' command is executed.
+16:55:30 INFO  : 'ps7_post_config' command is executed.
+16:55:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:55:30 INFO  : The application 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:55:31 INFO  : 'configparams force-mem-access 0' command is executed.
+16:55:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:55:31 INFO  : Memory regions updated for context APU
+16:55:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:55:31 INFO  : 'con' command is executed.
+16:55:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:55:31 INFO  : Launch script is exported to file 'C:\eFPGA\7_6_VERDER\.sdk\launch_scripts\single_application_debug\debugger_7_6_verder_app-default.tcl'
+16:56:12 INFO  : Disconnected from the channel tcfchan#10.
+16:56:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:56:14 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+16:56:14 INFO  : 'jtag frequency' command is executed.
+16:56:14 INFO  : Context for 'APU' is selected.
+16:56:14 INFO  : System reset is completed.
+16:56:17 INFO  : 'after 3000' command is executed.
+16:56:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+16:56:18 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit"
+16:56:18 INFO  : Context for 'APU' is selected.
+16:56:18 INFO  : Hardware design information is loaded from 'C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa'.
+16:56:18 INFO  : 'configparams force-mem-access 1' command is executed.
+16:56:18 INFO  : Context for 'APU' is selected.
+16:56:18 INFO  : Sourcing of 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl' is done.
+16:56:18 INFO  : 'ps7_init' command is executed.
+16:56:18 INFO  : 'ps7_post_config' command is executed.
+16:56:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:56:19 INFO  : The application 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:56:19 INFO  : 'configparams force-mem-access 0' command is executed.
+16:56:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:56:19 INFO  : Memory regions updated for context APU
+16:56:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:56:19 INFO  : 'con' command is executed.
+16:56:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:56:19 INFO  : Launch script is exported to file 'C:\eFPGA\7_6_VERDER\.sdk\launch_scripts\single_application_debug\debugger_7_6_verder_app-default.tcl'
+16:56:57 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+16:57:02 INFO  : Disconnected from the channel tcfchan#11.
+16:57:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:57:03 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+16:57:03 INFO  : 'jtag frequency' command is executed.
+16:57:03 INFO  : Context for 'APU' is selected.
+16:57:03 INFO  : System reset is completed.
+16:57:06 INFO  : 'after 3000' command is executed.
+16:57:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+16:57:08 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit"
+16:57:08 INFO  : Context for 'APU' is selected.
+16:57:08 INFO  : Hardware design information is loaded from 'C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa'.
+16:57:08 INFO  : 'configparams force-mem-access 1' command is executed.
+16:57:08 INFO  : Context for 'APU' is selected.
+16:57:08 INFO  : Sourcing of 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl' is done.
+16:57:08 INFO  : 'ps7_init' command is executed.
+16:57:08 INFO  : 'ps7_post_config' command is executed.
+16:57:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:57:08 INFO  : The application 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:57:08 INFO  : 'configparams force-mem-access 0' command is executed.
+16:57:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:57:08 INFO  : Memory regions updated for context APU
+16:57:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:57:08 INFO  : 'con' command is executed.
+16:57:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:57:08 INFO  : Launch script is exported to file 'C:\eFPGA\7_6_VERDER\.sdk\launch_scripts\single_application_debug\debugger_7_6_verder_app-default.tcl'
+16:57:27 INFO  : Disconnected from the channel tcfchan#12.
+16:57:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:57:29 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+16:57:29 INFO  : 'jtag frequency' command is executed.
+16:57:29 INFO  : Context for 'APU' is selected.
+16:57:29 INFO  : System reset is completed.
+16:57:32 INFO  : 'after 3000' command is executed.
+16:57:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+16:57:33 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit"
+16:57:33 INFO  : Context for 'APU' is selected.
+16:57:33 INFO  : Hardware design information is loaded from 'C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa'.
+16:57:33 INFO  : 'configparams force-mem-access 1' command is executed.
+16:57:33 INFO  : Context for 'APU' is selected.
+16:57:33 INFO  : Sourcing of 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl' is done.
+16:57:33 INFO  : 'ps7_init' command is executed.
+16:57:33 INFO  : 'ps7_post_config' command is executed.
+16:57:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:57:34 INFO  : The application 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:57:34 INFO  : 'configparams force-mem-access 0' command is executed.
+16:57:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:57:34 INFO  : Memory regions updated for context APU
+16:57:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:57:34 INFO  : 'con' command is executed.
+16:57:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:57:34 INFO  : Launch script is exported to file 'C:\eFPGA\7_6_VERDER\.sdk\launch_scripts\single_application_debug\debugger_7_6_verder_app-default.tcl'
+17:00:09 INFO  : Checking for BSP changes to sync application flags for project '7_6_VERDER_APP'...
+17:00:14 INFO  : Disconnected from the channel tcfchan#13.
+17:00:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:00:16 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+17:00:16 INFO  : 'jtag frequency' command is executed.
+17:00:16 INFO  : Context for 'APU' is selected.
+17:00:16 INFO  : System reset is completed.
+17:00:19 INFO  : 'after 3000' command is executed.
+17:00:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+17:00:20 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit"
+17:00:20 INFO  : Context for 'APU' is selected.
+17:00:20 INFO  : Hardware design information is loaded from 'C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa'.
+17:00:20 INFO  : 'configparams force-mem-access 1' command is executed.
+17:00:20 INFO  : Context for 'APU' is selected.
+17:00:20 INFO  : Sourcing of 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl' is done.
+17:00:20 INFO  : 'ps7_init' command is executed.
+17:00:20 INFO  : 'ps7_post_config' command is executed.
+17:00:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:00:21 INFO  : The application 'C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:00:21 INFO  : 'configparams force-mem-access 0' command is executed.
+17:00:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/7_6_VERDER/7_6_VERDER_APP/Debug/7_6_VERDER_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:00:21 INFO  : Memory regions updated for context APU
+17:00:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:00:21 INFO  : 'con' command is executed.
+17:00:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+17:00:21 INFO  : Launch script is exported to file 'C:\eFPGA\7_6_VERDER\.sdk\launch_scripts\single_application_debug\debugger_7_6_verder_app-default.tcl'
+17:06:17 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\eFPGA\7_6_VERDER\temp_xsdb_launch_script.tcl
+17:09:20 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+17:09:20 WARN  : xsct server communication channel is not established.

@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Jan 24 20:08:55 2019
+# Process ID: 208532
+# Current directory: C:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent201904 C:\Users\11702534\Desktop\Examen FPGA\Oef_FPGA\Oef_FPGA\Oef_17\Oef_17.xpr
+# Log file: C:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17/vivado.log
+# Journal file: C:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17/Oef_17.xpr}
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {design_1_rst_ps7_0_50M_0 design_1_ps7_0_axi_periph_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {design_1_rst_ps7_0_50M_0 design_1_ps7_0_axi_periph_0}] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+generate_target all [get_files  {{C:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17/Oef_17.srcs/sources_1/bd/design_1/design_1.bd}}]
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_PWM_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_50M_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+export_ip_user_files -of_objects [get_files {{C:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17/Oef_17.srcs/sources_1/bd/design_1/design_1.bd}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17/Oef_17.srcs/sources_1/bd/design_1/design_1.bd}}]
+launch_runs -jobs 4 {design_1_PWM_0_0_synth_1 design_1_processing_system7_0_0_synth_1 design_1_rst_ps7_0_50M_0_synth_1 design_1_auto_pc_0_synth_1}
+export_simulation -of_objects [get_files {{C:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17/Oef_17.srcs/sources_1/bd/design_1/design_1.bd}}] -directory {C:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17/Oef_17.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17/Oef_17.ip_user_files} -ipstatic_source_dir {C:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17/Oef_17.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17/Oef_17.cache/compile_simlib/modelsim} {questa=C:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17/Oef_17.cache/compile_simlib/questa} {riviera=C:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17/Oef_17.cache/compile_simlib/riviera} {activehdl=C:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17/Oef_17.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+ipx::edit_ip_in_project -upgrade true -name PWM_v1_0_project -directory {C:/Users/11702534/Desktop/Examen\ FPGA/Oef_FPGA/Oef_FPGA/Oef_17/Oef_17.tmp/PWM_v1_0_project} {c:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/ip_repo/PWM_1.0/component.xml}
+update_compile_order -fileset sources_1
+current_project Oef_17
+close_project

@@ -1,0 +1,104 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x5DF7D4EB12990A65",
+      "device": "xc7z007sclg225-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "main_0": "",
+      "vhdlnoclk_0": ""
+    },
+    "ports": {
+      "LED_G": {
+        "direction": "O"
+      },
+      "LED_R": {
+        "direction": "O"
+      },
+      "light_reset_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "main_0": {
+        "vlnv": "xilinx.com:module_ref:main:1.0",
+        "xci_name": "design_1_main_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "main",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_65MHz": {
+            "direction": "I"
+          },
+          "light_reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "LED_G": {
+            "direction": "O"
+          },
+          "LED_R": {
+            "direction": "O"
+          }
+        }
+      },
+      "vhdlnoclk_0": {
+        "vlnv": "xilinx.com:module_ref:vhdlnoclk:1.0",
+        "xci_name": "design_1_vhdlnoclk_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "vhdlnoclk",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk65MHz": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "main_0_LED_G": {
+        "ports": [
+          "main_0/LED_G",
+          "LED_G"
+        ]
+      },
+      "main_0_LED_R": {
+        "ports": [
+          "main_0/LED_R",
+          "LED_R"
+        ]
+      },
+      "light_reset_0_1": {
+        "ports": [
+          "light_reset_0",
+          "main_0/light_reset"
+        ]
+      },
+      "vhdlnoclk_0_clk65MHz": {
+        "ports": [
+          "vhdlnoclk_0/clk65MHz",
+          "main_0/clk_65MHz"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+2021-01-25T15:31:54.657949600255-15:31:54 **** Incremental Build of configuration Debug for project EX11_aapp ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building file: ../src/freertos_hello_world.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/KasperPC/Desktop/EOS_Examen/EX11/EX11_app/export/EX11_app/sw/EX11_app/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+000-'Finished building: ../src/freertos_hello_world.c'
+000-' '
+000-'Building target: EX11_aapp.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/KasperPC/Desktop/EOS_Examen/EX11/EX11_app/export/EX11_app/sw/EX11_app/freertos10_xilinx_domain/bsplib/lib -o "EX11_aapp.elf"  ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+000-'Finished building target: EX11_aapp.elf'
+000-' '
+000-'Invoking: ARM v7 Print Size'
+000-arm-none-eabi-size EX11_aapp.elf  |tee "EX11_aapp.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  70988	   3352	  88768	 163108	  27d24	EX11_aapp.elf
+000-'Finished building: EX11_aapp.elf.size'
+000-' '
+00255-
+15:31:55 Build Finished (took 508ms)
+

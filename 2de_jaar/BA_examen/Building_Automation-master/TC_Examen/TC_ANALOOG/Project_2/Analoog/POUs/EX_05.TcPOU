@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="EX_05" Id="{7d1b431c-931d-4f6d-ade1-5c7258c38b93}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM EX_05
+
+VAR
+	druk_ingesteld_1 : INT;
+	druk_ingesteld_2 : INT;
+	druk_ingesteld_3 : INT;
+	
+	temp_min_value_1 : INT;
+	temp_min_value_2 : INT;
+	
+	debiet_min_value_1 : INT;
+END_VAR
+
+VAR_INPUT
+	druk_1 : INT;
+	druk_2 : INT;
+	druk_3 : INT;
+	
+	temp_1 : INT;
+	temp_2 : INT;
+	
+	debiet_1 : INT;
+END_VAR
+
+VAR_OUTPUT
+	productieProces_LED : BOOL;
+	alarm_LED : BOOL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF((druk_1 < druk_ingesteld_1) AND (druk_2 < druk_ingesteld_2)) OR ((druk_1 < druk_ingesteld_1) AND (druk_3 < druk_ingesteld_3)) OR ((druk_2 < druk_ingesteld_2) AND (druk_3 < druk_ingesteld_3))
+	THEN IF (debiet_1 < debiet_min_value_1)
+		 	THEN productieProces_LED := FALSE;
+		 END_IF
+		 IF ((temp_1 < temp_min_value_1) AND (temp_2 < temp_min_value_2))
+			THEN alarm_LED := TRUE;
+				 productieProces_LED := FALSE;
+		 END_IF
+ELSE
+	productieProces_LED := TRUE;
+	alarm_LED := FALSE;
+END_IF
+]]></ST>
+    </Implementation>
+    <LineIds Name="EX_05">
+      <LineId Id="37" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="41" Count="1" />
+      <LineId Id="51" Count="1" />
+      <LineId Id="82" Count="0" />
+      <LineId Id="50" Count="0" />
+      <LineId Id="47" Count="1" />
+      <LineId Id="80" Count="0" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="46" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

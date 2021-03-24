@@ -1,0 +1,7 @@
+/*6_A_NEW_BEGINNING*/
+the_ROM_image:
+{
+  [bootloader]<6_A_NEW_BEGINNING/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

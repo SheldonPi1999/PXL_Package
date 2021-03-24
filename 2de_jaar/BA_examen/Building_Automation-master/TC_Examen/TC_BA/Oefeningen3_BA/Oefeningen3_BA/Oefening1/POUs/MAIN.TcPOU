@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="MAIN" Id="{e5aa803a-2a42-4560-8e83-663a4f69ad7c}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	Knipperlicht: FB_Knipperlicht;
+END_VAR
+
+VAR_OUTPUT
+	LED : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Knipperlicht(
+	Enable:= TRUE, 
+	OnTime:= T#500MS, 
+	OfTime:= T#500MS, 
+	Q=> LED);]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="13" Count="4" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

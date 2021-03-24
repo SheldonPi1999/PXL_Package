@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="SCALING" Id="{4a06a462-7d8c-4ae5-8648-29fc9f2ab7c4}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION SCALING : INT
+VAR_INPUT
+	input: INT;
+	
+	imin: REAL; 
+	imax: REAL;
+	omin: REAL;
+	omax: REAL;
+END_VAR
+VAR
+	m: REAL;
+	b: REAL;
+END_VAR ]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[m:= (omax - omin)/(imax-imin);
+b:= omin-(imin*m);
+SCALING := REAL_TO_INT((m*input)+b);]]></ST>
+    </Implementation>
+    <LineIds Name="SCALING">
+      <LineId Id="54" Count="1" />
+      <LineId Id="40" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

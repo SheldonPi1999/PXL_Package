@@ -1,0 +1,8 @@
+11:28:04 **** Incremental Build of configuration Debug for project Oef_17 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Er is niets te doen voor 'main-build'.
+
+11:28:05 Build Finished (took 426ms)
+

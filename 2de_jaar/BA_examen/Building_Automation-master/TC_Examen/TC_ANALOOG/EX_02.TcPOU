@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="EX_02" Id="{97a6edd0-2058-4242-bf2b-98aee3b6a8a6}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM EX_02
+
+VAR
+	input_ask: INT;
+	input_live: INT;
+	
+	Toggler: TP;
+	tijd: TOF;
+END_VAR
+
+VAR_INPUT
+	potentiometer_ask: INT;
+	potentiometer_live: INT;
+END_VAR
+
+VAR_OUTPUT
+	LED: BOOL;
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Toggler(IN:= NOT tijd.Q, Q => LED);
+tijd(IN:= Toggler.Q);
+
+input_ask := INT_TO_BYTE(SCALING(input:=potentiometer_ask, imin:= 0, imax:= 32767, omin:= 0, omax:= 100));
+input_live := INT_TO_BYTE(SCALING(input:=potentiometer_live, imin:= 0, imax:= 32767, omin:= 0, omax:= 100));
+
+IF (input_live <= (input_ask*0.9))
+	THEN Toggler.PT := tijd.PT := T#2000MS;
+ELSIF (input_live >= (input_ask*1.1))
+	THEN Toggler.PT := tijd.PT := T#1000MS;
+ELSE LED := TRUE;
+END_IF;]]></ST>
+    </Implementation>
+    <LineIds Name="EX_02">
+      <LineId Id="176" Count="1" />
+      <LineId Id="175" Count="0" />
+      <LineId Id="124" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="85" Count="0" />
+      <LineId Id="126" Count="3" />
+      <LineId Id="132" Count="0" />
+      <LineId Id="131" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,28 @@
+20:05:09 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\KasperPC\Desktop\EOS_Examen\EOS_OEFENING\EX12_STOLEN\temp_xsdb_launch_script.tcl
+20:05:09 INFO  : Registering command handlers for Vitis TCF services
+20:05:09 INFO  : Platform repository initialization has completed.
+20:05:10 INFO  : XSCT server has started successfully.
+20:05:10 INFO  : Successfully done setting XSCT server connection channel  
+20:05:10 INFO  : Successfully done setting workspace for the tool. 
+20:05:10 INFO  : Successfully done query RDI_DATADIR 
+20:05:10 INFO  : plnx-install-location is set to ''
+20:05:50 INFO  : Result from executing command 'getProjects': EX12_STOLEN
+20:05:50 INFO  : Result from executing command 'getPlatforms': 
+20:05:55 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/EX12_STOLEN/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+20:06:00 INFO  : (SwPlaform) Successfully done setParamInSpec 
+20:06:00 INFO  : (SwPlaform) Successfully done setParamInSpec 
+20:06:02 INFO  : (SwPlatform) Successfully done update_mss 
+20:06:03 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/EX12_STOLEN/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+20:06:09 ERROR : (XSDB Server)rm: kan lstat `*.o' niet uitvoeren: Invalid argument
+
+20:06:09 ERROR : (XSDB Server)make: *** [Makefile:42: clean] Error 1
+
+20:06:10 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/EX12_STOLEN/ps7_cortexa9_0/freertos10_xilinx_domain/bsp/system.mss"
+20:06:14 INFO  : (SwPlaform) Successfully done setParamInSpec 
+20:06:14 INFO  : (SwPlaform) Successfully done setParamInSpec 
+20:06:15 INFO  : (SwPlatform) Successfully done update_mss 
+20:06:16 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/EX12_STOLEN/ps7_cortexa9_0/freertos10_xilinx_domain/bsp/system.mss"
+20:06:56 INFO  : Result from executing command 'getProjects': EX12_STOLEN
+20:06:56 INFO  : Result from executing command 'getPlatforms': EX12_STOLEN|C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/EX12_STOLEN/export/EX12_STOLEN/EX12_STOLEN.xpfm
+20:07:58 INFO  : Checking for BSP changes to sync application flags for project 'EX12_STOLEN_app'...
+20:09:11 INFO  : Checking for BSP changes to sync application flags for project 'EX12_STOLEN_app'...

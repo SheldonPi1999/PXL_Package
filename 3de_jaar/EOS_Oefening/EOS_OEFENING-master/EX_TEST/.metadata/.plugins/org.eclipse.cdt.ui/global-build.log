@@ -1,0 +1,47 @@
+Nothing to build in platform 'EX_TEST'
+
+17:41:13 **** Incremental Build of configuration Debug for project EX_TEST_app ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/KasperPC/Desktop/EOS_Examen/EX_TEST/EX_TEST/export/EX_TEST/sw/EX_TEST/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'vTask1':
+../src/freertos_hello_world.c:171:10: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+  171 |   Data = scanf("%u", &Data); //XGpioPs_ReadPin(&GpioPs, BUTTON_PIN);
+      |          ^~~~~
+../src/freertos_hello_world.c:171:10: warning: incompatible implicit declaration of built-in function 'scanf'
+../src/freertos_hello_world.c:14:1: note: include '<stdio.h>' or provide a declaration of 'scanf'
+   13 | #include "header.h"
+  +++ |+#include <stdio.h>
+   14 | 
+../src/freertos_hello_world.c:171:18: warning: format '%u' expects argument of type 'unsigned int *', but argument 2 has type 'u32 *' {aka 'long unsigned int *'} [-Wformat=]
+  171 |   Data = scanf("%u", &Data); //XGpioPs_ReadPin(&GpioPs, BUTTON_PIN);
+      |                 ~^   ~~~~~
+      |                  |   |
+      |                  |   u32 * {aka long unsigned int *}
+      |                  unsigned int *
+      |                 %lu
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: EX_TEST_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/KasperPC/Desktop/EOS_Examen/EX_TEST/EX_TEST/export/EX_TEST/sw/EX_TEST/freertos10_xilinx_domain/bsplib/lib -o "EX_TEST_app.elf"  ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: EX_TEST_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EX_TEST_app.elf  |tee "EX_TEST_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 110220	   3380	  95520	 209120	  330e0	EX_TEST_app.elf
+'Finished building: EX_TEST_app.elf.size'
+' '
+17:41:14 **** Incremental Build of configuration Debug for project EX_TEST_app_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 52046 C:/Users/KasperPC/Desktop/EOS_Examen/EX_TEST/EX_TEST/export/EX_TEST/EX_TEST.xpfm freertos10_xilinx_domain C:/Users/KasperPC/Desktop/EOS_Examen/EX_TEST/EX_TEST_app_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/KasperPC/Desktop/EOS_Examen/EX_TEST/EX_TEST/export/EX_TEST/EX_TEST.xpfm --sys_config EX_TEST --bif C:/Users/KasperPC/Desktop/EOS_Examen/EX_TEST/EX_TEST_app_system/Debug/system.bif --bitstream C:/Users/KasperPC/Desktop/EOS_Examen/EX_TEST/EX_TEST_app/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/KasperPC/Desktop/EOS_Examen/EX_TEST/EX_TEST_app/Debug/EX_TEST_app.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/KasperPC/Desktop/EOS_Examen/EX_TEST/EX_TEST_app/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/KasperPC/Desktop/EOS_Examen/EX_TEST/EX_TEST_app_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

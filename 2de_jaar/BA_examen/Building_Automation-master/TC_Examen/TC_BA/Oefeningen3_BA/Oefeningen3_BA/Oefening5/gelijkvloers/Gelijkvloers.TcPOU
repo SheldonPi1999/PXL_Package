@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="Gelijkvloers" Id="{9ed53821-e683-4637-9a96-a80cc87ffcb9}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Gelijkvloers
+VAR
+	TEMP_Inkom : INT;
+	TEMP_Living : INT;
+	TEMP_Eetruimte : INT;
+	TEMP_Keuken : INT;
+	TEMP_Badkamer_1 : INT;
+	TEMP_Berging : INT;
+	
+	houseUPDATE : ARRAY [1..2, 1..6] OF INT;
+	SW_Array : ARRAY [1..12] OF BOOL;
+	TEMP_Keuken_Array : ARRAY [1..20] OF INT;
+	
+	i: INT;
+	j: INT;
+	
+	TEMP_Buiten : INT;
+	
+	TON : TON;
+	TOF: TOF;
+	
+	TON_T : TON;
+	TOF_T: TOF;
+	
+	R_TRIG : R_TRIG;
+	R_TRIG_VAR : BOOL;
+END_VAR
+
+VAR_INPUT
+	SW_Inkom : BOOL;
+	SW_Living : BOOL;
+	SW_Eetruimte : BOOL;
+	SW_Keuken : BOOL;
+	SW_Badkamer_1 : BOOL;
+	SW_Berging : BOOL;
+	
+	SW_TEMP : BOOL;
+	
+	SW_V_Keuken : BOOL;
+	SW_V_Berging : BOOL;
+	SW_V_Badkamer_1 : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[SW_Array[1] := SW_Inkom;
+SW_Array[2] := SW_Living;
+SW_Array[3] := SW_Eetruimte;
+SW_Array[4] := SW_Keuken;
+SW_Array[5] := SW_Berging;
+SW_Array[6] := SW_Badkamer_1;
+
+SW_Array[10] := SW_V_Keuken;
+SW_Array[11] := SW_V_Berging;
+SW_Array[12] := SW_V_Badkamer_1;
+
+FOR i:=1 TO 12 BY 1 DO
+	houseUpdate[1, i] := BOOL_TO_INT(SW_Array[i]);
+END_FOR;
+
+TEMP_Eetruimte := TEMP_Buiten;		
+TEMP_Inkom := TEMP_Buiten;		
+TEMP_Living := TEMP_Buiten;		
+
+TOF(IN:= TON.Q, PT:= T#0MS);
+TON(IN:= NOT(TOF.Q), PT:= T#3S);
+
+IF SW_V_Keuken AND (TEMP_Keuken < 40) THEN
+	TEMP_Keuken := TEMP_Keuken + BOOL_TO_INT(TOF.Q);
+ELSIF (TEMP_Keuken > TEMP_BUITEN) THEN
+	TEMP_Keuken := TEMP_Keuken - BOOL_TO_INT(TOF.Q);
+END_IF
+
+// Nu gaan we over naar Danny in de studio. 
+TOF_T(IN:= TON_T.Q, PT:= T#0MS);
+TON_T(IN:= NOT(TOF_T.Q), PT:= T#10S);
+
+IF TOF_T.Q THEN
+	FOR j:=1 TO 19 BY 1 DO
+		TEMP_Keuken_Array[j] := TEMP_Keuken_Array[j+1];
+	END_FOR;
+	TEMP_Keuken_Array[20] := TEMP_Keuken;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="Gelijkvloers">
+      <LineId Id="52" Count="0" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="57" Count="3" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="86" Count="2" />
+      <LineId Id="69" Count="0" />
+      <LineId Id="72" Count="2" />
+      <LineId Id="99" Count="0" />
+      <LineId Id="102" Count="0" />
+      <LineId Id="105" Count="1" />
+      <LineId Id="127" Count="0" />
+      <LineId Id="205" Count="0" />
+      <LineId Id="207" Count="0" />
+      <LineId Id="215" Count="4" />
+      <LineId Id="214" Count="0" />
+      <LineId Id="228" Count="0" />
+      <LineId Id="227" Count="0" />
+      <LineId Id="231" Count="0" />
+      <LineId Id="230" Count="0" />
+      <LineId Id="233" Count="0" />
+      <LineId Id="232" Count="0" />
+      <LineId Id="237" Count="1" />
+      <LineId Id="236" Count="0" />
+      <LineId Id="243" Count="0" />
+      <LineId Id="235" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

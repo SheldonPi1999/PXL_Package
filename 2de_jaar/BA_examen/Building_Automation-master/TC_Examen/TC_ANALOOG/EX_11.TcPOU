@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="EX_11" Id="{186e4265-5ac9-46b2-ad8f-604448cd9c9e}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM EX_11
+VAR
+	bUp, bDown	: BOOL;
+	bVoltage	: DINT;
+
+	fbFlankUp	: F_TRIG;
+	fbFlankDown	: F_TRIG;
+
+	fbVertraging: TON;		// Lange en korte klik
+	fbPuls		: TON;		// Voltage verhoger per x seconden
+END_VAR
+
+VAR_OUTPUT
+	voltage_slider_10000mV: INT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbFlankUp(CLK:= bUp);
+fbFlankDown(CLK:= bDown);
+		
+fbVertraging(IN:= bUp OR bDown, PT:= T#1S );
+fbPuls(IN:= fbVertraging.Q AND NOT(fbPuls.Q), PT:= T#1S);
+
+IF fbFlankUp.Q AND NOT fbVertraging.Q THEN
+	bVoltage := bVoltage + 100;
+ELSIF bUp AND fbPuls.Q THEN
+	bVoltage := bVoltage + 500;
+END_IF
+
+IF fbFlankDown.Q AND NOT fbVertraging.Q THEN
+	bVoltage := bVoltage - 100;
+ELSIF bDown AND fbPuls.Q THEN
+	bVoltage := bVoltage - 500;
+END_IF
+
+bVoltage := Checkbounds(bVoltage,0,10000);
+]]></ST>
+    </Implementation>
+    <LineIds Name="EX_11">
+      <LineId Id="119" Count="18" />
+      <LineId Id="33" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

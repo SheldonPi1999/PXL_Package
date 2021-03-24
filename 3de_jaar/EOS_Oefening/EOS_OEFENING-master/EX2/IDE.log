@@ -1,0 +1,376 @@
+13:32:47 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\KasperPC\Desktop\EOS_Examen\EX2\temp_xsdb_launch_script.tcl
+13:32:47 INFO  : Registering command handlers for Vitis TCF services
+13:32:47 INFO  : Platform repository initialization has completed.
+13:32:49 INFO  : XSCT server has started successfully.
+13:32:49 INFO  : Successfully done setting XSCT server connection channel  
+13:32:49 INFO  : plnx-install-location is set to ''
+13:32:52 INFO  : Successfully done setting workspace for the tool. 
+13:32:52 INFO  : Successfully done query RDI_DATADIR 
+13:35:14 INFO  : Result from executing command 'getProjects': seven_seg_app
+13:35:14 INFO  : Result from executing command 'getPlatforms': 
+13:35:31 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+13:35:52 INFO  : (SwPlaform) Successfully done setParamInSpec 
+13:35:55 INFO  : (SwPlaform) Successfully done setParamInSpec 
+13:35:55 INFO  : (SwPlatform) Successfully done update_mss 
+13:35:56 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+13:36:03 ERROR : (XSDB Server)rm: kan lstat `*.o' niet uitvoeren: Invalid argument
+
+13:36:03 ERROR : (XSDB Server)make: *** [Makefile:42: clean] Error 1
+
+13:36:05 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+13:36:11 INFO  : (SwPlaform) Successfully done setParamInSpec 
+13:36:12 INFO  : (SwPlaform) Successfully done setParamInSpec 
+13:36:13 INFO  : (SwPlatform) Successfully done update_mss 
+13:36:14 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+13:36:57 INFO  : Result from executing command 'getProjects': seven_seg_app
+13:36:57 INFO  : Result from executing command 'getPlatforms': seven_seg_app|C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/seven_seg_app.xpfm
+13:42:16 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+13:42:52 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+13:42:56 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+13:53:40 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+13:53:52 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+13:54:03 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+13:54:08 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+13:54:35 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+13:54:47 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+13:55:06 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+13:55:11 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+13:57:40 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+13:58:15 INFO  : Result from executing command 'getProjects': seven_seg_app
+13:58:15 INFO  : Result from executing command 'getPlatforms': seven_seg_app|C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/seven_seg_app.xpfm
+13:58:15 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+13:59:07 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+13:59:45 INFO  : Result from executing command 'getProjects': seven_seg_app
+13:59:45 INFO  : Result from executing command 'getPlatforms': seven_seg_app|C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/seven_seg_app.xpfm
+13:59:45 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+14:00:05 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+14:00:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:00:49 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:00:49 INFO  : 'jtag frequency' command is executed.
+14:00:49 INFO  : Context for 'APU' is selected.
+14:00:49 INFO  : System reset is completed.
+14:00:52 INFO  : 'after 3000' command is executed.
+14:00:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}' command is executed.
+14:00:54 INFO  : FPGA configured successfully with bitstream "C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit"
+14:00:55 INFO  : Context for 'APU' is selected.
+14:00:55 INFO  : Hardware design and registers information is loaded from 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa'.
+14:00:55 INFO  : 'configparams force-mem-access 1' command is executed.
+14:00:55 INFO  : Context for 'APU' is selected.
+14:00:55 INFO  : Sourcing of 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl' is done.
+14:00:56 INFO  : 'ps7_init' command is executed.
+14:00:56 INFO  : 'ps7_post_config' command is executed.
+14:00:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:00:56 ERROR : Memory write error at 0x100000. MMU section translation fault
+14:00:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}
+fpga -file C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/Debug/sevensegAPP.elf
+----------------End of Script----------------
+
+14:00:56 ERROR : Memory write error at 0x100000. MMU section translation fault
+14:01:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:01:12 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:01:12 INFO  : 'jtag frequency' command is executed.
+14:01:12 INFO  : Context for 'APU' is selected.
+14:01:12 INFO  : System reset is completed.
+14:01:15 INFO  : 'after 3000' command is executed.
+14:01:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}' command is executed.
+14:01:17 INFO  : FPGA configured successfully with bitstream "C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit"
+14:01:17 INFO  : Context for 'APU' is selected.
+14:01:17 INFO  : Hardware design and registers information is loaded from 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa'.
+14:01:17 INFO  : 'configparams force-mem-access 1' command is executed.
+14:01:17 INFO  : Context for 'APU' is selected.
+14:01:17 INFO  : Sourcing of 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl' is done.
+14:01:17 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+14:01:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}
+fpga -file C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+14:01:17 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+14:01:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:01:43 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:01:43 INFO  : 'jtag frequency' command is executed.
+14:01:43 INFO  : Context for 'APU' is selected.
+14:01:43 INFO  : System reset is completed.
+14:01:46 INFO  : 'after 3000' command is executed.
+14:01:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}' command is executed.
+14:01:47 INFO  : FPGA configured successfully with bitstream "C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit"
+14:01:47 INFO  : Context for 'APU' is selected.
+14:01:47 INFO  : Hardware design and registers information is loaded from 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa'.
+14:01:47 INFO  : 'configparams force-mem-access 1' command is executed.
+14:01:47 INFO  : Context for 'APU' is selected.
+14:01:47 INFO  : Sourcing of 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl' is done.
+14:01:47 INFO  : 'ps7_init' command is executed.
+14:01:47 INFO  : 'ps7_post_config' command is executed.
+14:01:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:01:48 INFO  : The application 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/Debug/sevensegAPP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:01:48 INFO  : 'configparams force-mem-access 0' command is executed.
+14:01:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}
+fpga -file C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/Debug/sevensegAPP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:01:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:01:48 INFO  : 'con' command is executed.
+14:01:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:01:48 INFO  : Launch script is exported to file 'C:\Users\KasperPC\Desktop\EOS_Examen\EX2\.sdk\launch_scripts\single_application_debug\debugger_sevensegapp-default.tcl'
+14:02:05 INFO  : Disconnected from the channel tcfchan#20.
+14:02:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:02:07 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:02:07 INFO  : 'jtag frequency' command is executed.
+14:02:07 INFO  : Context for 'APU' is selected.
+14:02:07 INFO  : System reset is completed.
+14:02:10 INFO  : 'after 3000' command is executed.
+14:02:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}' command is executed.
+14:02:11 INFO  : FPGA configured successfully with bitstream "C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit"
+14:02:11 INFO  : Context for 'APU' is selected.
+14:02:11 INFO  : Hardware design and registers information is loaded from 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa'.
+14:02:11 INFO  : 'configparams force-mem-access 1' command is executed.
+14:02:11 INFO  : Context for 'APU' is selected.
+14:02:11 INFO  : Sourcing of 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl' is done.
+14:02:11 INFO  : 'ps7_init' command is executed.
+14:02:11 INFO  : 'ps7_post_config' command is executed.
+14:02:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:02:12 INFO  : The application 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/Debug/sevensegAPP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:02:12 INFO  : 'configparams force-mem-access 0' command is executed.
+14:02:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}
+fpga -file C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/Debug/sevensegAPP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:02:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:02:12 INFO  : 'con' command is executed.
+14:02:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:02:12 INFO  : Launch script is exported to file 'C:\Users\KasperPC\Desktop\EOS_Examen\EX2\.sdk\launch_scripts\single_application_debug\debugger_sevensegapp-default.tcl'
+14:02:17 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+14:02:22 INFO  : Disconnected from the channel tcfchan#21.
+14:02:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:02:24 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:02:24 INFO  : 'jtag frequency' command is executed.
+14:02:24 INFO  : Context for 'APU' is selected.
+14:02:24 INFO  : System reset is completed.
+14:02:27 INFO  : 'after 3000' command is executed.
+14:02:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}' command is executed.
+14:02:28 INFO  : FPGA configured successfully with bitstream "C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit"
+14:02:28 INFO  : Context for 'APU' is selected.
+14:02:28 INFO  : Hardware design and registers information is loaded from 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa'.
+14:02:28 INFO  : 'configparams force-mem-access 1' command is executed.
+14:02:28 INFO  : Context for 'APU' is selected.
+14:02:28 INFO  : Sourcing of 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl' is done.
+14:02:28 INFO  : 'ps7_init' command is executed.
+14:02:28 INFO  : 'ps7_post_config' command is executed.
+14:02:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:02:29 INFO  : The application 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/Debug/sevensegAPP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:02:29 INFO  : 'configparams force-mem-access 0' command is executed.
+14:02:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}
+fpga -file C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/Debug/sevensegAPP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:02:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:02:29 INFO  : 'con' command is executed.
+14:02:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:02:29 INFO  : Launch script is exported to file 'C:\Users\KasperPC\Desktop\EOS_Examen\EX2\.sdk\launch_scripts\single_application_debug\debugger_sevensegapp-default.tcl'
+14:02:45 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+14:02:51 INFO  : Disconnected from the channel tcfchan#23.
+14:02:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:02:52 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:02:52 INFO  : 'jtag frequency' command is executed.
+14:02:52 INFO  : Context for 'APU' is selected.
+14:02:53 INFO  : System reset is completed.
+14:02:56 INFO  : 'after 3000' command is executed.
+14:02:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}' command is executed.
+14:02:57 INFO  : FPGA configured successfully with bitstream "C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit"
+14:02:57 INFO  : Context for 'APU' is selected.
+14:02:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa'.
+14:02:57 INFO  : 'configparams force-mem-access 1' command is executed.
+14:02:57 INFO  : Context for 'APU' is selected.
+14:02:57 INFO  : Sourcing of 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl' is done.
+14:02:57 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+14:02:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}
+fpga -file C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+14:02:57 ERROR : Memory read error at 0xE0001034. AP transaction timeout
+14:03:08 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+14:03:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:03:16 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:03:16 INFO  : 'jtag frequency' command is executed.
+14:03:16 INFO  : Context for 'APU' is selected.
+14:03:16 INFO  : System reset is completed.
+14:03:20 INFO  : 'after 3000' command is executed.
+14:03:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}' command is executed.
+14:03:21 INFO  : FPGA configured successfully with bitstream "C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit"
+14:03:21 INFO  : Context for 'APU' is selected.
+14:03:21 INFO  : Hardware design and registers information is loaded from 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa'.
+14:03:21 INFO  : 'configparams force-mem-access 1' command is executed.
+14:03:21 INFO  : Context for 'APU' is selected.
+14:03:21 INFO  : Sourcing of 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl' is done.
+14:03:21 INFO  : 'ps7_init' command is executed.
+14:03:21 INFO  : 'ps7_post_config' command is executed.
+14:03:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:03:21 INFO  : The application 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/Debug/sevensegAPP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:03:21 INFO  : 'configparams force-mem-access 0' command is executed.
+14:03:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}
+fpga -file C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/Debug/sevensegAPP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:03:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:03:21 INFO  : 'con' command is executed.
+14:03:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:03:21 INFO  : Launch script is exported to file 'C:\Users\KasperPC\Desktop\EOS_Examen\EX2\.sdk\launch_scripts\single_application_debug\debugger_sevensegapp-default.tcl'
+14:03:31 INFO  : Checking for BSP changes to sync application flags for project 'sevensegAPP'...
+14:03:41 INFO  : Disconnected from the channel tcfchan#25.
+14:03:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:03:42 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:03:42 INFO  : 'jtag frequency' command is executed.
+14:03:42 INFO  : Context for 'APU' is selected.
+14:03:42 INFO  : System reset is completed.
+14:03:45 INFO  : 'after 3000' command is executed.
+14:03:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}' command is executed.
+14:03:46 INFO  : FPGA configured successfully with bitstream "C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit"
+14:03:46 INFO  : Context for 'APU' is selected.
+14:03:46 INFO  : Hardware design and registers information is loaded from 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa'.
+14:03:46 INFO  : 'configparams force-mem-access 1' command is executed.
+14:03:46 INFO  : Context for 'APU' is selected.
+14:03:46 INFO  : Sourcing of 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl' is done.
+14:03:47 INFO  : 'ps7_init' command is executed.
+14:03:47 INFO  : 'ps7_post_config' command is executed.
+14:03:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:03:47 INFO  : The application 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/Debug/sevensegAPP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:03:47 INFO  : 'configparams force-mem-access 0' command is executed.
+14:03:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}
+fpga -file C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP/Debug/sevensegAPP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:03:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:03:47 INFO  : 'con' command is executed.
+14:03:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:03:47 INFO  : Launch script is exported to file 'C:\Users\KasperPC\Desktop\EOS_Examen\EX2\.sdk\launch_scripts\single_application_debug\debugger_sevensegapp-default.tcl'
+14:04:49 INFO  : Disconnected from the channel tcfchan#28.

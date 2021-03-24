@@ -1,0 +1,7 @@
+/*11_VHDL_SEG_AXI*/
+the_ROM_image:
+{
+  [bootloader]<11_VHDL_SEG_AXI/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

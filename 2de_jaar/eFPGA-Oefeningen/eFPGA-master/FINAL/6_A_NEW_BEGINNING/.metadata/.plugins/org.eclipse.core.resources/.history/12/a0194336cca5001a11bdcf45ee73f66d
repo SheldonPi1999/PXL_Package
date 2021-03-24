@@ -1,0 +1,108 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xparameters.h"
+#include "xgpiops.h"
+#include "xstatus.h"
+#include "sleep.h"
+#include "xscugic.h"
+#include "Xil_exception.h"
+
+#define GPIO_BANK			XGPIOPS_BANK0
+
+// BoardType = 1 for MiniZED ; 2 for ZYBO
+int BoardType = 1;
+
+u32 Input_Pin; /* Switch button */
+u32 Output_Pin, Output_Pin2; /* LED buttons */
+
+static XGpioPs Gpio;
+
+int counter=0;
+
+int main()
+{
+	int counter;
+	int status;
+	XGpioPs_Config *GPIOConfigPtr;
+
+	init_platform();
+
+	GPIOConfigPtr = XGpioPs_LookupConfig(XPAR_PS7_GPIO_0_DEVICE_ID);
+	status = XGpioPs_CfgInitialize(&Gpio, GPIOConfigPtr,GPIOConfigPtr->BaseAddr);
+
+	if (status != XST_SUCCESS) {
+		printf("status error \n\r");
+		return XST_FAILURE;
+	}
+
+    printf("Starting GPIO PS Example / Interrupt Enabled\n\r");
+
+    if(BoardType==1){
+    	printf("Running on MiniZED\n\r");
+    	Input_Pin = 0;
+    	Output_Pin = 52;//rood
+    	Output_Pin2 = 53;//groen
+    }
+
+    // Set Output pin van leds
+	XGpioPs_SetDirectionPin(&Gpio, Output_Pin, 1);
+	XGpioPs_SetOutputEnablePin(&Gpio, Output_Pin, 1);
+	XGpioPs_SetDirectionPin(&Gpio, Output_Pin2, 1);
+	XGpioPs_SetOutputEnablePin(&Gpio, Output_Pin2, 1);
+
+	// Set Input pin
+	XGpioPs_SetDirectionPin(&Gpio,Input_Pin,0);
+
+	while(1)
+	{
+		XGpioPs *Gpio = (XGpioPs *)CallBackRef;
+		u32 DataRead;
+			XGpioPs_SetDirectionPin(Gpio, Output_Pin, 1);//locatie
+			XGpioPs_SetOutputEnablePin(Gpio, Output_Pin, 1);//set actief
+			XGpioPs_SetDirectionPin(Gpio, Output_Pin2, 1);
+			XGpioPs_SetOutputEnablePin(Gpio, Output_Pin2, 1);
+
+			// We have to select the bank because the interrupt handler goes for BANK0 and BANK1
+			if( Bank == 0x00){
+				printf("Value of Counter: %d Bank: %d\r\n",(int) counter, (int)Bank);
+				switch(counter)
+				{	// 00 01 10 11
+					case 0:
+						//uit
+						XGpioPs_WritePin(Gpio, Output_Pin, (u32) 0x00);
+						XGpioPs_WritePin(Gpio, Output_Pin2, (u32) 0x00);
+						break;
+					case 1:
+						//rood
+						XGpioPs_WritePin(Gpio, Output_Pin, (u32) 0x01);
+						XGpioPs_WritePin(Gpio, Output_Pin2, (u32) 0x00);
+						break;
+					case 2:
+						//geel
+						XGpioPs_WritePin(Gpio, Output_Pin, (u32) 0x00);
+						XGpioPs_WritePin(Gpio, Output_Pin2, (u32) 0x01);
+						break;
+					case 3:
+						//beide
+						XGpioPs_WritePin(Gpio, Output_Pin, (u32) 0x01);
+						XGpioPs_WritePin(Gpio, Output_Pin2, (u32) 0x01);
+						break;
+					default:
+						//standaard
+						XGpioPs_WritePin(Gpio, Output_Pin, (u32) 0x00);
+						XGpioPs_WritePin(Gpio, Output_Pin2, (u32) 0x00);
+
+				}
+				//case bepaling
+				if(counter<3)
+					counter++;
+				else
+					counter=0;
+			}
+
+	}
+
+    cleanup_platform();
+    return 0;
+}
+

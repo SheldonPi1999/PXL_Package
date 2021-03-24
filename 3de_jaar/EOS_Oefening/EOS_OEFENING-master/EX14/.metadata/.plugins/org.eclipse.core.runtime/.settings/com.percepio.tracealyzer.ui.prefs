@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+rtosType=FreeRTOS
+sameFileHandling=Ask every time
+traceBufferAddressExpression=RecorderDataPtr
+traceBufferSizeExpression=sizeof(*RecorderDataPtr)
+traceDirectory=C\:\\Users\\KasperPC\\Desktop\\EOS_Examen\\EX14\\Traces
+traceName=C\:\\Users\\KasperPC\\Desktop\\EOS_Examen\\EX14\\Traces\\trace
+tracealyzerPath=C\:\\Program Files\\Percepio\\Tracealyzer 4\\Tracealyzer.exe
+tracealyzerPreviousPaths=C\:\\Program Files\\Percepio\\Tracealyzer 4;C\:\\Program Files\\Percepio\\Tracealyzer 4\\Tracealyzer.exe

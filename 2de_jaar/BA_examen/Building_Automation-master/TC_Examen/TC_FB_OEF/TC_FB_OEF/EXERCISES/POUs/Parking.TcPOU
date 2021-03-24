@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="Parking" Id="{b6dac06e-1f03-4220-90f3-decbfcd282e7}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Parking
+VAR
+	R_TRIG_1 : R_TRIG;
+	R_TRIG_2 : R_TRIG;
+	
+	R_TRIG_BINNEN : R_TRIG;
+	R_TRIG_BUITEN : R_TRIG;
+	
+	CTUD : CTUD;	
+	
+	PING1 : BOOL;
+	PING2 : BOOL;
+	
+	BINNEN : BOOL;
+	BUITEN : BOOL;
+END_VAR
+
+VAR_INPUT
+	SENSOR_1 : BOOL;
+	SENSOR_2 : BOOL;
+END_VAR
+
+VAR_OUTPUT
+	LED_R : BOOL;
+	LED_G : BOOL;
+	SLAGBOOM : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[R_TRIG_1(CLK := SENSOR_1);
+R_TRIG_2(CLK := SENSOR_2);
+R_TRIG_BINNEN(CLK := BINNEN);
+R_TRIG_BUITEN(CLK := BUITEN);
+
+CTUD(CU := R_TRIG_BINNEN.Q, CD := R_TRIG_BUITEN.Q);
+
+IF R_TRIG_1.Q THEN
+	IF PING2 THEN
+		BUITEN := TRUE;
+		SLAGBOOM := FALSE;
+		PING2 := FALSE;
+	ELSE
+		PING1 := TRUE;
+		SLAGBOOM := TRUE;
+	END_IF
+ELSE
+	BUITEN := FALSE;
+END_IF
+
+IF R_TRIG_2.Q THEN
+	IF PING1 THEN
+		BINNEN := TRUE;
+		SLAGBOOM := FALSE;
+		PING1 := FALSE;
+	ELSE
+		PING2 := TRUE;
+		SLAGBOOM := TRUE;
+	END_IF
+ELSE
+	BINNEN := FALSE;
+END_IF
+
+IF CTUD.CV < 10 THEN
+	LED_G := TRUE;
+	LED_R := FALSE;
+ELSE
+	LED_R := TRUE;
+	LED_G := FALSE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="Parking">
+      <LineId Id="154" Count="1" />
+      <LineId Id="196" Count="0" />
+      <LineId Id="195" Count="0" />
+      <LineId Id="197" Count="0" />
+      <LineId Id="156" Count="0" />
+      <LineId Id="193" Count="0" />
+      <LineId Id="157" Count="8" />
+      <LineId Id="201" Count="0" />
+      <LineId Id="200" Count="0" />
+      <LineId Id="166" Count="10" />
+      <LineId Id="198" Count="1" />
+      <LineId Id="177" Count="7" />
+      <LineId Id="65" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

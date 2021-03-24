@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="EX_07" Id="{b4320929-5a4a-4f0b-9dc8-a5706beb8913}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM EX_07
+
+VAR
+	Toggler: TP;
+	tijd: TOF;
+	
+	NIVEAU : INT;
+END_VAR
+
+VAR_INPUT
+	NIVEAU_SENSOR : INT;
+END_VAR
+
+VAR_OUTPUT
+	pomp_1 : BOOL;
+	pomp_2 : BOOL;
+	pomp_3 : BOOL;
+	
+	ALARM_LED : BOOL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Toggler(IN:= NOT tijd.Q, Q => ALARM_LED);
+tijd(IN:= Toggler.Q);
+
+
+NIVEAU := SCALING(input:=NIVEAU_SENSOR, imin:= 0, imax:= 32767, omin:= 0, omax:= 100);
+
+IF(NIVEAU < 50)
+	THEN pomp_1 := FALSE;
+	     pomp_2 := FALSE;
+		 pomp_3 := FALSE;
+		 ALARM_LED := FALSE;
+ELSIF(NIVEAU < 70)
+	THEN pomp_1 := TRUE;
+		 pomp_2 := TRUE;
+		 pomp_3 := FALSE;
+		 ALARM_LED := FALSE;
+ELSIF(NIVEAU < 80)
+	THEN pomp_3 := TRUE;
+		 ALARM_LED := FALSE;
+ELSIF(NIVEAU > 80)
+	THEN Toggler.PT := tijd.PT := T#300MS;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="EX_07">
+      <LineId Id="72" Count="1" />
+      <LineId Id="70" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="85" Count="0" />
+      <LineId Id="94" Count="1" />
+      <LineId Id="104" Count="0" />
+      <LineId Id="88" Count="0" />
+      <LineId Id="87" Count="0" />
+      <LineId Id="96" Count="0" />
+      <LineId Id="129" Count="0" />
+      <LineId Id="103" Count="0" />
+      <LineId Id="90" Count="0" />
+      <LineId Id="89" Count="0" />
+      <LineId Id="102" Count="0" />
+      <LineId Id="101" Count="0" />
+      <LineId Id="100" Count="0" />
+      <LineId Id="86" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,44 @@
+10:53:11 **** Incremental Build of configuration Debug for project EX10_app ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/KasperPC/Desktop/EOS_Examen/EX10/EX10/export/EX10/sw/EX10/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:125:32: warning: pointer targets in passing argument 2 of 'xTaskCreate' differ in signedness [-Wpointer-sign]
+  125 |      xTaskCreate( prvLed_Task, ( signed char * ) "LED_TASK",
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                |
+      |                                signed char *
+In file included from ../src/freertos_hello_world.c:49:
+C:/Users/KasperPC/Desktop/EOS_Examen/EX10/EX10/export/EX10/sw/EX10/freertos10_xilinx_domain/bspinclude/include/task.h:331:27: note: expected 'const char * const' but argument is of type 'signed char *'
+  331 |        const char * const pcName, /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |        ~~~~~~~~~~~~~~~~~~~^~~~~~
+../src/freertos_hello_world.c:133:30: warning: pointer targets in passing argument 1 of 'xTimerCreate' differ in signedness [-Wpointer-sign]
+  133 |      xTimer = xTimerCreate ( (const signed char *) "LedTimer",
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                              |
+      |                              const signed char *
+In file included from ../src/freertos_hello_world.c:52:
+C:/Users/KasperPC/Desktop/EOS_Examen/EX10/EX10/export/EX10/sw/EX10/freertos10_xilinx_domain/bspinclude/include/timers.h:228:49: note: expected 'const char * const' but argument is of type 'const signed char *'
+  228 |  TimerHandle_t xTimerCreate( const char * const pcTimerName,   /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                              ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: EX10_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/KasperPC/Desktop/EOS_Examen/EX10/EX10/export/EX10/sw/EX10/freertos10_xilinx_domain/bsplib/lib -o "EX10_app.elf"  ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: EX10_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EX10_app.elf  |tee "EX10_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  71200	   3344	  88768	 163312	  27df0	EX10_app.elf
+'Finished building: EX10_app.elf.size'
+' '
+
+10:53:12 Build Finished (took 528ms)
+

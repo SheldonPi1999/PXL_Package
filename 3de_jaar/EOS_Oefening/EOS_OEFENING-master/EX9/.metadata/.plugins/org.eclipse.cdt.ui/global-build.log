@@ -1,0 +1,50 @@
+Nothing to build in platform 'EX9'
+
+10:43:46 **** Incremental Build of configuration Debug for project EX9_app ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9/export/EX9/sw/EX9/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c: In function 'main':
+../src/freertos_hello_world.c:67:26: warning: pointer targets in passing argument 2 of 'xTaskCreate' differ in signedness [-Wpointer-sign]
+   67 |  xTaskCreate( prvLed_ON, ( signed char * ) "LED_ON",
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          signed char *
+In file included from ../src/freertos_hello_world.c:24:
+C:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9/export/EX9/sw/EX9/freertos10_xilinx_domain/bspinclude/include/task.h:331:27: note: expected 'const char * const' but argument is of type 'signed char *'
+  331 |        const char * const pcName, /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |        ~~~~~~~~~~~~~~~~~~~^~~~~~
+../src/freertos_hello_world.c:70:27: warning: pointer targets in passing argument 2 of 'xTaskCreate' differ in signedness [-Wpointer-sign]
+   70 |  xTaskCreate( prvLed_OFF, ( signed char * ) "LED_OFF",
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           signed char *
+In file included from ../src/freertos_hello_world.c:24:
+C:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9/export/EX9/sw/EX9/freertos10_xilinx_domain/bspinclude/include/task.h:331:27: note: expected 'const char * const' but argument is of type 'signed char *'
+  331 |        const char * const pcName, /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |        ~~~~~~~~~~~~~~~~~~~^~~~~~
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: EX9_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9/export/EX9/sw/EX9/freertos10_xilinx_domain/bsplib/lib -o "EX9_app.elf"  ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: EX9_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EX9_app.elf  |tee "EX9_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70912	   3344	  88768	 163024	  27cd0	EX9_app.elf
+'Finished building: EX9_app.elf.size'
+' '
+10:43:47 **** Incremental Build of configuration Debug for project EX9_app_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 59946 C:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9/export/EX9/EX9.xpfm freertos10_xilinx_domain C:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9_app_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9/export/EX9/EX9.xpfm --sys_config EX9 --bif C:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9_app_system/Debug/system.bif --bitstream C:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9_app/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9_app/Debug/EX9_app.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9_app/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9_app_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

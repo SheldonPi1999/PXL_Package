@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="MAIN" Id="{5ec854cf-ef37-45f5-928f-846df768ef16}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+    // trigger command execution for OpenWeatherMap samples
+    bGetOpenWeatherMap: BOOL;	
+	bGetContentResult: BOOL;
+	
+	sContent : STRING(511);
+	
+	eRequestType: STRING(INT#4);
+	RisingEdge: R_TRIG;
+	
+	FB_IotHttpRequest: FB_IotHttpRequest;
+	FB_IotHttpClient: FB_IotHttpClient :=(sHostName := 'observations.buienradar.nl', bKeepAlive := TRUE, tConnectionTimeout := T#10S);
+END_VAR
+
+VAR_OUTPUT
+	jsonDoc: SJsonValue;
+	jsonSerial: SJsonValue;
+	fbJson: FB_JsonDomParser;
+	humidity : LREAL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF NOT FB_IotHttpClient.bConfigured THEN 
+    FB_IotHttpClient.stTLS.sCA:= 'C:\Users\Kasper\Desktop\2.cer';
+    FB_IotHttpClient.nHostPort:= 443;
+    FB_IotHttpClient.stTLS.bNoServerCertCheck:= TRUE;
+	
+ELSIF FB_IotHttpClient.bConfigured THEN
+	bGetOpenWeatherMap := TRUE;
+END_IF
+
+RisingEdge(CLK:= bGetOpenWeatherMap);
+
+IF RisingEdge.Q THEN
+	IF FB_IotHttpRequest.SendRequest(sUri := '/1.0/actual/weatherstation/10006458?btc=202005061725&ak=66a3435a3dee4dd8b1e8351270ad40fc', fbClient := FB_IotHttpClient, eRequestType := ETcIotHttpRequestType.HTTP_Get, 0, 0, 0) THEN
+		bGetContentResult:= FB_IotHttpRequest.GetContent(pContent:= ADR(sContent), nContentSize:= SIZEOF(sContent), bSetNullTermination:= TRUE);
+	END_IF
+END_IF
+
+IF NOT(FB_IotHttpRequest.bBusy) THEN
+	jsonDoc := FB_IotHttpRequest.GetJsonDomContent(fbJson);
+	jsonSerial := fbJson.FindMember(jsonDoc, 'humidity');
+	humidity := fbJson.GetDouble(jsonSerial);
+END_IF
+
+FB_IotHttpClient.Execute();]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="27" Count="19" />
+      <LineId Id="48" Count="2" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

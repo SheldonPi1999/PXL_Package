@@ -1,0 +1,7 @@
+/*20_AXI_TIMER_IP*/
+the_ROM_image:
+{
+  [bootloader]<20_AXI_TIMER_IP/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

@@ -1,0 +1,7 @@
+/*14_CUSTOM_AXI_7_SEG*/
+the_ROM_image:
+{
+  [bootloader]<14_CUSTOM_AXI_7_SEG/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

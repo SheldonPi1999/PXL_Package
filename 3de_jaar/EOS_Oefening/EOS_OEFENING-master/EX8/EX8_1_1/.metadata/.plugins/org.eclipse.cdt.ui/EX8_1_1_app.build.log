@@ -1,0 +1,25 @@
+11:47:36 **** Build of configuration Debug for project EX8_1_1_app ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/KasperPC/Desktop/EOS_Examen/EX8/EX8_1_1/EX8_1_1_2/export/EX8_1_1_2/sw/EX8_1_1_2/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: EX8_1_1_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/KasperPC/Desktop/EOS_Examen/EX8/EX8_1_1/EX8_1_1_2/export/EX8_1_1_2/sw/EX8_1_1_2/freertos10_xilinx_domain/bsplib/lib -o "EX8_1_1_app.elf"  ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: EX8_1_1_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EX8_1_1_app.elf  |tee "EX8_1_1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  70944	   3344	  88784	 163072	  27d00	EX8_1_1_app.elf
+'Finished building: EX8_1_1_app.elf.size'
+' '
+
+11:47:36 Build Finished (took 537ms)
+

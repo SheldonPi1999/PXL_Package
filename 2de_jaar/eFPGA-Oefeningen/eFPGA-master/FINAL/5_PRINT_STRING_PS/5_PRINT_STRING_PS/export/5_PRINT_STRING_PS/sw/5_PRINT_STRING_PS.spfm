@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdx:platform sdx:vendor="xilinx.com"
+              sdx:library="sdx"
+              sdx:name="5_PRINT_STRING_PS"
+              sdx:version="1.0"
+              sdx:schemaVersion="1.0"
+              xmlns:sdx="http://www.xilinx.com/sdx">
+    <sdx:description>
+5_PRINT_STRING_PS
+    </sdx:description>
+    <sdx:systemConfigurations sdx:defaultConfiguration="5_PRINT_STRING_PS">
+        <sdx:configuration sdx:name="5_PRINT_STRING_PS"
+                           sdx:displayName="5_PRINT_STRING_PS"
+                           sdx:defaultProcessorGroup="standalone_domain"
+                           sdx:runtimes="cpp">
+            <sdx:description>5_PRINT_STRING_PS</sdx:description>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="5_PRINT_STRING_PS/boot/5_PRINT_STRING_PS.bif"
+                            sdx:readme="5_PRINT_STRING_PS/boot/generic.readme"
+                            sdx:qemuArguments="5_PRINT_STRING_PS/qemu/qemu_args.txt"
+                            />
+                <sdx:image sdx:name="standalone_domain"
+                            sdx:bif="5_PRINT_STRING_PS/boot/5_PRINT_STRING_PS.bif"
+                            sdx:readme="5_PRINT_STRING_PS/boot/generic.readme"
+                            sdx:qemuArguments="5_PRINT_STRING_PS/standalone_domain/qemu/qemu_args.txt"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="standalone_domain"
+                                sdx:displayName="standalone on ps7_cortexa9_0"
+                                sdx:cpuType="cortex-a9"
+                                sdx:cpuInstance="ps7_cortexa9_0">
+                <sdx:os sdx:name="standalone"
+                        sdx:displayName="standalone"
+                        sdx:bspLibraryPaths="5_PRINT_STRING_PS/standalone_domain/bsplib/lib"
+                        sdx:bspIncludePaths="5_PRINT_STRING_PS/standalone_domain/bspinclude/include"
+                        sdx:bspConfig="5_PRINT_STRING_PS/standalone_domain/system.mss"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+    </sdx:systemConfigurations>
+</sdx:platform>

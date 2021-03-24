@@ -1,0 +1,170 @@
+14:24:15 INFO  : Registering command handlers for Vitis TCF services
+14:24:15 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\KasperPC\Desktop\EOS_Examen\EX3\EX3.hw\temp_xsdb_launch_script.tcl
+14:24:15 INFO  : Platform repository initialization has completed.
+14:24:17 INFO  : XSCT server has started successfully.
+14:24:17 INFO  : Successfully done setting XSCT server connection channel  
+14:24:17 INFO  : plnx-install-location is set to ''
+14:24:17 INFO  : Successfully done setting workspace for the tool. 
+14:24:17 INFO  : Successfully done query RDI_DATADIR 
+14:25:20 INFO  : Result from executing command 'getProjects': UART_app
+14:25:20 INFO  : Result from executing command 'getPlatforms': 
+14:25:32 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART_app/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+14:25:36 INFO  : (SwPlaform) Successfully done setParamInSpec 
+14:25:37 INFO  : (SwPlaform) Successfully done setParamInSpec 
+14:25:38 INFO  : (SwPlatform) Successfully done update_mss 
+14:25:39 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART_app/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+14:25:46 ERROR : (XSDB Server)rm: kan lstat `*.o' niet uitvoeren: Invalid argument
+
+14:25:46 ERROR : (XSDB Server)make: *** [Makefile:42: clean] Error 1
+
+14:25:51 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART_app/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+14:25:54 INFO  : (SwPlaform) Successfully done setParamInSpec 
+14:25:54 INFO  : (SwPlaform) Successfully done setParamInSpec 
+14:25:55 INFO  : (SwPlatform) Successfully done update_mss 
+14:25:56 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART_app/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+14:26:29 INFO  : Result from executing command 'getProjects': UART_app
+14:26:29 INFO  : Result from executing command 'getPlatforms': UART_app|C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART_app/export/UART_app/UART_app.xpfm
+14:30:55 INFO  : Checking for BSP changes to sync application flags for project 'UART__app'...
+14:31:13 INFO  : Checking for BSP changes to sync application flags for project 'UART__app'...
+14:31:28 INFO  : Checking for BSP changes to sync application flags for project 'UART__app'...
+14:31:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:31:55 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:31:55 INFO  : 'jtag frequency' command is executed.
+14:31:56 INFO  : Context for 'APU' is selected.
+14:31:56 INFO  : System reset is completed.
+14:31:59 INFO  : 'after 3000' command is executed.
+14:31:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}' command is executed.
+14:32:01 INFO  : FPGA configured successfully with bitstream "C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/_ide/bitstream/design_1_wrapper.bit"
+14:32:01 INFO  : Context for 'APU' is selected.
+14:32:01 INFO  : Hardware design and registers information is loaded from 'C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART_app/export/UART_app/hw/design_1_wrapper.xsa'.
+14:32:01 INFO  : 'configparams force-mem-access 1' command is executed.
+14:32:01 INFO  : Context for 'APU' is selected.
+14:32:01 INFO  : Sourcing of 'C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/_ide/psinit/ps7_init.tcl' is done.
+14:32:02 INFO  : 'ps7_init' command is executed.
+14:32:02 INFO  : 'ps7_post_config' command is executed.
+14:32:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:32:02 INFO  : The application 'C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/Debug/UART__app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:32:02 INFO  : 'configparams force-mem-access 0' command is executed.
+14:32:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}
+fpga -file C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART_app/export/UART_app/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/Debug/UART__app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:32:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:32:03 INFO  : 'con' command is executed.
+14:32:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:32:03 INFO  : Launch script is exported to file 'C:\Users\KasperPC\Desktop\EOS_Examen\EX3\EX3.hw\.sdk\launch_scripts\single_application_debug\debugger_uart__app-default.tcl'
+14:33:54 INFO  : Disconnected from the channel tcfchan#5.
+14:33:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:33:55 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:33:55 INFO  : 'jtag frequency' command is executed.
+14:33:55 INFO  : Context for 'APU' is selected.
+14:33:55 INFO  : System reset is completed.
+14:33:58 INFO  : 'after 3000' command is executed.
+14:33:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}' command is executed.
+14:34:00 INFO  : FPGA configured successfully with bitstream "C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/_ide/bitstream/design_1_wrapper.bit"
+14:34:00 INFO  : Context for 'APU' is selected.
+14:34:00 INFO  : Hardware design and registers information is loaded from 'C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART_app/export/UART_app/hw/design_1_wrapper.xsa'.
+14:34:00 INFO  : 'configparams force-mem-access 1' command is executed.
+14:34:00 INFO  : Context for 'APU' is selected.
+14:34:00 INFO  : Sourcing of 'C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/_ide/psinit/ps7_init.tcl' is done.
+14:34:00 INFO  : 'ps7_init' command is executed.
+14:34:00 INFO  : 'ps7_post_config' command is executed.
+14:34:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:34:00 INFO  : The application 'C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/Debug/UART__app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:34:00 INFO  : 'configparams force-mem-access 0' command is executed.
+14:34:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}
+fpga -file C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART_app/export/UART_app/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/Debug/UART__app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:34:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:34:00 INFO  : 'con' command is executed.
+14:34:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:34:00 INFO  : Launch script is exported to file 'C:\Users\KasperPC\Desktop\EOS_Examen\EX3\EX3.hw\.sdk\launch_scripts\single_application_debug\debugger_uart__app-default.tcl'
+14:35:01 INFO  : Checking for BSP changes to sync application flags for project 'UART__app'...
+14:35:16 INFO  : Checking for BSP changes to sync application flags for project 'UART__app'...
+14:35:32 INFO  : Checking for BSP changes to sync application flags for project 'UART__app'...
+14:35:37 INFO  : Disconnected from the channel tcfchan#6.
+14:35:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:35:38 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:35:38 INFO  : 'jtag frequency' command is executed.
+14:35:38 INFO  : Context for 'APU' is selected.
+14:35:38 INFO  : System reset is completed.
+14:35:41 INFO  : 'after 3000' command is executed.
+14:35:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}' command is executed.
+14:35:42 INFO  : FPGA configured successfully with bitstream "C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/_ide/bitstream/design_1_wrapper.bit"
+14:35:42 INFO  : Context for 'APU' is selected.
+14:35:42 INFO  : Hardware design and registers information is loaded from 'C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART_app/export/UART_app/hw/design_1_wrapper.xsa'.
+14:35:43 INFO  : 'configparams force-mem-access 1' command is executed.
+14:35:43 INFO  : Context for 'APU' is selected.
+14:35:43 INFO  : Sourcing of 'C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/_ide/psinit/ps7_init.tcl' is done.
+14:35:43 INFO  : 'ps7_init' command is executed.
+14:35:43 INFO  : 'ps7_post_config' command is executed.
+14:35:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:35:43 INFO  : The application 'C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/Debug/UART__app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:35:43 INFO  : 'configparams force-mem-access 0' command is executed.
+14:35:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}
+fpga -file C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART_app/export/UART_app/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/KasperPC/Desktop/EOS_Examen/EX3/EX3.hw/UART__app/Debug/UART__app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:35:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:35:43 INFO  : 'con' command is executed.
+14:35:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:35:43 INFO  : Launch script is exported to file 'C:\Users\KasperPC\Desktop\EOS_Examen\EX3\EX3.hw\.sdk\launch_scripts\single_application_debug\debugger_uart__app-default.tcl'
+14:35:56 INFO  : Disconnected from the channel tcfchan#7.

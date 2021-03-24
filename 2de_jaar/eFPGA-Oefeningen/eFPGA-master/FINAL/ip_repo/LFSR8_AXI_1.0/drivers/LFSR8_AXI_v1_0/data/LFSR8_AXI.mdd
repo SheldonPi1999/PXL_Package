@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER LFSR8_AXI
+	OPTION supported_peripherals = (LFSR8_AXI);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = LFSR8_AXI;
+END DRIVER

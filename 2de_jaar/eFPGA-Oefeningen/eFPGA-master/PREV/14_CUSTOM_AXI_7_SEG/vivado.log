@@ -1,0 +1,221 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Jun  2 12:32:16 2020
+# Process ID: 7528
+# Current directory: C:/eFPGA/14_CUSTOM_AXI_7_SEG
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1152 C:\eFPGA\14_CUSTOM_AXI_7_SEG\14_CUSTOM_AXI_7_SEG.xpr
+# Log file: C:/eFPGA/14_CUSTOM_AXI_7_SEG/vivado.log
+# Journal file: C:/eFPGA/14_CUSTOM_AXI_7_SEG\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+create_peripheral xilinx.com user SEVEN_SEGMENT_DECODER 1.0 -dir C:/eFPGA/14_CUSTOM_AXI_7_SEG/../ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:SEVEN_SEGMENT_DECODER:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design -force [ipx::find_open_core xilinx.com:user:SEVEN_SEGMENT_DECODER:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:SEVEN_SEGMENT_DECODER:1.0]
+set_property  ip_repo_paths  C:/eFPGA/14_CUSTOM_AXI_7_SEG/../ip_repo/SEVEN_SEGMENT_DECODER_1.0 [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/eFPGA/ip_repo/SEVEN_SEGMENT_DECODER_1.0'.
+ipx::edit_ip_in_project -upgrade true -name edit_SEVEN_SEGMENT_DECODER_v1_0 -directory C:/eFPGA/14_CUSTOM_AXI_7_SEG/../ip_repo c:/eFPGA/ip_repo/SEVEN_SEGMENT_DECODER_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/eFPGA/ip_repo/SEVEN_SEGMENT_DECODER_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to c:/eFPGA/ip_repo/SEVEN_SEGMENT_DECODER_1.0/src C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.srcs/sources_1/new/VHDL_7_SEG.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/eFPGA/ip_repo/SEVEN_SEGMENT_DECODER_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/eFPGA/ip_repo/SEVEN_SEGMENT_DECODER_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/eFPGA/ip_repo/SEVEN_SEGMENT_DECODER_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/eFPGA/ip_repo/SEVEN_SEGMENT_DECODER_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core {c:\eFPGA\ip_repo\SEVEN_SEGMENT_DECODER_1.0\xilinx.com_user_SEVEN_SEGMENT_DECODER_1.0.zip} [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project
+update_ip_catalog -rebuild -repo_path c:/eFPGA/ip_repo/SEVEN_SEGMENT_DECODER_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/eFPGA/ip_repo/SEVEN_SEGMENT_DECODER_1.0'
+create_bd_design "design_1"
+Wrote  : <C:\eFPGA\14_CUSTOM_AXI_7_SEG\14_CUSTOM_AXI_7_SEG.srcs\sources_1\bd\design_1\design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1169.184 ; gain = 0.000
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/eFPGA/14_CUSTOM_AXI_7_SEG [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/eFPGA/14_CUSTOM_AXI_7_SEG'.
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/eFPGA/14_CUSTOM_AXI_7_SEG [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/eFPGA/14_CUSTOM_AXI_7_SEG'.
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/eFPGA/14_CUSTOM_AXI_7_SEG [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/eFPGA/14_CUSTOM_AXI_7_SEG'.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:SEVEN_SEGMENT_DECODER:1.0 SEVEN_SEGMENT_DECODER_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1} CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_GPIO_EMIO_GPIO_IO {1}] [get_bd_cells processing_system7_0]
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_cells processing_system7_0]
+make_bd_intf_pins_external  [get_bd_cells processing_system7_0]
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'make_bd_intf_pins_external  [get_bd_cells processing_system7_0]'
+INFO: [Common 17-17] undo 'make_bd_pins_external  [get_bd_cells processing_system7_0]'
+INFO: [Common 17-17] undo 'startgroup'
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins processing_system7_0/GPIO_0]
+endgroup
+set_property name GPIO [get_bd_intf_ports GPIO_0_0]
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1}] [get_bd_cells processing_system7_0]
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/SEVEN_SEGMENT_DECODER_0/S00_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins SEVEN_SEGMENT_DECODER_0/S00_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Slave segment </SEVEN_SEGMENT_DECODER_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C0_0000 [ 64K ]>
+startgroup
+make_bd_pins_external  [get_bd_pins SEVEN_SEGMENT_DECODER_0/enc_out]
+endgroup
+make_wrapper -files [get_files C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/sources_1/bd/design_1/design_1.bd] -top
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+Wrote  : <C:\eFPGA\14_CUSTOM_AXI_7_SEG\14_CUSTOM_AXI_7_SEG.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+make_wrapper: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1343.219 ; gain = 109.945
+add_files -norecurse C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+launch_runs impl_1 -jobs 24
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\eFPGA\14_CUSTOM_AXI_7_SEG\14_CUSTOM_AXI_7_SEG.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block SEVEN_SEGMENT_DECODER_0 .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+Exporting to file C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
+[Tue Jun  2 12:56:06 2020] Launched design_1_processing_system7_0_0_synth_1, design_1_SEVEN_SEGMENT_DECODER_0_0_synth_1, design_1_rst_ps7_0_50M_0_synth_1, design_1_auto_pc_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_SEVEN_SEGMENT_DECODER_0_0_synth_1: C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.runs/design_1_SEVEN_SEGMENT_DECODER_0_0_synth_1/runme.log
+design_1_rst_ps7_0_50M_0_synth_1: C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.runs/design_1_rst_ps7_0_50M_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.runs/design_1_auto_pc_0_synth_1/runme.log
+synth_1: C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.runs/synth_1/runme.log
+[Tue Jun  2 12:56:06 2020] Launched impl_1...
+Run output will be captured here: C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1419.965 ; gain = 48.992
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z007sclg225-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1594.098 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.296 . Memory (MB): peak = 2249.039 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.296 . Memory (MB): peak = 2249.039 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2249.039 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
+
+open_run: Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2427.719 ; gain = 954.516
+place_ports {enc_out_0[0]} L15
+place_ports {enc_out_0[1]} M15
+place_ports {enc_out_0[2]} L14
+place_ports {enc_out_0[3]} M14
+place_ports {enc_out_0[4]} K13
+place_ports {enc_out_0[5]} L13
+place_ports {enc_out_0[6]} N13
+place_ports {enc_out_0[7]} N14
+set_property IOSTANDARD LVCMOS33 [get_ports [list {enc_out_0[7]} {enc_out_0[6]} {enc_out_0[5]} {enc_out_0[4]} {enc_out_0[3]} {enc_out_0[2]} {enc_out_0[1]} {enc_out_0[0]}]]
+open_bd_design {C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/sources_1/bd/design_1/design_1.bd}
+place_ports {GPIO_tri_io[0]} E11
+set_property IOSTANDARD LVCMOS33 [get_ports [list {GPIO_tri_io[0]}]]
+file mkdir C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/constrs_1/new
+close [ open C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/constrs_1/new/XDC.xdc w ]
+add_files -fileset constrs_1 C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/constrs_1/new/XDC.xdc
+set_property target_constrs_file C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.srcs/constrs_1/new/XDC.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+[Tue Jun  2 13:01:37 2020] Launched synth_1...
+Run output will be captured here: C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.runs/synth_1/runme.log
+[Tue Jun  2 13:01:37 2020] Launched impl_1...
+Run output will be captured here: C:/eFPGA/14_CUSTOM_AXI_7_SEG/14_CUSTOM_AXI_7_SEG.runs/impl_1/runme.log
+write_hw_platform -fixed -force  -include_bit -file C:/eFPGA/14_CUSTOM_AXI_7_SEG/design_1_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: C:/eFPGA/14_CUSTOM_AXI_7_SEG/design_1_wrapper.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2019.2/data\embeddedsw) loading 0 seconds
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/eFPGA/14_CUSTOM_AXI_7_SEG/design_1_wrapper.xsa
+write_hw_platform: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2661.523 ; gain = 7.457
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  2 13:51:00 2020...

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="MAIN" Id="{6ef4fc20-940c-46ed-9f26-3d56df419a83}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+
+VAR_INPUT
+	bSetParameter : BOOL := TRUE;
+END_VAR
+
+VAR
+	FB_IotMqttClient : FB_IotMqttClient;
+	FB_IotMqttMessageQueue : FB_IotMqttMessageQueue;
+	FB_IotMqttMessage : FB_IotMqttMessage;
+	
+	bSubscribed    : BOOL;
+	sTopicSub      : STRING(255) := '$$SYS/broker/clients/connected';
+    {attribute 'TcEncoding':='UTF-8'}
+    sTopicRcv      : STRING(255);
+    {attribute 'TcEncoding':='UTF-8'}
+    sPayloadRcv    : STRING(5);
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bSetParameter THEN
+	FB_IotMqttClient.sHostName:= 'test.mosquitto.org';
+	FB_IotMqttClient.nHostPort:= 1883;
+	FB_IotMqttClient.ipMessageQueue:= FB_IotMqttMessageQueue;
+	bSetParameter:= FALSE;
+END_IF
+
+FB_IotMqttClient.Execute(TRUE);
+
+IF FB_IotMqttClient.bConnected THEN
+	IF NOT bSubscribed THEN
+		bSubscribed := FB_IotMqttClient.Subscribe(sTopic:=sTopicSub, eQoS:=TcIotMqttQos.AtMostOnceDelivery);
+	END_IF
+END_IF
+
+IF FB_IotMqttMessageQueue.nQueuedMessages > 0 THEN
+	IF FB_IotMqttMessageQueue.Dequeue(fbMessage:=FB_IotMqttMessage) THEN
+		FB_IotMqttMessage.GetTopic(pTopic:=ADR(sTopicRcv), nTopicSize:=SIZEOF(sTopicRcv) );
+		FB_IotMqttMessage.GetPayload(pPayload:=ADR(sPayloadRcv), nPayloadSize:=SIZEOF(sPayloadRcv), bSetNullTermination:=FALSE);
+	END_IF
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="26" Count="1" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="80" Count="1" />
+      <LineId Id="41" Count="1" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="101" Count="2" />
+      <LineId Id="108" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="113" Count="5" />
+      <LineId Id="111" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

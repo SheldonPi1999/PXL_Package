@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="EX_04" Id="{d3435c9c-c36f-4700-8900-aeb745a93ac9}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM EX_04
+VAR
+	Toggler: TP;
+	tijd: TOF;
+	
+	period : INT;
+	duty : INT;
+END_VAR
+
+VAR_INPUT
+	potentio_freq : INT;
+	potentio_duty : INT;
+END_VAR
+
+VAR_OUTPUT
+	LED: BOOL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Toggler(IN:= NOT tijd.Q, Q => LED);
+tijd(IN:= Toggler.Q);
+
+period := SCALING(input:=potentio_freq, imin:= 0, imax:= 32767, omin:= 500, omax:= 10000);
+duty := SCALING(input:=potentio_duty, imin:= 0, imax:= 32767, omin:= 0, omax:= 100);
+
+Toggler.PT := INT_TO_TIME(period*duty/100);
+tijd.PT := INT_TO_TIME(period*(100-duty)/100);]]></ST>
+    </Implementation>
+    <LineIds Name="EX_04">
+      <LineId Id="10" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="23" Count="2" />
+      <LineId Id="78" Count="0" />
+      <LineId Id="64" Count="0" />
+      <LineId Id="77" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,1310 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:40:23 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 14612
+License: Customer
+
+Current time: 	Wed Jun 03 11:18:31 CEST 2020
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 24
+
+Screen size: 3440x1440
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 332 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	KasperCodeDojo
+User home directory: C:/Users/KasperCodeDojo
+User working directory: C:/eFPGA/21_ROT_CUSTOM_IP
+User country: 	BE
+User language: 	nl
+User locale: 	nl_BE
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.2
+RDI_DATADIR: C:/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: C:/Users/KasperCodeDojo/AppData/Roaming/Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: C:/Users/KasperCodeDojo/AppData/Roaming/Xilinx/Vivado/2019.2/
+Vivado layouts directory: C:/Users/KasperCodeDojo/AppData/Roaming/Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/eFPGA/21_ROT_CUSTOM_IP/vivado.log
+Vivado journal file location: 	C:/eFPGA/21_ROT_CUSTOM_IP/vivado.jou
+Engine tmp dir: 	C:/eFPGA/21_ROT_CUSTOM_IP/.Xil/Vivado-14612-DESKTOP-AIIUJ62
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.2
+XILINX_SDK: C:/Xilinx/Vitis/2019.2
+XILINX_VITIS: C:/Xilinx/Vitis/2019.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 820 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: C:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 80 MB (+81781kb) [00:00:07]
+// [Engine Memory]: 796 MB (+683481kb) [00:00:07]
+// [GUI Memory]: 95 MB (+11488kb) [00:00:07]
+// [GUI Memory]: 119 MB (+19614kb) [00:00:07]
+// WARNING: HEventQueue.dispatchEvent() is taking  1382 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'. 
+// Project name: 21_ROT_CUSTOM_IP; location: C:/eFPGA/21_ROT_CUSTOM_IP; part: xc7z007sclg225-1
+dismissDialog("Open Project"); // bB (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 820 MB. GUI used memory: 59 MB. Current time: 6/3/20, 11:18:32 AM CEST
+// Elapsed time: 152 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Create Block Design]", 6, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_CREATE_NEW_DIAGRAM
+// aF (cr): Create Block Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aF)
+dismissDialog("Create Block Design"); // aF (cr)
+// TclEventType: LOAD_FEATURE
+// bB (cr):  Create Block Design : addNotify
+// Tcl Message: create_bd_design "design_1" 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Wrote  : <C:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.srcs\sources_1\bd\design_1\design_1.bd>  
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 913 MB (+80368kb) [00:02:48]
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// HMemoryUtils.trashcanNow. Engine heap size: 945 MB. GUI used memory: 61 MB. Current time: 6/3/20, 11:21:12 AM CEST
+// Tcl Message: create_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 979.980 ; gain = 92.723 
+dismissDialog("Create Block Design"); // bB (cr)
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, (String) null); // E (ho, cr)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "7"); // OverlayTextField (ay, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ZYNQ7 Processing System", 9, "ZYNQ7 Processing System", 0, false); // L (O, ResizableWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ZYNQ7 Processing System", 9); // L (O, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ZYNQ7 Processing System", 9, "ZYNQ7 Processing System", 0, false, false, false, false, false, true); // L (O, ResizableWindow) - Double Click
+// TclEventType: LOAD_FEATURE
+// bB (cr):  Add IP : addNotify
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bB (cr)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 348, 154, 1022, 889, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_BLOCK_AUTOMATION, "Run Block Automation"); // h (cu, cr)
+// [Engine Memory]: 959 MB (+267kb) [00:03:06]
+// w (cr): Run Block Automation: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (w)
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Run Block Automation"); // w (cr)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 481, 592, 1022, 889, false, false, false, true, false); // go (i, cr) - Popup Trigger
+// bB (cr):  Run Block Automation : addNotify
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0] 
+// HMemoryUtils.trashcanNow. Engine heap size: 968 MB. GUI used memory: 63 MB. Current time: 6/3/20, 11:21:32 AM CEST
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Run Block Automation"); // bB (cr)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 351, 242, 1022, 889, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cr)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ai (ao, cr)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "Axi"); // OverlayTextField (ay)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD, "Create and Package New IP..."); // ai (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD
+// Q (cr): Create and Package New IP: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, Q)
+selectRadioButton(PAResourceItoN.NewIpWizard_CREATE_NEW_AXI4_IP_CREATE_AXI4, "Create a new AXI4 peripheral. Create an AXI4 IP, driver, software test application, IP Integrator AXI4 VIP simulation and debug demonstration design."); // b (a, Q)
+selectButton("NEXT", "Next >"); // JButton (j, Q)
+setText(PAResourceItoN.NewIpWizard_NAME_MYIP, "ROTARY_ENCODER", true); // ac (Q)
+selectButton("NEXT", "Next >"); // JButton (j, Q)
+selectButton("NEXT", "Next >"); // JButton (j, Q)
+selectRadioButton(PAResourceItoN.NewIpWizard_EDIT_IP, "Edit IP"); // a (Q)
+selectButton("FINISH", "Finish"); // JButton (j, Q)
+// 'q' command handler elapsed time: 15 seconds
+dismissDialog("Create and Package New IP"); // Q (cr)
+// Tcl Message: create_peripheral xilinx.com user ROTARY_ENCODER 1.0 -dir C:/eFPGA/21_ROT_CUSTOM_IP/../ip_repo 
+// Tcl Message: add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:ROTARY_ENCODER:1.0] 
+// TclEventType: PACKAGER_OBJECT_ADD
+// Tcl Message: generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:ROTARY_ENCODER:1.0] 
+// Tcl Message: write_peripheral [ipx::find_open_core xilinx.com:user:ROTARY_ENCODER:1.0] 
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  C:/eFPGA/21_ROT_CUSTOM_IP/../ip_repo/ROTARY_ENCODER_1.0 [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// bB (cr):  Create Peripheral IP : addNotify
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/eFPGA/ip_repo/ROTARY_ENCODER_1.0'. 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name edit_ROTARY_ENCODER_v1_0 -directory C:/eFPGA/21_ROT_CUSTOM_IP/../ip_repo c:/eFPGA/ip_repo/ROTARY_ENCODER_1.0/component.xml 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 1,009 MB (+2213kb) [00:03:44]
+// WARNING: HEventQueue.dispatchEvent() is taking  1171 ms.
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,009 MB. GUI used memory: 77 MB. Current time: 6/3/20, 11:22:08 AM CEST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// [GUI Memory]: 131 MB (+6448kb) [00:03:46]
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/eFPGA/ip_repo/ROTARY_ENCODER_1.0'. INFO: [IP_Flow 19-795] Syncing license key meta-data 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+dismissDialog("Create Peripheral IP"); // bB (cr)
+// [GUI Memory]: 146 MB (+8823kb) [00:03:48]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Add Sources]", 2, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cr): Add Sources: addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "ROTARY_ENCODER"); // ac (Q, F)
+selectButton(PAResourceAtoD.CreateSrcFileDialog_SPECIFY_FILE_DIRECTORY, (String) null); // t (an, F)
+// Elapsed time: 19 seconds
+setFolderChooser("C:/eFPGA/ip_repo");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 34 seconds
+dismissDialog("Add Sources"); // c (cr)
+// Tcl Message: close [ open C:/eFPGA/ip_repo/ROTARY_ENCODER.vhd w ] 
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/eFPGA/ip_repo/ROTARY_ENCODER.vhd 
+// I (cr): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton("OptionPane.button", "Yes"); // JButton (A, H)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // I (cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER(Behavioral) (ROTARY_ENCODER.vhd)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER(Behavioral) (ROTARY_ENCODER.vhd)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER(Behavioral) (ROTARY_ENCODER.vhd)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 83 MB. Current time: 6/3/20, 11:22:57 AM CEST
+selectCodeEditor("ROTARY_ENCODER.vhd", 0, 364); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 221, 183); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 19, 84); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 3, 69); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 15, 79); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 57, 71); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 57, 71); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 61, 69); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 38 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER.vhd", 205, 115); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 59 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 207, 102); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 54, 249); // ch (w, cr)
+// Elapsed time: 35 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 60, 301); // ch (w, cr)
+// Elapsed time: 31 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 50, 222); // ch (w, cr)
+// Elapsed time: 27 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 55, 301); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 57, 314); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 80, 302); // ch (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("ROTARY_ENCODER.vhd", 84, 292); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER.vhd", 134, 384); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 115, 271); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 107, 279); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 173, 293); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 62, 293); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER.vhd", 101, 276); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 126, 278); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER.vhd", 108, 275); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 87, 339); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER.vhd", 100, 279); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 187 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 121, 365); // ch (w, cr)
+// Elapsed time: 164 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 233, 322); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 101, 231); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 99, 239); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 95, 276); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 30 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 224, 131); // ch (w, cr)
+// Elapsed time: 82 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 118, 321); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 21 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 89, 281); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 95, 292); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 80, 325); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 80, 320); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 78, 323, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("ROTARY_ENCODER.vhd", 31, 315); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 40, 317); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 81, 338); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 78, 338, false, false, false, false, true); // ch (w, cr) - Double Click
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER.vhd", 232, 505); // ch (w, cr)
+// Elapsed time: 34 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 102, 374); // ch (w, cr)
+// Elapsed time: 18 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 205, 303); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER.vhd", 224, 484); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 197, 303); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER.vhd", 118, 346); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER.vhd", 140, 249); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 193, 299); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 196, 331); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 129, 302); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 120, 322); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 44, 332); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 114, 343); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 115, 342, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("ROTARY_ENCODER.vhd", 123, 327); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 124, 419); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 162, 248); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER.vhd", 95, 404); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 52, 241); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 54, 221); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER.vhd", 31, 303); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 39, 312); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 243, 453); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 190 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (O, cr)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// I (cr): Settings: addNotify
+// [Engine Memory]: 1,087 MB (+28948kb) [00:23:08]
+// WARNING: HEventQueue.dispatchEvent() is taking  1611 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,115 MB. GUI used memory: 92 MB. Current time: 6/3/20, 11:41:32 AM CEST
+expandTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP]", 6); // L (E, I)
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP, Packager]", 8, false); // L (E, I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+dismissDialog("Settings"); // I (cr)
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER(Behavioral) (ROTARY_ENCODER.vhd)]", 2, false); // B (F, cr)
+// [GUI Memory]: 162 MB (+9632kb) [00:23:30]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER(Behavioral) (ROTARY_ENCODER.vhd)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("ROTARY_ENCODER.vhd", 195, 344); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 195, 239); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 90, 135); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 183, 152); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 83, 144); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 180, 131); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 163, 173); // ch (w, cr)
+typeControlKey((HResource) null, "ROTARY_ENCODER.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 527, 186); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 215, 118); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 215, 118, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("ROTARY_ENCODER.vhd", 216, 120); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 297, 136); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 305, 135); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 113, 139); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 136, 160); // ch (w, cr)
+typeControlKey((HResource) null, "ROTARY_ENCODER.vhd", 'c'); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 404, 305); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 196, 286); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 217, 290); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 211, 277); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 223, 273); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 217, 276); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER.vhd", 210, 474); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 373, 120); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 127, 167); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 129, 120); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 155, 176); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd", 159, 172, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "ROTARY_ENCODER.vhd", 'c'); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER(Behavioral) (ROTARY_ENCODER.vhd)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER(Behavioral) (ROTARY_ENCODER.vhd)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER_v1_0(arch_imp) (ROTARY_ENCODER_v1_0.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER_v1_0(arch_imp) (ROTARY_ENCODER_v1_0.vhd)]", 1); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER_v1_0(arch_imp) (ROTARY_ENCODER_v1_0.vhd), ROTARY_ENCODER_v1_0_S00_AXI_inst : ROTARY_ENCODER_v1_0_S00_AXI(arch_imp) (ROTARY_ENCODER_v1_0_S00_AXI.vhd)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER_v1_0(arch_imp) (ROTARY_ENCODER_v1_0.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER_v1_0(arch_imp) (ROTARY_ENCODER_v1_0.vhd)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER_v1_0(arch_imp) (ROTARY_ENCODER_v1_0.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER_v1_0(arch_imp) (ROTARY_ENCODER_v1_0.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER(Behavioral) (ROTARY_ENCODER.vhd)]", 3, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER_v1_0(arch_imp) (ROTARY_ENCODER_v1_0.vhd), ROTARY_ENCODER_v1_0_S00_AXI_inst : ROTARY_ENCODER_v1_0_S00_AXI(arch_imp) (ROTARY_ENCODER_v1_0_S00_AXI.vhd)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER_v1_0(arch_imp) (ROTARY_ENCODER_v1_0.vhd), ROTARY_ENCODER_v1_0_S00_AXI_inst : ROTARY_ENCODER_v1_0_S00_AXI(arch_imp) (ROTARY_ENCODER_v1_0_S00_AXI.vhd)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER_v1_0(arch_imp) (ROTARY_ENCODER_v1_0.vhd), ROTARY_ENCODER_v1_0_S00_AXI_inst : ROTARY_ENCODER_v1_0_S00_AXI(arch_imp) (ROTARY_ENCODER_v1_0_S00_AXI.vhd)]", 2, false); // B (F, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 76, 464); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 91, 445); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 65, 470); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 57, 487); // ch (w, cr)
+typeControlKey((HResource) null, "ROTARY_ENCODER_v1_0_S00_AXI.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 177, 610); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 10, 477); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 36 seconds
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 68, 505); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 33, 469); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 201, 501); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 126, 612); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 184, 599); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 24 seconds
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 121, 318); // ch (w, cr)
+typeControlKey((HResource) null, "ROTARY_ENCODER_v1_0_S00_AXI.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 163, 432); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 82, 315); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 30, 428); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 104, 309); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 267, 325); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 226, 414); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 18 seconds
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 117, 308); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 148, 367); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 105, 352); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 102, 348); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 114, 349); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 112, 332); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 110, 324); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 111, 321); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 388, 338); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 387, 344); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 20 seconds
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 161, 447); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 261, 457); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 295, 468); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 31 seconds
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 59, 481); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 219, 530); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 392, 454); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 47, 791); // ch (w, cr)
+typeControlKey((HResource) null, "ROTARY_ENCODER_v1_0_S00_AXI.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 0, 730); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 31, 723); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 160, 826); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 76, 736); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 112, 759); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 246, 782); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 234, 782); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 264, 780); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 233, 772); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 233, 771, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 227, 772); // ch (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 119, 775); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 284, 852); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 136, 793); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 82, 753); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 33 seconds
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 216, 680); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 216, 677, false, false, false, false, true); // ch (w, cr) - Double Click
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER_v1_0_S00_AXI.vhd", 129, 814); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER_v1_0(arch_imp) (ROTARY_ENCODER_v1_0.vhd)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER_v1_0(arch_imp) (ROTARY_ENCODER_v1_0.vhd)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 110, 339); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 103, 319); // ch (w, cr)
+typeControlKey((HResource) null, "ROTARY_ENCODER_v1_0.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 86, 331); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 92, 357); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 98, 349); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 150, 403); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 94, 384); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 64, 316); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 69, 381); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 69, 381); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 15 seconds
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 114, 284); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "ROTARY_ENCODER_v1_0.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 63, 352); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 133, 404); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 108, 303); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 108, 303); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 78, 349); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 395, 332); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 107, 451); // ch (w, cr)
+typeControlKey((HResource) null, "ROTARY_ENCODER_v1_0.vhd", 'v'); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 149, 585); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 146, 598); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 161, 590); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 72, 491); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 69, 504); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 63, 532); // ch (w, cr)
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 113, 498); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 84, 474); // ch (w, cr)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 18 seconds
+selectCodeEditor("ROTARY_ENCODER_v1_0.vhd", 234, 475); // ch (w, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Edit Packaged IP]", 5, false); // u (O, cr)
+// bB (cr):  Open Project Manager : addNotify
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+dismissDialog("Open Project Manager"); // bB (cr)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // ar (O, cr)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from File Groups Wizard"); // h (M, cr)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes files [ipx::current_core] 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (O, cr)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // h (M, cr)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'. 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // ar (O, cr)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (O, cr)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_IP_THAT_REQUIRE, "IP has been modified."); // h (M, cr)
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cr)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 2 [ipx::current_core] 
+// Tcl Message: ipx::update_source_project_archive -component [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// Tcl Message: ipx::check_integrity -quiet [ipx::current_core] 
+// Tcl Message: ipx::archive_core {c:\eFPGA\ip_repo\ROTARY_ENCODER_1.0\xilinx.com_user_ROTARY_ENCODER_1.0.zip} [ipx::current_core] 
+// a (cr): Critical Messages: addNotify
+// TclEventType: FILE_SET_CHANGE
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[IP_Flow 19-5330] Component Referenced File 'c:/eFPGA/ip_repo/ROTARY_ENCODER.vhd' is outside of Component Directory: cannot archive the component.", 0); // b (F, a)
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[IP_Flow 19-5330] Component Referenced File 'c:/eFPGA/ip_repo/ROTARY_ENCODER.vhd' is outside of Component Directory: cannot archive the component.", 0, false, false, false, false, true); // b (F, a) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Critical Messages"); // a (cr)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 20 seconds
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cr)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 3 [ipx::current_core] 
+// Tcl Message: ipx::update_source_project_archive -component [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// Tcl Message: ipx::check_integrity -quiet [ipx::current_core] 
+// Tcl Message: ipx::archive_core {c:\eFPGA\ip_repo\ROTARY_ENCODER_1.0\xilinx.com_user_ROTARY_ENCODER_1.0.zip} [ipx::current_core] 
+// a (cr): Critical Messages: addNotify
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Critical Messages"); // a (cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER_v1_0(arch_imp) (ROTARY_ENCODER_v1_0.vhd)]", 1); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER_v1_0(arch_imp) (ROTARY_ENCODER_v1_0.vhd), ROTARY_ENCODER_v1_0_S00_AXI_inst : ROTARY_ENCODER_v1_0_S00_AXI(arch_imp) (ROTARY_ENCODER_v1_0_S00_AXI.vhd), Core1 : ROTARY_ENCODER(Behavioral) (ROTARY_ENCODER.vhd)]", 3, false); // B (F, cr)
+// [GUI Memory]: 174 MB (+3510kb) [00:32:04]
+selectButton(PAResourceQtoS.SrcFilePropPanels_TYPE, (String) null); // t (ci, cr)
+selectButton(PAResourceQtoS.SrcFilePropPanels_TYPE, (String) null); // t (ci, cr)
+selectButton(PAResourceQtoS.SrcFilePropPanels_TYPE, (String) null); // t (ci, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ROTARY_ENCODER_v1_0(arch_imp) (ROTARY_ENCODER_v1_0.vhd), ROTARY_ENCODER_v1_0_S00_AXI_inst : ROTARY_ENCODER_v1_0_S00_AXI(arch_imp) (ROTARY_ENCODER_v1_0_S00_AXI.vhd), Core1 : ROTARY_ENCODER(Behavioral) (ROTARY_ENCODER.vhd)]", 3, false, false, false, false, true, false); // B (F, cr) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_REPLACE_FILE, "Replace File..."); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_SRC_REPLACE_FILE
+setFileChooser("C:/eFPGA/ip_repo/ROTARY_ENCODER_1.0/src/ROTARY_ENCODER.vhd");
+// 'dI' command handler elapsed time: 6 seconds
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_files -from_files C:/eFPGA/ip_repo/ROTARY_ENCODER_1.0/src/ROTARY_ENCODER.vhd -to_files C:/eFPGA/ip_repo/ROTARY_ENCODER.vhd -filesets [get_filesets *] 
+// Tcl Message: INFO: [filemgmt 20-762] Replacing file 'C:/eFPGA/ip_repo/ROTARY_ENCODER.vhd' with file 'C:/eFPGA/ip_repo/ROTARY_ENCODER_1.0/src/ROTARY_ENCODER.vhd'. 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // ar (O, cr)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from File Groups Wizard"); // h (M, cr)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes files [ipx::current_core] 
+selectButton(PAResourceCommand.PACommandNames_PACKAGER_ADD_FILE_GROUP, "Package IP_packager_add_file_group"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_PACKAGER_ADD_FILE_GROUP
+// a (cr): Add File Group: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,140 MB. GUI used memory: 116 MB. Current time: 6/3/20, 11:50:42 AM CEST
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (a)
+// [Engine Memory]: 1,142 MB (+410kb) [00:32:19]
+dismissDialog("Add File Group"); // a (cr)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (O, cr)
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cr)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 4 [ipx::current_core] 
+// Tcl Message: ipx::update_source_project_archive -component [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// Tcl Message: ipx::check_integrity -quiet [ipx::current_core] 
+// Tcl Message: ipx::archive_core {c:\eFPGA\ip_repo\ROTARY_ENCODER_1.0\xilinx.com_user_ROTARY_ENCODER_1.0.zip} [ipx::current_core] 
+// bB (cr):  Package IP : addNotify
+selectButton("OptionPane.button", "Yes"); // JButton (A, G)
+// Tcl Message: ipx::move_temp_component_back -component [ipx::current_core] 
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,145 MB. GUI used memory: 112 MB. Current time: 6/3/20, 11:50:47 AM CEST
+// Tcl Message: close_project 
+dismissDialog("Package IP"); // bB (cr)
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild -repo_path c:/eFPGA/ip_repo/ROTARY_ENCODER_1.0 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/eFPGA/ip_repo/ROTARY_ENCODER_1.0' 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 301, 116, 1022, 889, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+// bB (SwingUtilities.SharedOwnerFrame):  Open IP Catalog : addNotify
+dismissDialog("Open IP Catalog"); // bB (SwingUtilities.SharedOwnerFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (O, cr)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// I (cr): Settings: addNotify
+expandTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP]", 6); // L (E, I)
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP, Repository]", 7, false); // L (E, I)
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // E (f, I)
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  {} [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: CREATE_IP_CATALOG
+// [GUI Memory]: 187 MB (+4182kb) [00:32:38]
+selectButton(PAResourceQtoS.SettingsProjectIPRepositoryPage_ADD_REPOSITORY, "Add Repository"); // E (f, I)
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+selectButton(PAResourceQtoS.SettingsProjectIPRepositoryPage_ADD_REPOSITORY, "Add Repository"); // E (f, I)
+// Elapsed time: 21 seconds
+setFolderChooser("C:/eFPGA/21_ROT_CUSTOM_IP/ip_repo");
+// TclEventType: PROJECT_CHANGE
+// [Engine Memory]: 1,201 MB (+2479kb) [00:33:01]
+// Tcl Message: set_property  ip_repo_paths  C:/eFPGA/21_ROT_CUSTOM_IP/ip_repo [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/eFPGA/21_ROT_CUSTOM_IP/ip_repo'. 
+// c (I): Add Repository: addNotify
+expandTree(RDIResource.AddRepositoryInfoDialog_REPOSITORY_TREE, "[root, c:/eFPGA/21_ROT_CUSTOM_IP/ip_repo, <html>IPs<span style='color: rgb(128, 128, 128)'>&nbsp;(1)</span></html>]", 1); // i (O, c)
+selectButton(RDIResource.AddRepositoryInfoDialog_OK, "OK"); // a (c)
+dismissDialog("Add Repository"); // c (I)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,265 MB. GUI used memory: 121 MB. Current time: 6/3/20, 11:51:27 AM CEST
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (I)
+// [Engine Memory]: 1,265 MB (+3851kb) [00:33:04]
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+dismissDialog("Settings"); // I (cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bB (cr):  Open Block Design : addNotify
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/design_1.bd} 
+dismissDialog("Open Block Design"); // bB (cr)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 371, 186, 1022, 889, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ai (ao, cr)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "RP"); // OverlayTextField (ay, ResizableWindow)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "ROT"); // OverlayTextField (ay, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ROTARY_ENCODER_v1.0", 4, "ROTARY_ENCODER_v1.0", 0, false); // L (O, ResizableWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ROTARY_ENCODER_v1.0", 4); // L (O, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ROTARY_ENCODER_v1.0", 4, "ROTARY_ENCODER_v1.0", 0, false, false, false, false, false, true); // L (O, ResizableWindow) - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:user:ROTARY_ENCODER:1.0 ROTARY_ENCODER_0 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// O (cr):  Re-customize IP : addNotify
+// r (cr): Re-customize IP: addNotify
+// cl (r): Configuration Presets: addNotify
+dismissDialog("Re-customize IP"); // O (cr)
+selectButton("PS-PL Configuration", "PS-PL Configuration"); // k (ch, r)
+expandTreeTable(PAResourceEtoH.GenSettingTreeTablePanel_GEN_SETTING_TREE_TABLE, "GP Slave AXI Interface ; GP Slave AXI Interface ; GP Slave AXI Interface", 2); // aA (O, r)
+expandTreeTable(PAResourceEtoH.GenSettingTreeTablePanel_GEN_SETTING_TREE_TABLE, "AXI Non Secure Enablement  ; 0 ; Enable AXI Non Secure Transaction", 1); // aA (O, r)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,301 MB. GUI used memory: 135 MB. Current time: 6/3/20, 11:51:47 AM CEST
+selectTreeTable(PAResourceEtoH.GenSettingTreeTablePanel_GEN_SETTING_TREE_TABLE, "GP Master AXI Interface ; GP Master AXI Interface ; GP Master AXI Interface", 2, "GP Master AXI Interface", 0, true); // aA (O, r) - Node
+expandTreeTable(PAResourceEtoH.GenSettingTreeTablePanel_GEN_SETTING_TREE_TABLE, "GP Master AXI Interface ; GP Master AXI Interface ; GP Master AXI Interface", 2); // aA (O, r)
+selectTreeTable(PAResourceEtoH.GenSettingTreeTablePanel_GEN_SETTING_TREE_TABLE, "M AXI GP0 interface ; 0 ; Enables General purpose AXI master interface 0", 3, "0", 1, true); // aA (O, r) - Node
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// Tcl Command: 'set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1}] [get_bd_cells processing_system7_0]'
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1}] [get_bd_cells processing_system7_0] 
+// Tcl Message: endgroup 
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // h (cu, cr)
+// w (cr): Run Connection Automation: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (w)
+dismissDialog("Run Connection Automation"); // w (cr)
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/ROTARY_ENCODER_0/S00_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins ROTARY_ENCODER_0/S00_AXI] 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// bB (cr):  Run Connection Automation : addNotify
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI 
+// Tcl Message: Slave segment </ROTARY_ENCODER_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C0_0000 [ 64K ]> 
+dismissDialog("Run Connection Automation"); // bB (cr)
+// Elapsed time: 10 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 289, 290, 1022, 889, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins ROTARY_ENCODER_0/ROT_VAL] 
+// Tcl Message: endgroup 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+// ab (cr): Specify Top Module: addNotify
+// Elapsed time: 10 seconds
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+// 'c' command handler elapsed time: 12 seconds
+dismissDialog("Specify Top Module"); // ab (cr)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1 (design_1.bd)]", 1, false, false, false, false, true, false); // B (F, cr) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_CREATE_TOP_HDL, "Create HDL Wrapper..."); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_CREATE_TOP_HDL
+// a (cr): Create HDL Wrapper: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (a)
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Create HDL Wrapper"); // a (cr)
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: make_wrapper -files [get_files C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/design_1.bd] -top 
+// bB (cr):  Create HDL Wrapper : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : <C:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.srcs\sources_1\bd\design_1\design_1.bd>  Wrote  : <C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// [Engine Memory]: 1,396 MB (+71050kb) [00:34:20]
+// Tcl Message: VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/synth/design_1.vhd VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/sim/design_1.vhd VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd 
+// Tcl Message: make_wrapper: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1437.281 ; gain = 118.477 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd 
+// a (cr): Critical Messages: addNotify
+dismissDialog("Create HDL Wrapper"); // bB (cr)
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.. Please check your design and connect them as needed: . /ROTARY_ENCODER_0/RT1. /ROTARY_ENCODER_0/RT2", 0); // b (F, a)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,411 MB. GUI used memory: 137 MB. Current time: 6/3/20, 11:52:47 AM CEST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 22 seconds
+dismissDialog("Critical Messages"); // a (cr)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 107, 270, 1022, 889, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins ROTARY_ENCODER_0/RT1] 
+// Tcl Message: endgroup 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 112, 285, 1022, 889, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 107, 293, 1022, 889, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins ROTARY_ENCODER_0/RT2] 
+// Tcl Message: endgroup 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// al (cr): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_CANCEL, "Cancel"); // a (al)
+dismissDialog("Save Project"); // al (cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// al (cr): Save Project: addNotify
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+// bB (cr):  Save Constraints : addNotify
+dismissDialog("Save Project"); // al (cr)
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : <C:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.srcs\sources_1\bd\design_1\design_1.bd>  Wrote  : <C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// bB (cr):  Starting Design Runs : addNotify
+dismissDialog("Save Constraints"); // bB (cr)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: launch_runs impl_1 -jobs 24 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// [GUI Memory]: 198 MB (+1733kb) [00:35:02]
+// Tcl Message: Wrote  : <C:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.srcs\sources_1\bd\design_1\design_1.bd>  VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/synth/design_1.vhd VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/sim/design_1.vhd VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,448 MB. GUI used memory: 138 MB. Current time: 6/3/20, 11:53:32 AM CEST
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block ROTARY_ENCODER_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M . 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh Generated Block Design Tcl file C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl Generated Hardware Definition File C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/synth/design_1.hwdef 
+// Tcl Message: INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1473.355 ; gain = 36.074 
+// 'c' command handler elapsed time: 26 seconds
+// Elapsed time: 23 seconds
+dismissDialog("Starting Design Runs"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,486 MB. GUI used memory: 159 MB. Current time: 6/3/20, 11:54:12 AM CEST
+// [Engine Memory]: 1,486 MB (+21463kb) [00:35:56]
+// [GUI Memory]: 215 MB (+7765kb) [00:35:58]
+// Elapsed time: 34 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL (aI, cr)
+selectCheckBox(PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String) null, false); // g (aR, cr): FALSE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // g (aR, cr): FALSE
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g (aR, cr): FALSE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, design_1, design_1_ROTARY_ENCODER_0_0_synth_1, [Synth 8-26] attribute 'event not implemented [c:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/ipshared/9544/src/ROTARY_ENCODER.vhd:16]. ]", 4, true); // ah (O, cr) - Node
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, design_1, design_1_ROTARY_ENCODER_0_0_synth_1, [Synth 8-26] attribute 'event not implemented [c:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/ipshared/9544/src/ROTARY_ENCODER.vhd:16]. ]", 4, true); // ah (O, cr) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;c:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.srcs\sources_1\bd\design_1\ipshared\9544\src\ROTARY_ENCODER.vhd;-;;-;16;-;line;-;16;-;;-;16;-;"); // ah (O, cr)
+// [GUI Memory]: 228 MB (+2381kb) [00:36:06]
+selectCodeEditor("ROTARY_ENCODER.vhd", 124, 262); // C (w, cr)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 21 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd", 226, 18); // C (w, cr)
+// Elapsed time: 161 seconds
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_IP_CATALOG, "Refresh IP Catalog"); // h (ds, cr)
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild -scan_changes 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// TclEventType: IP_SUMMARY_RESULTS
+// bB (cr):  Refresh IP Catalog : addNotify
+// Tcl Message: report_ip_status -name ip_status 
+dismissDialog("Refresh IP Catalog"); // bB (cr)
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_IP_CATALOG, "Refresh IP Catalog"); // h (ds, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (O, cr)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// I (cr): Settings: addNotify
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // E (f, I)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  {} [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+selectButton(PAResourceQtoS.SettingsProjectIPRepositoryPage_ADD_REPOSITORY, "Add Repository"); // E (f, I)
+setFolderChooser("C:/eFPGA");
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  C:/eFPGA [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// bB (cr):  Refresh All IP Repositories : addNotify
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/eFPGA'. 
+// c (I): Add Repository: addNotify
+selectTree(RDIResource.AddRepositoryInfoDialog_REPOSITORY_TREE, "[root, c:/eFPGA]", 0, true); // i (O, c) - Node
+expandTree(RDIResource.AddRepositoryInfoDialog_REPOSITORY_TREE, "[root, c:/eFPGA, <html>IPs<span style='color: rgb(128, 128, 128)'>&nbsp;(10)</span></html>]", 1); // i (O, c)
+selectButton(RDIResource.AddRepositoryInfoDialog_OK, "OK"); // a (c)
+dismissDialog("Add Repository"); // c (I)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+dismissDialog("Settings"); // I (cr)
+selectButton(PAResourceQtoS.SystemTab_SHOW_IP_STATUS, "Show IP Status"); // h (ds, cr)
+selectButton(PAResourceQtoS.SystemTab_SHOW_IP_STATUS, "Show IP Status"); // h (ds, cr)
+selectButton(PAResourceQtoS.SystemTab_SHOW_IP_STATUS, "Show IP Status"); // h (ds, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bB (cr):  Open Block Design : addNotify
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/design_1.bd} 
+dismissDialog("Open Block Design"); // bB (cr)
+selectTreeTable(PAResourceItoN.IPStatusTablePanel_IP_STATUS_TABLE, "design_1 ; false ;  ; design_1 ;  ;  ;  ;  ;  ; ", 0, "false", 1, true); // B (O, cr) - Node
+selectTreeTableHeader(PAResourceItoN.IPStatusTablePanel_IP_STATUS_TABLE, "Upgrade", 1); // B (O, cr)
+selectButton(PAResourceQtoS.SystemTab_SHOW_IP_STATUS, "Show IP Status"); // h (ds, cr)
+selectButton(PAResourceQtoS.SystemTab_SHOW_IP_STATUS, "Show IP Status"); // h (ds, cr)
+selectButton(PAResourceQtoS.SystemTab_SHOW_IP_STATUS, "Show IP Status"); // h (ds, cr)
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (g, cr)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// al (cr): Upgrade IP: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (al)
+// TclEventType: IP_LOCK_CHANGE
+dismissDialog("Upgrade IP"); // al (cr)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property LOCK_UPGRADE 1 [get_bd_cells /ROTARY_ENCODER_0] 
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // h (ds, cr)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (g, cr)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property LOCK_UPGRADE 0 [get_bd_cells /ROTARY_ENCODER_0] 
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// bB (cr):  Upgrade IP : addNotify
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: upgrade_ip -vlnv xilinx.com:user:ROTARY_ENCODER:1.0 [get_ips  design_1_ROTARY_ENCODER_0_0] -log ip_upgrade.log 
+// Tcl Message: Upgrading 'C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/design_1.bd' 
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded design_1_ROTARY_ENCODER_0_0 (ROTARY_ENCODER_v1.0 1.0) from revision 4 to revision 5 
+// Tcl Message: Wrote  : <C:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.srcs\sources_1\bd\design_1\design_1.bd>  Wrote  : <C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// Tcl Message: INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/eFPGA/21_ROT_CUSTOM_IP/ip_upgrade.log'. 
+// Tcl Message: export_ip_user_files -of_objects [get_ips design_1_ROTARY_ENCODER_0_0] -no_script -sync -force -quiet 
+// aI (cr): Generate Output Products: addNotify
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_CLOSE_DIALOG_UNSAVED_CHANGES_WILL, "Skip"); // a (aI)
+dismissDialog("Generate Output Products"); // aI (cr)
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // h (ds, cr)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bB (cr):  Resetting Runs : addNotify
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_1 
+// bB (cr):  Starting Design Runs : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: launch_runs impl_1 -jobs 24 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Wrote  : <C:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.srcs\sources_1\bd\design_1\design_1.bd>  VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/synth/design_1.vhd VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/sim/design_1.vhd VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block ROTARY_ENCODER_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh Generated Block Design Tcl file C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl Generated Hardware Definition File C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/synth/design_1.hwdef 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_NEW
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = c6cafbd915f3e03f; cache size = 1.881 MB. INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Jun  3 11:58:33 2020] Launched design_1_ROTARY_ENCODER_0_0_synth_1, synth_1... Run output will be captured here: design_1_ROTARY_ENCODER_0_0_synth_1: C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.runs/design_1_ROTARY_ENCODER_0_0_synth_1/runme.log synth_1: C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.runs/synth_1/runme.log [Wed Jun  3 11:58:33 2020] Launched impl_1... Run output will be captured here: C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1500.051 ; gain = 0.730 
+// 'c' command handler elapsed time: 7 seconds
+dismissDialog("Starting Design Runs"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,508 MB. GUI used memory: 162 MB. Current time: 6/3/20, 11:59:02 AM CEST
+// Elapsed time: 34 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL (aI, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, design_1, design_1_ROTARY_ENCODER_0_0_synth_1, [Synth 8-26] attribute 'event not implemented [c:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/ipshared/2d3b/src/ROTARY_ENCODER.vhd:17]. ]", 4, true); // ah (O, cr) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, design_1, design_1_ROTARY_ENCODER_0_0_synth_1, [Synth 8-26] attribute 'event not implemented [c:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/ipshared/2d3b/src/ROTARY_ENCODER.vhd:17]. ]", 4, true); // ah (O, cr) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;c:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.srcs\sources_1\bd\design_1\ipshared\2d3b\src\ROTARY_ENCODER.vhd;-;;-;16;-;line;-;17;-;;-;16;-;"); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, design_1, design_1_ROTARY_ENCODER_0_0_synth_1, [Synth 8-26] attribute 'event not implemented [c:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/ipshared/2d3b/src/ROTARY_ENCODER.vhd:17]. ]", 4, true, false, false, false, false, true); // ah (O, cr) - Double Click - Node
+// Elapsed time: 108 seconds
+selectCodeEditor("ROTARY_ENCODER.vhd (2)", 182, 189); // C (w, cr)
+selectCodeEditor("ROTARY_ENCODER.vhd (2)", 305, 29); // C (w, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (O, cr)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// I (cr): Settings: addNotify
+selectButton(PAResourceQtoS.SettingsProjectIPRepositoryPage_REFRESH_ALL, "Refresh All"); // a (E, I)
+// TclEventType: CREATE_IP_CATALOG
+// bB (cr):  Refresh All IP Repositories : addNotify
+// Tcl Message: update_ip_catalog -rebuild 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 

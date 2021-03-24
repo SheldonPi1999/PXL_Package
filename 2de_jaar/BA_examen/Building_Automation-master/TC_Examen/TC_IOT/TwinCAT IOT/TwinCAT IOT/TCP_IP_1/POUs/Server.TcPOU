@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="Server" Id="{86e238ee-f299-490a-a7c3-dc91a2283d34}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Server
+
+VAR_IN_OUT
+    hServer         : T_HSERVER; 
+END_VAR
+
+VAR_INPUT
+	CLOSE_CONNECTION : BOOL := FALSE;
+END_VAR
+
+VAR
+	FB_ServerClientConnection: FB_ServerClientConnection;
+	FB_SocketSend: FB_SocketSend;
+	FB_SocketCloseAll: FB_SocketCloseAll;
+	
+	DATA 	   : BYTE := 1;
+	pSrc       : POINTER TO BYTE := ADR(DATA);
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// The function F_CreateServerHnd is used to initialise/set the internal parameters of a server handle variable hServer.
+// The server handle is then transferred to the instances of the FB_ServerClientConnection function block via VAR_IN_OUT. 
+F_CreateServerHnd(
+	sSrvNetID:= '', 
+	sLocalHost:= '', 
+	nLocalPort:= 200, 
+	nMode:= LISTEN_MODE_CLOSEALL OR CONNECT_MODE_ENABLEDBG, 
+	bEnable:= TRUE, 
+	hServer:= hServer);
+
+FB_ServerClientConnection(
+	hServer:= hServer, 
+	eMode:= eACCEPT_ALL,
+	sRemoteHost:= '',
+	nRemotePort:= 200,
+	bEnable:= TRUE, 
+	tReconnect:= T#1S);
+
+IF FB_ServerClientConnection.eState = eSOCKET_CONNECTED THEN
+	FB_SocketSend(
+	sSrvNetId:= '', 
+	hSocket:= FB_ServerClientConnection.hSocket, 
+	cbLen:= 8, 
+	pSrc:= pSrc, 
+	bExecute:= TRUE, 
+	tTimeout:= T#10S);
+END_IF
+	
+FB_SocketCloseAll(
+	sSrvNetId:= '', 
+	bExecute:= CLOSE_CONNECTION, 
+	tTimeout:= T#1S);
+	
+	]]></ST>
+    </Implementation>
+    <LineIds Name="Server">
+      <LineId Id="211" Count="1" />
+      <LineId Id="198" Count="5" />
+      <LineId Id="190" Count="1" />
+      <LineId Id="108" Count="6" />
+      <LineId Id="250" Count="0" />
+      <LineId Id="142" Count="0" />
+      <LineId Id="253" Count="5" />
+      <LineId Id="251" Count="1" />
+      <LineId Id="156" Count="0" />
+      <LineId Id="159" Count="3" />
+      <LineId Id="154" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

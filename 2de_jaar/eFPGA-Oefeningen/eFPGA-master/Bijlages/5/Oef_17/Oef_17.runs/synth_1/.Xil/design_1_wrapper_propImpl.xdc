@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/Users/Gebruiker/Desktop/Oef_FPGA/Oef_17/Oef_17.srcs/constrs_1/new/constrant.xdc rfile:../../../Oef_17.srcs/constrs_1/new/constrant.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN R8 [get_ports outNPwm_0]
+set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN P8 [get_ports outPwm_0]

@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Jun  2 16:22:44 2020
+# Process ID: 14896
+# Current directory: C:/eFPGA/17_AXI_PWM
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11780 C:\eFPGA\17_AXI_PWM\17_AXI_PWM.xpr
+# Log file: C:/eFPGA/17_AXI_PWM/vivado.log
+# Journal file: C:/eFPGA/17_AXI_PWM\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/eFPGA/17_AXI_PWM/17_AXI_PWM.xpr
+create_peripheral xilinx.com user AXI_PWM 1.0 -dir C:/eFPGA/17_AXI_PWM/../ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:AXI_PWM:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:AXI_PWM:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:AXI_PWM:1.0]
+set_property  ip_repo_paths  C:/eFPGA/17_AXI_PWM/../ip_repo/AXI_PWM_1.0 [current_project]
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name edit_AXI_PWM_v1_0 -directory C:/eFPGA/17_AXI_PWM/../ip_repo c:/eFPGA/ip_repo/AXI_PWM_1.0/component.xml
+update_compile_order -fileset sources_1
+close [ open C:/eFPGA/17_AXI_PWM/PWM.vhd w ]
+add_files C:/eFPGA/17_AXI_PWM/PWM.vhd
+update_compile_order -fileset sources_1
+close_project

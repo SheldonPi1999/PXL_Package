@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\eFPGA\6_PS_LED_AND_BUTTON\6_PS_LED_AND_BUTTON.runs\design_1_processing_system7_0_0_synth_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Toegang geweigerd

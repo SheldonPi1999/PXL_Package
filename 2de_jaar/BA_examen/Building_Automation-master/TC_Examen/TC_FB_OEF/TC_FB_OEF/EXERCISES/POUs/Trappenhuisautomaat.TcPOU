@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="Trappenhuisautomaat" Id="{0ecd56e1-1daf-4b12-954b-b6d29a9bf687}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Trappenhuisautomaat
+VAR
+	TOF : TOF;
+	CTUD : CTUD;
+END_VAR
+
+VAR_INPUT
+	SW0 : BOOL;
+	SW1 : BOOL;
+	SW2 : BOOL;
+	SW3 : BOOL;
+	SW4 : BOOL;
+	SW5 : BOOL;
+	SW6 : BOOL;
+END_VAR
+
+VAR_OUTPUT
+	Q01 : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[TOF(IN:= SW0, PT:= T#3S, Q=> Q01);
+CTUD.RESET := NOT(Q01);
+
+
+IF SW1 OR SW2 OR SW3 OR SW4 OR SW5 OR SW6 THEN
+	SW0 := TRUE; 
+	CTUD.CU := SW0;
+	IF CTUD.CV = 2 THEN
+		TOF.PT := T#0S;
+		SW0 := FALSE;
+		Q01 := FALSE; 
+	END_IF
+ELSE
+	SW0 := FALSE;
+END_IF
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="Trappenhuisautomaat">
+      <LineId Id="50" Count="0" />
+      <LineId Id="98" Count="1" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="86" Count="0" />
+      <LineId Id="97" Count="0" />
+      <LineId Id="101" Count="1" />
+      <LineId Id="105" Count="1" />
+      <LineId Id="103" Count="0" />
+      <LineId Id="47" Count="1" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="42" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

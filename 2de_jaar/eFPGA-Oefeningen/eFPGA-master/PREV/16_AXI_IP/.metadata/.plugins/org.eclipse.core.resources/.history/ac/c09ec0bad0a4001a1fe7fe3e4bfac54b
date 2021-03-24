@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "sleep.h"
+
+
+int main()
+{
+	int getal_1;
+	int getal_2;
+    int operation;
+
+    init_platform();
+
+    for(;;)
+    {
+        printf("Please enter number 1: ");
+        scanf("%d", &getal_1);
+
+        printf("\nPlease enter number 2: ");
+        scanf("%d", &getal_1);
+
+        printf("\nPlease enter an operation: ");
+        scanf("%d", &operation);
+
+
+        sleep_A9(1);
+    }
+
+
+    cleanup_platform();
+    return 0;
+}

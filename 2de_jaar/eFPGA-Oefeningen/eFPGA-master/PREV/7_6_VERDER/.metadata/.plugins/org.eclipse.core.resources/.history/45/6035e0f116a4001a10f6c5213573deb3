@@ -1,0 +1,127 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "sleep.h"
+#include "xparameters.h"
+#include "xgpiops.h"
+
+#include "xscugic.h"
+
+#define GPIO_DEVICE_ID_PS XPAR_XGPIOPS_0_DEVICE_ID
+#define CHANNEL_PS 2
+#define MASK 0b110
+
+#define GPIO_INTERRUPT_ID	XPS_GPIO_INT_ID
+#define GPIO_BANK			XGPIOPS_BANK0
+
+XGpioPs GpioPs;
+
+void testfunctionPS(XGpioPs *gpiops);
+
+static void SetupInterruptSystem(XScuGic *GicInstancePtr, XGpioPs *Gpio, u16 GpioIntrId);
+static void IntrHandler(void *CallBackRef, u32 Bank, u32 Status);
+
+int main()
+{
+	int Status;
+	XGpioPs_Config *GPIOConfigPtr;
+
+    init_platform();
+
+    GPIOConfigPtr = XGpioPs_LookupConfig(GPIO_DEVICE_ID_PS);
+    Status = XGpioPs_CfgInitialize(&GpioPs, GPIOConfigPtr,GPIOConfigPtr->BaseAddr);
+
+    if (Status != XST_SUCCESS) {
+       printf("status error \n\r");
+       return XST_FAILURE;
+    }
+
+    XGpioPs_SetDirection(&GpioPs, CHANNEL_PS, MASK);
+    XGpioPs_SetOutputEnable(&GpioPs, CHANNEL_PS, MASK);
+    print("GPIO PS and PL Demo Application!\n\r");
+
+    SetupInterruptSystem(&Intc, &GpioPs, 1);
+
+    for (;;) {
+    	xil_printf("TURNING ON PS: %x\n\r", MASK);
+    	XGpioPs_Write(&GpioPs, CHANNEL_PS, MASK);
+    	sleep_A9(1);
+    	xil_printf("TURNING OFF PS: %x\n\r", 0b000);
+    	XGpioPs_Write(&GpioPs, CHANNEL_PS, 0b000);
+    	sleep_A9(1);
+    	xil_printf("BUTTON ON PS BIATCH: %x\n\r", XGpioPs_Read(&GpioPs, CHANNEL_PS));
+    	sleep_A9(1);
+    }
+
+
+    cleanup_platform();
+    return 0;
+}
+
+static void SetupInterruptSystem(XScuGic *GicInstancePtr, XGpioPs *Gpio, u16 GpioIntrId)
+{
+		XScuGic_Config *IntcConfig;
+		Xil_ExceptionInit();
+
+		IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+
+		XScuGic_CfgInitialize(GicInstancePtr, IntcConfig, IntcConfig->CpuBaseAddress);
+
+		Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler)XScuGic_InterruptHandler, GicInstancePtr);
+
+		XScuGic_Connect(GicInstancePtr, GpioIntrId, (Xil_ExceptionHandler)XGpioPs_IntrHandler, (void *)Gpio);
+
+		XGpioPs_SetIntrTypePin(Gpio, Input_Pin, XGPIOPS_IRQ_TYPE_EDGE_RISING);
+
+		XGpioPs_SetCallbackHandler(Gpio, (void *)Gpio, IntrHandler);
+
+		XGpioPs_IntrEnablePin(Gpio, Input_Pin);
+
+		XGpioPs_IntrDisable(Gpio,0x01,0xFFFFFFFF);
+		XScuGic_Enable(GicInstancePtr, GpioIntrId);
+
+		Xil_ExceptionEnableMask(XIL_EXCEPTION_IRQ);
+}
+
+static void IntrHandler(void *CallBackRef, u32 Bank, u32 Status)
+{
+	XGpioPs *Gpio = (XGpioPs *)CallBackRef;
+	u32 DataRead;
+		XGpioPs_SetDirectionPin(Gpio, Output_Pin, 1);
+		XGpioPs_SetOutputEnablePin(Gpio, Output_Pin, 1);
+		XGpioPs_SetDirectionPin(Gpio, Output_Pin2, 1);
+		XGpioPs_SetOutputEnablePin(Gpio, Output_Pin2, 1);
+
+		// We have to select the bank because the interrupt handler goes for BANK0 and BANK1
+		if( Bank == 0x00){
+			printf("Value of Counter: %d Bank: %d\r\n",(int) counter, (int)Bank);
+			switch(counter)
+			{	// 00 01 10 11
+				case 0:
+					XGpioPs_WritePin(Gpio, Output_Pin, (u32) 0x00);
+					XGpioPs_WritePin(Gpio, Output_Pin2, (u32) 0x00);
+					break;
+				case 1:
+					XGpioPs_WritePin(Gpio, Output_Pin, (u32) 0x01);
+					XGpioPs_WritePin(Gpio, Output_Pin2, (u32) 0x00);
+					break;
+				case 2:
+					XGpioPs_WritePin(Gpio, Output_Pin, (u32) 0x00);
+					XGpioPs_WritePin(Gpio, Output_Pin2, (u32) 0x01);
+					break;
+				case 3:
+					XGpioPs_WritePin(Gpio, Output_Pin, (u32) 0x01);
+					XGpioPs_WritePin(Gpio, Output_Pin2, (u32) 0x01);
+					break;
+				default:
+					XGpioPs_WritePin(Gpio, Output_Pin, (u32) 0x00);
+					XGpioPs_WritePin(Gpio, Output_Pin2, (u32) 0x00);
+
+			}
+			if(counter<3)
+				counter++;
+			else
+				counter=0;
+		}
+}
+

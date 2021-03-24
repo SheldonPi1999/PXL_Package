@@ -1,0 +1,21 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.769465",
+   "Default View_TopLeft":"-830,-967",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port light_reset_0 -pg 1 -lvl 0 -x -530 -y -370 -defaultsOSRD
+preplace port LED_G -pg 1 -lvl 3 -x 330 -y -390 -defaultsOSRD
+preplace port LED_R -pg 1 -lvl 3 -x 330 -y -370 -defaultsOSRD
+preplace inst main_0 -pg 1 -lvl 2 -x 100 -y -380 -defaultsOSRD
+preplace inst vhdlnoclk_0 -pg 1 -lvl 1 -x -190 -y -430 -defaultsOSRD
+preplace netloc main_0_LED_G 1 2 1 N -390
+preplace netloc main_0_LED_R 1 2 1 N -370
+preplace netloc light_reset_0_1 1 0 2 NJ -370 NJ
+preplace netloc vhdlnoclk_0_clk65MHz 1 1 1 -90 -430n
+levelinfo -pg 1 -530 -190 100 330
+pagesize -pg 1 -db -bbox -sgen -670 -660 430 120
+"
+}
+

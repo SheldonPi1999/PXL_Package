@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON.srcs/constrs_1/new/XDC.xdc rfile:../../../6_PS_LED_AND_BUTTON.srcs/constrs_1/new/XDC.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN L15 [get_ports {GPIO_tri_io[0]}]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN E12 [get_ports {GPIO_tri_io[1]}]
+set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN E13 [get_ports {GPIO_tri_io[2]}]

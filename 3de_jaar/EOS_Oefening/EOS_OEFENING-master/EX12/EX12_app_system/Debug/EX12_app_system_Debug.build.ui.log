@@ -1,0 +1,15 @@
+2021-01-27T20:17:49.00409600255-20:17:49 **** Incremental Build of configuration Debug for project EX12_app_system ****
+000-make all 
+000-Generating bif file for the system project
+000-generate_system_bif.bat 59318 C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm freertos10_xilinx_domain C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12/EX12_app_system/Debug/system.bif
+000-xpfm path is not valid
+000-    invoked from within
+000-"::tcf::eval -progress {apply {{msg} {puts $msg}}} {tcf_send_command tcfchan#0 xsdb eval s es {{::scw::generate_bif -xpfm C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm -domains freertos10_xilinx_domain -bifpath C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12/EX12_app_system/Debug/system.bif}}}"
+000-    (procedure "::tcf::send_command" line 4)
+000-    invoked from within
+000-"tcf send_command $::xsdb::curchan xsdb eval s es [list "::scw::generate_bif $GENERATE_BIF_ARGS"]"
+000-    (file "C:/Xilinx/Vitis/2020.1\scripts\vitis\util\generate_system_bif.tcl" line 25)
+000/EX12_app_system/Debug0-1-1make: *** [makefile:38: package] Error 12-make: *** [makefile:38: package] Error 1
+00255-
+20:17:49 Build Finished (took 970ms)
+

@@ -1,0 +1,10 @@
+2021-01-24T17:07:08.130785500255-17:07:08 **** Incremental Build of configuration Debug for project EX7_app_system ****
+000-make all 
+000-Generating bif file for the system project
+000-generate_system_bif.bat 51362 C:/Users/KasperPC/Desktop/EOS_Examen/EX7/EX7/export/EX7/EX7.xpfm freertos10_xilinx_domain C:/Users/KasperPC/Desktop/EOS_Examen/EX7/EX7_app_system/Debug/system.bif
+000-sdcard_gen --xpfm C:/Users/KasperPC/Desktop/EOS_Examen/EX7/EX7/export/EX7/EX7.xpfm --sys_config EX7 --bif C:/Users/KasperPC/Desktop/EOS_Examen/EX7/EX7_app_system/Debug/system.bif --bitstream C:/Users/KasperPC/Desktop/EOS_Examen/EX7/EX7_app/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/KasperPC/Desktop/EOS_Examen/EX7/EX7_app/Debug/EX7_app.elf,ps7_cortexa9_0
+000-creating BOOT.BIN using C:/Users/KasperPC/Desktop/EOS_Examen/EX7/EX7_app/_ide/bitstream/design_1_wrapper.bit
+000-Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/KasperPC/Desktop/EOS_Examen/EX7/EX7_app_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+00255-
+17:07:11 Build Finished (took 3s.150ms)
+

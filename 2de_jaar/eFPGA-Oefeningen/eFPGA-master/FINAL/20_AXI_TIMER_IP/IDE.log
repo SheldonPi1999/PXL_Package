@@ -1,0 +1,1749 @@
+19:04:04 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\eFPGA\20_AXI_TIMER_IP\temp_xsdb_launch_script.tcl
+19:04:06 INFO  : XSCT server has started successfully.
+19:04:06 INFO  : plnx-install-location is set to ''
+19:04:06 INFO  : Successfully done setting XSCT server connection channel  
+19:04:06 INFO  : Successfully done query RDI_DATADIR 
+19:04:06 INFO  : Successfully done setting workspace for the tool. 
+19:04:07 INFO  : Registering command handlers for Vitis TCF services
+19:13:48 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+19:13:48 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+19:48:33 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\eFPGA\20_AXI_TIMER_IP\temp_xsdb_launch_script.tcl
+19:48:34 INFO  : XSCT server has started successfully.
+19:49:06 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\eFPGA\20_AXI_TIMER_IP\temp_xsdb_launch_script.tcl
+19:49:08 INFO  : XSCT server has started successfully.
+19:49:10 INFO  : Registering command handlers for Vitis TCF services
+19:49:13 INFO  : Successfully done setting XSCT server connection channel  
+19:49:13 INFO  : plnx-install-location is set to ''
+19:49:13 INFO  : Successfully done setting workspace for the tool. 
+19:49:13 INFO  : Successfully done query RDI_DATADIR 
+19:49:14 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+19:49:14 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+19:49:17 INFO  : (SwPlaform) Successfully done setParamInSpec 
+19:49:18 INFO  : (SwPlaform) Successfully done setParamInSpec 
+19:49:19 INFO  : (SwPlaform) Successfully done setParamInSpec 
+19:49:19 INFO  : (SwPlatform) Successfully done update_mss 
+19:49:20 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+19:54:36 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:13:50 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:14:06 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:14:39 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:15:23 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:16:12 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:16:29 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:16:38 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:17:10 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:17:27 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:17:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:17:36 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+20:17:37 INFO  : 'jtag frequency' command is executed.
+20:17:37 INFO  : Context for 'APU' is selected.
+20:17:37 INFO  : System reset is completed.
+20:17:40 INFO  : 'after 3000' command is executed.
+20:17:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+20:17:42 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+20:17:43 INFO  : Context for 'APU' is selected.
+20:17:43 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+20:17:43 INFO  : 'configparams force-mem-access 1' command is executed.
+20:17:43 INFO  : Context for 'APU' is selected.
+20:17:43 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+20:17:44 INFO  : 'ps7_init' command is executed.
+20:17:44 INFO  : 'ps7_post_config' command is executed.
+20:17:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:17:45 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:17:45 INFO  : 'configparams force-mem-access 0' command is executed.
+20:17:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:17:45 INFO  : Memory regions updated for context APU
+20:17:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:17:45 INFO  : 'con' command is executed.
+20:17:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:17:45 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+20:18:44 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:18:48 INFO  : Disconnected from the channel tcfchan#2.
+20:18:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:18:49 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+20:18:49 INFO  : 'jtag frequency' command is executed.
+20:18:49 INFO  : Context for 'APU' is selected.
+20:18:49 INFO  : System reset is completed.
+20:18:52 INFO  : 'after 3000' command is executed.
+20:18:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+20:18:54 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+20:18:54 INFO  : Context for 'APU' is selected.
+20:18:54 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+20:18:54 INFO  : 'configparams force-mem-access 1' command is executed.
+20:18:54 INFO  : Context for 'APU' is selected.
+20:18:54 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+20:18:54 INFO  : 'ps7_init' command is executed.
+20:18:54 INFO  : 'ps7_post_config' command is executed.
+20:18:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:18:54 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:18:54 INFO  : 'configparams force-mem-access 0' command is executed.
+20:18:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:18:54 INFO  : Memory regions updated for context APU
+20:18:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:18:54 INFO  : 'con' command is executed.
+20:18:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:18:54 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+20:23:00 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:23:04 INFO  : Disconnected from the channel tcfchan#3.
+20:23:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:23:05 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+20:23:05 INFO  : 'jtag frequency' command is executed.
+20:23:05 INFO  : Context for 'APU' is selected.
+20:23:05 INFO  : System reset is completed.
+20:23:08 INFO  : 'after 3000' command is executed.
+20:23:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+20:23:10 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+20:23:10 INFO  : Context for 'APU' is selected.
+20:23:10 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+20:23:10 INFO  : 'configparams force-mem-access 1' command is executed.
+20:23:10 INFO  : Context for 'APU' is selected.
+20:23:10 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+20:23:10 INFO  : 'ps7_init' command is executed.
+20:23:10 INFO  : 'ps7_post_config' command is executed.
+20:23:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:23:10 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:23:10 INFO  : 'configparams force-mem-access 0' command is executed.
+20:23:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:23:10 INFO  : Memory regions updated for context APU
+20:23:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:23:10 INFO  : 'con' command is executed.
+20:23:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:23:10 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+20:25:22 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:26:08 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:26:18 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:26:36 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:27:07 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:27:59 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:29:03 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:29:16 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:29:22 INFO  : Disconnected from the channel tcfchan#4.
+20:29:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:29:24 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+20:29:24 INFO  : 'jtag frequency' command is executed.
+20:29:24 INFO  : Context for 'APU' is selected.
+20:29:24 INFO  : System reset is completed.
+20:29:27 INFO  : 'after 3000' command is executed.
+20:29:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+20:29:28 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+20:29:28 INFO  : Context for 'APU' is selected.
+20:29:28 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+20:29:28 INFO  : 'configparams force-mem-access 1' command is executed.
+20:29:28 INFO  : Context for 'APU' is selected.
+20:29:28 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+20:29:28 INFO  : 'ps7_init' command is executed.
+20:29:28 INFO  : 'ps7_post_config' command is executed.
+20:29:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:29:28 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:29:28 INFO  : 'configparams force-mem-access 0' command is executed.
+20:29:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:29:28 INFO  : Memory regions updated for context APU
+20:29:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:29:29 INFO  : 'con' command is executed.
+20:29:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:29:29 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+20:30:09 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:30:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:30:14 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+20:30:14 INFO  : 'jtag frequency' command is executed.
+20:30:14 INFO  : Context for 'APU' is selected.
+20:30:14 INFO  : System reset is completed.
+20:30:17 INFO  : 'after 3000' command is executed.
+20:30:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+20:30:18 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+20:30:18 INFO  : Context for 'APU' is selected.
+20:30:18 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+20:30:18 INFO  : 'configparams force-mem-access 1' command is executed.
+20:30:18 INFO  : Context for 'APU' is selected.
+20:30:18 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+20:30:19 INFO  : 'ps7_init' command is executed.
+20:30:19 INFO  : 'ps7_post_config' command is executed.
+20:30:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:30:19 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:30:19 INFO  : 'configparams force-mem-access 0' command is executed.
+20:30:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:30:19 INFO  : Memory regions updated for context APU
+20:30:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:30:19 INFO  : 'con' command is executed.
+20:30:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:30:19 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default_(1).tcl'
+20:31:18 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:31:23 INFO  : Disconnected from the channel tcfchan#7.
+20:31:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:31:24 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+20:31:24 INFO  : 'jtag frequency' command is executed.
+20:31:24 INFO  : Context for 'APU' is selected.
+20:31:24 INFO  : System reset is completed.
+20:31:27 INFO  : 'after 3000' command is executed.
+20:31:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+20:31:28 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+20:31:29 INFO  : Context for 'APU' is selected.
+20:31:29 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+20:31:29 INFO  : 'configparams force-mem-access 1' command is executed.
+20:31:29 INFO  : Context for 'APU' is selected.
+20:31:29 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+20:31:29 INFO  : 'ps7_init' command is executed.
+20:31:29 INFO  : 'ps7_post_config' command is executed.
+20:31:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:31:29 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:31:29 INFO  : 'configparams force-mem-access 0' command is executed.
+20:31:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:31:29 INFO  : Memory regions updated for context APU
+20:31:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:31:29 INFO  : 'con' command is executed.
+20:31:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:31:29 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+20:32:38 INFO  : Disconnected from the channel tcfchan#8.
+20:32:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:32:39 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+20:32:39 INFO  : 'jtag frequency' command is executed.
+20:32:39 INFO  : Context for 'APU' is selected.
+20:32:39 INFO  : System reset is completed.
+20:32:42 INFO  : 'after 3000' command is executed.
+20:32:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+20:32:44 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+20:32:44 INFO  : Context for 'APU' is selected.
+20:32:44 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+20:32:44 INFO  : 'configparams force-mem-access 1' command is executed.
+20:32:44 INFO  : Context for 'APU' is selected.
+20:32:44 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+20:32:44 INFO  : 'ps7_init' command is executed.
+20:32:44 INFO  : 'ps7_post_config' command is executed.
+20:32:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:32:44 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:32:44 INFO  : 'configparams force-mem-access 0' command is executed.
+20:32:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:32:44 INFO  : Memory regions updated for context APU
+20:32:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:32:44 INFO  : 'con' command is executed.
+20:32:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:32:44 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+20:34:31 WARN  : channel "tcfchan#7" closed
+20:37:09 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:37:16 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:37:31 INFO  : Disconnected from the channel tcfchan#9.
+20:37:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:37:33 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+20:37:33 INFO  : 'jtag frequency' command is executed.
+20:37:33 INFO  : Context for 'APU' is selected.
+20:37:33 INFO  : System reset is completed.
+20:37:36 INFO  : 'after 3000' command is executed.
+20:37:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+20:37:37 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+20:37:37 INFO  : Context for 'APU' is selected.
+20:37:37 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+20:37:37 INFO  : 'configparams force-mem-access 1' command is executed.
+20:37:37 INFO  : Context for 'APU' is selected.
+20:37:37 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+20:37:37 INFO  : 'ps7_init' command is executed.
+20:37:37 INFO  : 'ps7_post_config' command is executed.
+20:37:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:37:37 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:37:37 INFO  : 'configparams force-mem-access 0' command is executed.
+20:37:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:37:38 INFO  : Memory regions updated for context APU
+20:37:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:37:38 INFO  : 'con' command is executed.
+20:37:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:37:38 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+20:39:32 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:39:39 INFO  : Disconnected from the channel tcfchan#11.
+20:39:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:39:41 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+20:39:41 INFO  : 'jtag frequency' command is executed.
+20:39:41 INFO  : Context for 'APU' is selected.
+20:39:41 INFO  : System reset is completed.
+20:39:44 INFO  : 'after 3000' command is executed.
+20:39:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+20:39:45 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+20:39:45 INFO  : Context for 'APU' is selected.
+20:39:45 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+20:39:45 INFO  : 'configparams force-mem-access 1' command is executed.
+20:39:45 INFO  : Context for 'APU' is selected.
+20:39:45 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+20:39:45 INFO  : 'ps7_init' command is executed.
+20:39:45 INFO  : 'ps7_post_config' command is executed.
+20:39:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:39:45 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:39:45 INFO  : 'configparams force-mem-access 0' command is executed.
+20:39:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:39:45 INFO  : Memory regions updated for context APU
+20:39:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:39:46 INFO  : 'con' command is executed.
+20:39:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:39:46 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+20:40:24 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:40:28 INFO  : Disconnected from the channel tcfchan#12.
+20:40:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:40:29 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+20:40:29 INFO  : 'jtag frequency' command is executed.
+20:40:29 INFO  : Context for 'APU' is selected.
+20:40:29 INFO  : System reset is completed.
+20:40:32 INFO  : 'after 3000' command is executed.
+20:40:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+20:40:34 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+20:40:34 INFO  : Context for 'APU' is selected.
+20:40:34 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+20:40:34 INFO  : 'configparams force-mem-access 1' command is executed.
+20:40:34 INFO  : Context for 'APU' is selected.
+20:40:34 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+20:40:34 INFO  : 'ps7_init' command is executed.
+20:40:34 INFO  : 'ps7_post_config' command is executed.
+20:40:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:40:34 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:40:34 INFO  : 'configparams force-mem-access 0' command is executed.
+20:40:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:40:34 INFO  : Memory regions updated for context APU
+20:40:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:40:34 INFO  : 'con' command is executed.
+20:40:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:40:34 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+20:41:59 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:42:05 INFO  : Disconnected from the channel tcfchan#13.
+20:42:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:42:06 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+20:42:06 INFO  : 'jtag frequency' command is executed.
+20:42:06 INFO  : Context for 'APU' is selected.
+20:42:06 INFO  : System reset is completed.
+20:42:09 INFO  : 'after 3000' command is executed.
+20:42:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+20:42:11 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+20:42:11 INFO  : Context for 'APU' is selected.
+20:42:11 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+20:42:11 INFO  : 'configparams force-mem-access 1' command is executed.
+20:42:11 INFO  : Context for 'APU' is selected.
+20:42:11 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+20:42:11 INFO  : 'ps7_init' command is executed.
+20:42:11 INFO  : 'ps7_post_config' command is executed.
+20:42:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:42:11 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:42:11 INFO  : 'configparams force-mem-access 0' command is executed.
+20:42:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:42:11 INFO  : Memory regions updated for context APU
+20:42:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:42:11 INFO  : 'con' command is executed.
+20:42:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:42:11 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+20:43:07 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:43:21 INFO  : Disconnected from the channel tcfchan#14.
+20:43:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:43:22 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+20:43:22 INFO  : 'jtag frequency' command is executed.
+20:43:22 INFO  : Context for 'APU' is selected.
+20:43:22 INFO  : System reset is completed.
+20:43:25 INFO  : 'after 3000' command is executed.
+20:43:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+20:43:26 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+20:43:26 INFO  : Context for 'APU' is selected.
+20:43:26 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+20:43:26 INFO  : 'configparams force-mem-access 1' command is executed.
+20:43:26 INFO  : Context for 'APU' is selected.
+20:43:26 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+20:43:27 INFO  : 'ps7_init' command is executed.
+20:43:27 INFO  : 'ps7_post_config' command is executed.
+20:43:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:43:27 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:43:27 INFO  : 'configparams force-mem-access 0' command is executed.
+20:43:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:43:27 INFO  : Memory regions updated for context APU
+20:43:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:43:27 INFO  : 'con' command is executed.
+20:43:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:43:27 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+20:43:43 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:50:36 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+20:50:43 INFO  : Disconnected from the channel tcfchan#15.
+20:50:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:50:45 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+20:50:45 INFO  : 'jtag frequency' command is executed.
+20:50:45 INFO  : Context for 'APU' is selected.
+20:50:45 INFO  : System reset is completed.
+20:50:48 INFO  : 'after 3000' command is executed.
+20:50:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+20:50:49 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+20:50:49 INFO  : Context for 'APU' is selected.
+20:50:49 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+20:50:49 INFO  : 'configparams force-mem-access 1' command is executed.
+20:50:49 INFO  : Context for 'APU' is selected.
+20:50:49 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+20:50:49 INFO  : 'ps7_init' command is executed.
+20:50:49 INFO  : 'ps7_post_config' command is executed.
+20:50:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:50:49 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:50:50 INFO  : 'configparams force-mem-access 0' command is executed.
+20:50:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:50:50 INFO  : Memory regions updated for context APU
+20:50:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:50:50 INFO  : 'con' command is executed.
+20:50:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:50:50 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+21:30:09 INFO  : Disconnected from the channel tcfchan#16.
+09:47:56 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\eFPGA\20_AXI_TIMER_IP\temp_xsdb_launch_script.tcl
+09:47:58 INFO  : XSCT server has started successfully.
+09:47:58 INFO  : Successfully done setting XSCT server connection channel  
+09:47:58 INFO  : plnx-install-location is set to ''
+09:47:58 INFO  : Successfully done setting workspace for the tool. 
+09:47:59 INFO  : Registering command handlers for Vitis TCF services
+09:48:01 INFO  : Successfully done query RDI_DATADIR 
+09:56:10 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+09:56:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:56:22 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+09:56:22 INFO  : 'jtag frequency' command is executed.
+09:56:23 INFO  : Context for 'APU' is selected.
+09:56:23 INFO  : System reset is completed.
+09:56:26 INFO  : 'after 3000' command is executed.
+09:56:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+09:56:28 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+09:56:29 INFO  : Context for 'APU' is selected.
+09:56:29 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+09:56:29 INFO  : 'configparams force-mem-access 1' command is executed.
+09:56:30 INFO  : Context for 'APU' is selected.
+09:56:30 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+09:56:30 INFO  : 'ps7_init' command is executed.
+09:56:30 INFO  : 'ps7_post_config' command is executed.
+09:56:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:56:31 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:56:31 INFO  : 'configparams force-mem-access 0' command is executed.
+09:56:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:56:31 INFO  : Memory regions updated for context APU
+09:56:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:56:31 INFO  : 'con' command is executed.
+09:56:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:56:31 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:02:01 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:02:45 INFO  : Disconnected from the channel tcfchan#1.
+10:02:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:02:47 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:02:47 INFO  : 'jtag frequency' command is executed.
+10:02:47 INFO  : Context for 'APU' is selected.
+10:02:47 INFO  : System reset is completed.
+10:02:50 INFO  : 'after 3000' command is executed.
+10:03:05 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:03:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:03:08 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:03:08 INFO  : Context for 'APU' is selected.
+10:03:08 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:03:08 INFO  : 'configparams force-mem-access 1' command is executed.
+10:03:08 INFO  : Context for 'APU' is selected.
+10:03:08 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:03:08 INFO  : 'ps7_init' command is executed.
+10:03:08 INFO  : 'ps7_post_config' command is executed.
+10:03:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:03:08 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:03:08 INFO  : 'configparams force-mem-access 0' command is executed.
+10:03:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:03:09 INFO  : Memory regions updated for context APU
+10:03:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:03:09 INFO  : 'con' command is executed.
+10:03:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:03:09 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:03:12 INFO  : Disconnected from the channel tcfchan#2.
+10:03:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:03:14 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:03:14 INFO  : 'jtag frequency' command is executed.
+10:03:14 INFO  : Context for 'APU' is selected.
+10:03:14 INFO  : System reset is completed.
+10:03:17 INFO  : 'after 3000' command is executed.
+10:03:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:03:18 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:03:18 INFO  : Context for 'APU' is selected.
+10:03:20 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:03:20 INFO  : 'configparams force-mem-access 1' command is executed.
+10:03:20 INFO  : Context for 'APU' is selected.
+10:03:20 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:03:20 INFO  : 'ps7_init' command is executed.
+10:03:20 INFO  : 'ps7_post_config' command is executed.
+10:03:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:03:20 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:03:20 INFO  : 'configparams force-mem-access 0' command is executed.
+10:03:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:03:20 INFO  : Memory regions updated for context APU
+10:03:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:03:20 INFO  : 'con' command is executed.
+10:03:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:03:20 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:04:39 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:04:43 INFO  : Disconnected from the channel tcfchan#3.
+10:04:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:04:44 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:04:44 INFO  : 'jtag frequency' command is executed.
+10:04:45 INFO  : Context for 'APU' is selected.
+10:04:45 INFO  : System reset is completed.
+10:04:48 INFO  : 'after 3000' command is executed.
+10:04:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:04:49 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:04:49 INFO  : Context for 'APU' is selected.
+10:04:50 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:04:50 INFO  : 'configparams force-mem-access 1' command is executed.
+10:04:50 INFO  : Context for 'APU' is selected.
+10:04:50 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:04:51 INFO  : 'ps7_init' command is executed.
+10:04:51 INFO  : 'ps7_post_config' command is executed.
+10:04:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:04:51 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:04:51 INFO  : 'configparams force-mem-access 0' command is executed.
+10:04:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:04:51 INFO  : Memory regions updated for context APU
+10:04:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:04:51 INFO  : 'con' command is executed.
+10:04:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:04:51 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:05:24 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:05:30 INFO  : Disconnected from the channel tcfchan#4.
+10:05:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:05:32 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:05:32 INFO  : 'jtag frequency' command is executed.
+10:05:32 INFO  : Context for 'APU' is selected.
+10:05:32 INFO  : System reset is completed.
+10:05:35 INFO  : 'after 3000' command is executed.
+10:05:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:05:36 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:05:36 INFO  : Context for 'APU' is selected.
+10:05:38 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:05:38 INFO  : 'configparams force-mem-access 1' command is executed.
+10:05:38 INFO  : Context for 'APU' is selected.
+10:05:38 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:05:38 INFO  : 'ps7_init' command is executed.
+10:05:38 INFO  : 'ps7_post_config' command is executed.
+10:05:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:05:38 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:05:38 INFO  : 'configparams force-mem-access 0' command is executed.
+10:05:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:05:38 INFO  : Memory regions updated for context APU
+10:05:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:05:38 INFO  : 'con' command is executed.
+10:05:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:05:38 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:06:06 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:06:46 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:08:26 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\eFPGA\20_AXI_TIMER_IP\temp_xsdb_launch_script.tcl
+10:08:28 INFO  : XSCT server has started successfully.
+10:08:29 INFO  : Successfully done setting XSCT server connection channel  
+10:08:29 INFO  : plnx-install-location is set to ''
+10:08:29 INFO  : Registering command handlers for Vitis TCF services
+10:08:29 INFO  : Successfully done query RDI_DATADIR 
+10:08:29 INFO  : Successfully done setting workspace for the tool. 
+10:08:37 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:08:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:08:45 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:08:45 INFO  : 'jtag frequency' command is executed.
+10:08:46 INFO  : Context for 'APU' is selected.
+10:08:46 INFO  : System reset is completed.
+10:08:49 INFO  : 'after 3000' command is executed.
+10:08:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:08:51 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:08:52 INFO  : Context for 'APU' is selected.
+10:08:52 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:08:52 INFO  : 'configparams force-mem-access 1' command is executed.
+10:08:53 INFO  : Context for 'APU' is selected.
+10:08:53 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:08:53 INFO  : 'ps7_init' command is executed.
+10:08:53 INFO  : 'ps7_post_config' command is executed.
+10:08:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:08:54 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:08:54 INFO  : 'configparams force-mem-access 0' command is executed.
+10:08:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:08:54 INFO  : Memory regions updated for context APU
+10:08:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:08:54 INFO  : 'con' command is executed.
+10:08:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:08:54 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:09:32 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:09:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:09:38 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:09:38 INFO  : 'jtag frequency' command is executed.
+10:09:38 INFO  : Context for 'APU' is selected.
+10:09:38 INFO  : System reset is completed.
+10:09:41 INFO  : 'after 3000' command is executed.
+10:09:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:09:42 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:09:42 INFO  : Context for 'APU' is selected.
+10:09:42 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:09:42 INFO  : 'configparams force-mem-access 1' command is executed.
+10:09:42 INFO  : Context for 'APU' is selected.
+10:09:42 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:09:42 INFO  : 'ps7_init' command is executed.
+10:09:42 INFO  : 'ps7_post_config' command is executed.
+10:09:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:09:42 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:09:42 INFO  : 'configparams force-mem-access 0' command is executed.
+10:09:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:09:43 INFO  : Memory regions updated for context APU
+10:09:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:09:43 INFO  : 'con' command is executed.
+10:09:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:09:43 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default_(1).tcl'
+10:09:48 INFO  : Disconnected from the channel tcfchan#1.
+10:10:41 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:10:57 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:11:02 WARN  : channel "tcfchan#1" closed
+10:11:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:11:03 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:11:03 INFO  : 'jtag frequency' command is executed.
+10:11:03 INFO  : Context for 'APU' is selected.
+10:11:03 INFO  : System reset is completed.
+10:11:06 INFO  : 'after 3000' command is executed.
+10:11:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:11:07 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:11:07 INFO  : Context for 'APU' is selected.
+10:11:08 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:11:08 INFO  : 'configparams force-mem-access 1' command is executed.
+10:11:08 INFO  : Context for 'APU' is selected.
+10:11:08 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:11:08 INFO  : 'ps7_init' command is executed.
+10:11:08 INFO  : 'ps7_post_config' command is executed.
+10:11:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:11:08 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:11:08 INFO  : 'configparams force-mem-access 0' command is executed.
+10:11:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:11:08 INFO  : Memory regions updated for context APU
+10:11:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:11:08 INFO  : 'con' command is executed.
+10:11:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:11:08 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:11:42 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:11:46 INFO  : Disconnected from the channel tcfchan#2.
+10:11:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:11:47 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:11:47 INFO  : 'jtag frequency' command is executed.
+10:11:47 INFO  : Context for 'APU' is selected.
+10:11:47 INFO  : System reset is completed.
+10:11:50 INFO  : 'after 3000' command is executed.
+10:11:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:11:51 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:11:51 INFO  : Context for 'APU' is selected.
+10:11:53 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:11:53 INFO  : 'configparams force-mem-access 1' command is executed.
+10:11:53 INFO  : Context for 'APU' is selected.
+10:11:53 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:11:53 INFO  : 'ps7_init' command is executed.
+10:11:53 INFO  : 'ps7_post_config' command is executed.
+10:11:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:11:53 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:11:53 INFO  : 'configparams force-mem-access 0' command is executed.
+10:11:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:11:53 INFO  : Memory regions updated for context APU
+10:11:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:11:53 INFO  : 'con' command is executed.
+10:11:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:11:53 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:14:42 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:14:47 INFO  : Disconnected from the channel tcfchan#3.
+10:14:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:14:48 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:14:48 INFO  : 'jtag frequency' command is executed.
+10:14:48 INFO  : Context for 'APU' is selected.
+10:14:48 INFO  : System reset is completed.
+10:14:52 INFO  : 'after 3000' command is executed.
+10:14:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:14:53 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:14:53 INFO  : Context for 'APU' is selected.
+10:14:55 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:14:55 INFO  : 'configparams force-mem-access 1' command is executed.
+10:14:55 INFO  : Context for 'APU' is selected.
+10:14:55 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:14:55 ERROR : Memory write error at 0xF800605C. Cannot flush JTAG server queue. FT_Write failed: io error
+10:14:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+10:14:55 ERROR : Memory write error at 0xF800605C. Cannot flush JTAG server queue. FT_Write failed: io error
+10:15:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:15:27 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:15:27 INFO  : 'jtag frequency' command is executed.
+10:15:27 INFO  : Context for 'APU' is selected.
+10:15:27 INFO  : System reset is completed.
+10:15:30 INFO  : 'after 3000' command is executed.
+10:15:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:15:31 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:15:31 INFO  : Context for 'APU' is selected.
+10:15:31 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:15:31 INFO  : 'configparams force-mem-access 1' command is executed.
+10:15:31 INFO  : Context for 'APU' is selected.
+10:15:31 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:15:31 INFO  : 'ps7_init' command is executed.
+10:15:31 INFO  : 'ps7_post_config' command is executed.
+10:15:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:15:32 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:15:32 INFO  : 'configparams force-mem-access 0' command is executed.
+10:15:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:15:32 INFO  : Memory regions updated for context APU
+10:15:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:15:32 INFO  : 'con' command is executed.
+10:15:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:15:32 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:15:47 INFO  : Disconnected from the channel tcfchan#4.
+10:15:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:15:48 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:15:48 INFO  : 'jtag frequency' command is executed.
+10:15:48 INFO  : Context for 'APU' is selected.
+10:15:48 INFO  : System reset is completed.
+10:15:51 INFO  : 'after 3000' command is executed.
+10:15:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:15:52 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:15:53 INFO  : Context for 'APU' is selected.
+10:15:54 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:15:54 INFO  : 'configparams force-mem-access 1' command is executed.
+10:15:54 INFO  : Context for 'APU' is selected.
+10:15:54 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:15:54 INFO  : 'ps7_init' command is executed.
+10:15:54 INFO  : 'ps7_post_config' command is executed.
+10:15:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:15:54 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:15:54 INFO  : 'configparams force-mem-access 0' command is executed.
+10:15:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:15:54 INFO  : Memory regions updated for context APU
+10:15:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:15:55 INFO  : 'con' command is executed.
+10:15:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:15:55 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:16:13 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:16:18 INFO  : Disconnected from the channel tcfchan#5.
+10:16:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:16:19 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:16:19 INFO  : 'jtag frequency' command is executed.
+10:16:19 INFO  : Context for 'APU' is selected.
+10:16:19 INFO  : System reset is completed.
+10:16:22 INFO  : 'after 3000' command is executed.
+10:16:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:16:24 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:16:24 INFO  : Context for 'APU' is selected.
+10:16:25 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:16:25 INFO  : 'configparams force-mem-access 1' command is executed.
+10:16:25 INFO  : Context for 'APU' is selected.
+10:16:25 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:16:25 INFO  : 'ps7_init' command is executed.
+10:16:25 INFO  : 'ps7_post_config' command is executed.
+10:16:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:16:26 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:16:26 INFO  : 'configparams force-mem-access 0' command is executed.
+10:16:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:16:26 INFO  : Memory regions updated for context APU
+10:16:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:16:26 INFO  : 'con' command is executed.
+10:16:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:16:26 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:16:51 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:16:55 INFO  : Disconnected from the channel tcfchan#6.
+10:16:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:16:57 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:16:57 INFO  : 'jtag frequency' command is executed.
+10:16:57 INFO  : Context for 'APU' is selected.
+10:16:57 INFO  : System reset is completed.
+10:17:00 INFO  : 'after 3000' command is executed.
+10:17:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:17:01 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:17:01 INFO  : Context for 'APU' is selected.
+10:17:02 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:17:02 INFO  : 'configparams force-mem-access 1' command is executed.
+10:17:02 INFO  : Context for 'APU' is selected.
+10:17:03 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:17:03 INFO  : 'ps7_init' command is executed.
+10:17:03 INFO  : 'ps7_post_config' command is executed.
+10:17:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:17:03 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:17:03 INFO  : 'configparams force-mem-access 0' command is executed.
+10:17:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:17:03 INFO  : Memory regions updated for context APU
+10:17:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:17:03 INFO  : 'con' command is executed.
+10:17:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:17:03 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:24:52 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:26:26 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:29:02 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:29:14 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:29:19 INFO  : Disconnected from the channel tcfchan#7.
+10:29:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:29:20 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:29:20 INFO  : 'jtag frequency' command is executed.
+10:29:20 INFO  : Context for 'APU' is selected.
+10:29:20 INFO  : System reset is completed.
+10:29:23 INFO  : 'after 3000' command is executed.
+10:29:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:29:25 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:29:25 INFO  : Context for 'APU' is selected.
+10:29:27 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:29:27 INFO  : 'configparams force-mem-access 1' command is executed.
+10:29:27 INFO  : Context for 'APU' is selected.
+10:29:27 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:29:27 INFO  : 'ps7_init' command is executed.
+10:29:27 INFO  : 'ps7_post_config' command is executed.
+10:29:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:29:27 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:29:27 INFO  : 'configparams force-mem-access 0' command is executed.
+10:29:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:29:27 INFO  : Memory regions updated for context APU
+10:29:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:29:27 INFO  : 'con' command is executed.
+10:29:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:29:27 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:29:38 INFO  : Disconnected from the channel tcfchan#10.
+10:29:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:29:39 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:29:39 INFO  : 'jtag frequency' command is executed.
+10:29:39 INFO  : Context for 'APU' is selected.
+10:29:39 INFO  : System reset is completed.
+10:29:42 INFO  : 'after 3000' command is executed.
+10:29:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:29:43 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:29:43 INFO  : Context for 'APU' is selected.
+10:29:43 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:29:43 INFO  : 'configparams force-mem-access 1' command is executed.
+10:29:43 INFO  : Context for 'APU' is selected.
+10:29:43 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:29:43 INFO  : 'ps7_init' command is executed.
+10:29:44 INFO  : 'ps7_post_config' command is executed.
+10:29:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:29:44 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:29:44 INFO  : 'configparams force-mem-access 0' command is executed.
+10:29:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:29:44 INFO  : Memory regions updated for context APU
+10:29:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:29:44 INFO  : 'con' command is executed.
+10:29:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:29:44 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:39:41 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+10:39:41 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+10:39:51 INFO  :  (SwPlatform) Successfully done removeDriver 
+10:39:51 INFO  : (SwPlatform) Successfully done update_mss 
+10:39:51 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+10:40:43 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:40:43 INFO  : Updating application flags with new BSP settings...
+10:40:43 INFO  : Successfully updated application flags for project 20_AXI_TIMER_IP_APP.
+10:40:57 INFO  : (SwPlatform) Successfully done setDriver 
+10:40:57 INFO  : (SwPlatform) Successfully done update_mss 
+10:40:57 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+10:42:05 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:42:05 INFO  : Updating application flags with new BSP settings...
+10:42:05 INFO  : Successfully updated application flags for project 20_AXI_TIMER_IP_APP.
+10:50:32 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:51:06 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:51:08 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:51:20 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:51:28 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:51:49 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:52:09 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:52:24 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:52:32 INFO  : Disconnected from the channel tcfchan#11.
+10:52:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:52:34 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:52:34 INFO  : 'jtag frequency' command is executed.
+10:52:34 INFO  : Context for 'APU' is selected.
+10:52:34 INFO  : System reset is completed.
+10:52:37 INFO  : 'after 3000' command is executed.
+10:52:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:52:38 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:52:38 INFO  : Context for 'APU' is selected.
+10:52:38 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:52:38 INFO  : 'configparams force-mem-access 1' command is executed.
+10:52:38 INFO  : Context for 'APU' is selected.
+10:52:38 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:52:38 INFO  : 'ps7_init' command is executed.
+10:52:38 INFO  : 'ps7_post_config' command is executed.
+10:52:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:52:38 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:52:38 INFO  : 'configparams force-mem-access 0' command is executed.
+10:52:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:52:39 INFO  : Memory regions updated for context APU
+10:52:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:52:39 INFO  : 'con' command is executed.
+10:52:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:52:39 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:52:58 INFO  : Disconnected from the channel tcfchan#14.
+10:52:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:52:59 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:52:59 INFO  : 'jtag frequency' command is executed.
+10:53:00 INFO  : Context for 'APU' is selected.
+10:53:00 INFO  : System reset is completed.
+10:53:03 INFO  : 'after 3000' command is executed.
+10:53:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:53:04 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:53:04 INFO  : Context for 'APU' is selected.
+10:53:04 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:53:04 INFO  : 'configparams force-mem-access 1' command is executed.
+10:53:04 INFO  : Context for 'APU' is selected.
+10:53:04 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:53:04 INFO  : 'ps7_init' command is executed.
+10:53:04 INFO  : 'ps7_post_config' command is executed.
+10:53:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:53:04 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:53:04 INFO  : 'configparams force-mem-access 0' command is executed.
+10:53:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:53:04 INFO  : Memory regions updated for context APU
+10:53:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:53:04 INFO  : 'con' command is executed.
+10:53:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:53:04 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:53:23 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:54:35 INFO  : Disconnected from the channel tcfchan#15.
+10:54:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:54:36 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:54:36 INFO  : 'jtag frequency' command is executed.
+10:54:36 INFO  : Context for 'APU' is selected.
+10:54:36 INFO  : System reset is completed.
+10:54:39 INFO  : 'after 3000' command is executed.
+10:54:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:54:40 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:54:41 INFO  : Context for 'APU' is selected.
+10:54:41 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:54:41 INFO  : 'configparams force-mem-access 1' command is executed.
+10:54:41 INFO  : Context for 'APU' is selected.
+10:54:41 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:54:41 INFO  : 'ps7_init' command is executed.
+10:54:41 INFO  : 'ps7_post_config' command is executed.
+10:54:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:54:41 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:54:41 INFO  : 'configparams force-mem-access 0' command is executed.
+10:54:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:54:41 INFO  : Memory regions updated for context APU
+10:54:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:54:41 INFO  : 'con' command is executed.
+10:54:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:54:41 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:57:29 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:57:37 INFO  : Disconnected from the channel tcfchan#16.
+10:57:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:57:38 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:57:39 INFO  : 'jtag frequency' command is executed.
+10:57:39 INFO  : Context for 'APU' is selected.
+10:57:39 INFO  : System reset is completed.
+10:57:42 INFO  : 'after 3000' command is executed.
+10:57:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:57:43 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:57:43 INFO  : Context for 'APU' is selected.
+10:57:43 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:57:43 INFO  : 'configparams force-mem-access 1' command is executed.
+10:57:43 INFO  : Context for 'APU' is selected.
+10:57:43 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:57:43 INFO  : 'ps7_init' command is executed.
+10:57:43 INFO  : 'ps7_post_config' command is executed.
+10:57:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:57:43 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:57:43 INFO  : 'configparams force-mem-access 0' command is executed.
+10:57:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:57:43 INFO  : Memory regions updated for context APU
+10:57:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:57:44 INFO  : 'con' command is executed.
+10:57:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:57:44 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:58:27 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:58:32 INFO  : Disconnected from the channel tcfchan#17.
+10:58:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:58:34 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:58:34 INFO  : 'jtag frequency' command is executed.
+10:58:34 INFO  : Context for 'APU' is selected.
+10:58:34 INFO  : System reset is completed.
+10:58:37 INFO  : 'after 3000' command is executed.
+10:58:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:58:38 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:58:38 INFO  : Context for 'APU' is selected.
+10:58:38 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:58:38 INFO  : 'configparams force-mem-access 1' command is executed.
+10:58:38 INFO  : Context for 'APU' is selected.
+10:58:38 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:58:38 INFO  : 'ps7_init' command is executed.
+10:58:38 INFO  : 'ps7_post_config' command is executed.
+10:58:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:58:38 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:58:38 INFO  : 'configparams force-mem-access 0' command is executed.
+10:58:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:58:39 INFO  : Memory regions updated for context APU
+10:58:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:58:39 INFO  : 'con' command is executed.
+10:58:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:58:39 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+10:59:21 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:59:46 INFO  : Checking for BSP changes to sync application flags for project '20_AXI_TIMER_IP_APP'...
+10:59:53 INFO  : Disconnected from the channel tcfchan#18.
+10:59:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:59:55 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+10:59:55 INFO  : 'jtag frequency' command is executed.
+10:59:55 INFO  : Context for 'APU' is selected.
+10:59:55 INFO  : System reset is completed.
+10:59:58 INFO  : 'after 3000' command is executed.
+10:59:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+10:59:59 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+10:59:59 INFO  : Context for 'APU' is selected.
+10:59:59 INFO  : Hardware design information is loaded from 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa'.
+10:59:59 INFO  : 'configparams force-mem-access 1' command is executed.
+10:59:59 INFO  : Context for 'APU' is selected.
+10:59:59 INFO  : Sourcing of 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+10:59:59 INFO  : 'ps7_init' command is executed.
+10:59:59 INFO  : 'ps7_post_config' command is executed.
+10:59:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:59:59 INFO  : The application 'C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:59:59 INFO  : 'configparams force-mem-access 0' command is executed.
+10:59:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP_APP/Debug/20_AXI_TIMER_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:59:59 INFO  : Memory regions updated for context APU
+11:00:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:00:00 INFO  : 'con' command is executed.
+11:00:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:00:00 INFO  : Launch script is exported to file 'C:\eFPGA\20_AXI_TIMER_IP\.sdk\launch_scripts\single_application_debug\debugger_20_axi_timer_ip_app-default.tcl'
+11:08:54 INFO  : Disconnected from the channel tcfchan#19.
+13:20:48 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\eFPGA\20_AXI_TIMER_IP\temp_xsdb_launch_script.tcl
+13:20:50 INFO  : XSCT server has started successfully.
+13:20:50 INFO  : Successfully done setting XSCT server connection channel  
+13:20:50 INFO  : plnx-install-location is set to ''
+13:20:50 INFO  : Successfully done setting workspace for the tool. 
+13:20:50 INFO  : Registering command handlers for Vitis TCF services
+13:20:51 INFO  : Successfully done query RDI_DATADIR 

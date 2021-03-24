@@ -1,0 +1,117 @@
+14:08:24 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\KasperPC\Desktop\EOS_Examen\EX14\temp_xsdb_launch_script.tcl
+14:08:24 INFO  : Registering command handlers for Vitis TCF services
+14:08:24 INFO  : Platform repository initialization has completed.
+14:08:25 INFO  : XSCT server has started successfully.
+14:08:25 INFO  : Successfully done setting XSCT server connection channel  
+14:08:26 INFO  : Successfully done setting workspace for the tool. 
+14:08:26 INFO  : Successfully done query RDI_DATADIR 
+14:08:26 INFO  : plnx-install-location is set to ''
+14:09:58 INFO  : Result from executing command 'getProjects': EX14
+14:09:58 INFO  : Result from executing command 'getPlatforms': 
+14:11:13 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14/ps7_cortexa9_0/freertos10_xilinx_domain/bsp/system.mss"
+14:11:19 INFO  : (SwPlaform) Successfully done setParamInSpec 
+14:11:20 INFO  : (SwPlaform) Successfully done setParamInSpec 
+14:11:21 INFO  : (SwPlaform) Successfully done setParamInSpec 
+14:11:22 INFO  : (SwPlatform) Successfully done update_mss 
+14:11:23 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14/ps7_cortexa9_0/freertos10_xilinx_domain/bsp/system.mss"
+14:11:26 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+14:11:30 INFO  : (SwPlaform) Successfully done setParamInSpec 
+14:11:30 INFO  : (SwPlaform) Successfully done setParamInSpec 
+14:11:31 INFO  : (SwPlatform) Successfully done update_mss 
+14:11:32 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+14:11:39 ERROR : (XSDB Server)rm: kan lstat `*.o' niet uitvoeren: Invalid argument
+
+14:11:39 ERROR : (XSDB Server)make: *** [Makefile:42: clean] Error 1
+
+14:14:41 INFO  : Result from executing command 'getProjects': EX14
+14:14:41 INFO  : Result from executing command 'getPlatforms': EX14|C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14/export/EX14/EX14.xpfm
+14:15:51 INFO  : Checking for BSP changes to sync application flags for project 'EX14_1'...
+14:16:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:16:04 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:16:04 INFO  : 'jtag frequency' command is executed.
+14:16:04 INFO  : Context for 'APU' is selected.
+14:16:04 INFO  : System reset is completed.
+14:16:07 INFO  : 'after 3000' command is executed.
+14:16:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}' command is executed.
+14:16:09 INFO  : FPGA configured successfully with bitstream "C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14_1/_ide/bitstream/design_1_wrapper.bit"
+14:16:09 INFO  : Context for 'APU' is selected.
+14:16:09 INFO  : Hardware design and registers information is loaded from 'C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14/export/EX14/hw/design_1_wrapper.xsa'.
+14:16:09 INFO  : 'configparams force-mem-access 1' command is executed.
+14:16:09 INFO  : Context for 'APU' is selected.
+14:16:09 INFO  : Sourcing of 'C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14_1/_ide/psinit/ps7_init.tcl' is done.
+14:16:10 INFO  : 'ps7_init' command is executed.
+14:16:10 INFO  : 'ps7_post_config' command is executed.
+14:16:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:16:10 INFO  : The application 'C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14_1/Debug/EX14_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:16:10 INFO  : 'configparams force-mem-access 0' command is executed.
+14:16:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}
+fpga -file C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14_1/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14/export/EX14/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14_1/Debug/EX14_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:18:16 INFO  : Disconnected from the channel tcfchan#3.
+14:19:29 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\KasperPC\Desktop\EOS_Examen\EX14\temp_xsdb_launch_script.tcl
+14:19:30 INFO  : XSCT server has started successfully.
+14:19:30 INFO  : Successfully done setting XSCT server connection channel  
+14:19:30 INFO  : plnx-install-location is set to ''
+14:19:30 INFO  : Successfully done setting workspace for the tool. 
+14:19:31 INFO  : Platform repository initialization has completed.
+14:19:31 INFO  : Successfully done query RDI_DATADIR 
+14:19:31 INFO  : Registering command handlers for Vitis TCF services
+14:20:32 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14/ps7_cortexa9_0/freertos10_xilinx_domain/bsp/system.mss"
+14:20:43 INFO  : Successfully done sdx_reload_mss "C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14/ps7_cortexa9_0/freertos10_xilinx_domain/bsp/system.mss"
+14:20:43 INFO  : No changes in MSS file content so sources will not be generated.
+14:30:15 INFO  : Result from executing command 'getProjects': EX14
+14:30:15 INFO  : Result from executing command 'getPlatforms': EX14|C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14/export/EX14/EX14.xpfm
+14:30:15 INFO  : Checking for BSP changes to sync application flags for project 'EX14_1'...
+14:30:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:30:47 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+14:30:47 INFO  : 'jtag frequency' command is executed.
+14:30:47 INFO  : Context for 'APU' is selected.
+14:30:47 INFO  : System reset is completed.
+14:30:51 INFO  : 'after 3000' command is executed.
+14:30:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}' command is executed.
+14:30:52 INFO  : FPGA configured successfully with bitstream "C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14_1/_ide/bitstream/design_1_wrapper.bit"
+14:30:53 INFO  : Context for 'APU' is selected.
+14:30:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14/export/EX14/hw/design_1_wrapper.xsa'.
+14:30:53 INFO  : 'configparams force-mem-access 1' command is executed.
+14:30:53 INFO  : Context for 'APU' is selected.
+14:30:53 INFO  : Sourcing of 'C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14_1/_ide/psinit/ps7_init.tcl' is done.
+14:30:53 INFO  : 'ps7_init' command is executed.
+14:30:53 INFO  : 'ps7_post_config' command is executed.
+14:30:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:30:54 INFO  : The application 'C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14_1/Debug/EX14_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:30:54 INFO  : 'configparams force-mem-access 0' command is executed.
+14:30:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-MiniZed V1-1234-oj1A-13723093-0"}
+fpga -file C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14_1/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14/export/EX14/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/KasperPC/Desktop/EOS_Examen/EX14/EX14_1/Debug/EX14_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+

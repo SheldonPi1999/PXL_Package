@@ -1,0 +1,7 @@
+/*19_BRAM_Controller*/
+the_ROM_image:
+{
+  [bootloader]<19_BRAM_Controller/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

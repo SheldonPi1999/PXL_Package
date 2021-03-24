@@ -1,0 +1,541 @@
+14:52:03 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\eFPGA\6_PS_LED_AND_BUTTON\temp_xsdb_launch_script.tcl
+14:52:05 INFO  : XSCT server has started successfully.
+14:52:05 INFO  : plnx-install-location is set to ''
+14:52:05 INFO  : Successfully done setting XSCT server connection channel  
+14:52:06 INFO  : Registering command handlers for Vitis TCF services
+14:52:06 INFO  : Successfully done setting workspace for the tool. 
+14:52:06 INFO  : Successfully done query RDI_DATADIR 
+14:52:59 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+14:52:59 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+14:53:05 INFO  : (SwPlaform) Successfully done setParamInSpec 
+14:53:06 INFO  : (SwPlaform) Successfully done setParamInSpec 
+14:53:08 INFO  : (SwPlatform) Successfully done update_mss 
+14:53:08 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+15:19:32 INFO  : Checking for BSP changes to sync application flags for project '6_PS_LED_AND_BUTTON_App'...
+15:19:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:19:43 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+15:19:43 INFO  : 'jtag frequency' command is executed.
+15:19:44 INFO  : Context for 'APU' is selected.
+15:19:44 INFO  : System reset is completed.
+15:19:47 INFO  : 'after 3000' command is executed.
+15:19:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:19:49 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit"
+15:19:50 INFO  : Context for 'APU' is selected.
+15:19:50 INFO  : Hardware design information is loaded from 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa'.
+15:19:50 INFO  : 'configparams force-mem-access 1' command is executed.
+15:19:51 INFO  : Context for 'APU' is selected.
+15:19:51 INFO  : Sourcing of 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl' is done.
+15:19:51 INFO  : 'ps7_init' command is executed.
+15:19:51 INFO  : 'ps7_post_config' command is executed.
+15:19:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:19:52 INFO  : The application 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:19:52 INFO  : 'configparams force-mem-access 0' command is executed.
+15:19:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:19:52 INFO  : Memory regions updated for context APU
+15:19:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:19:52 INFO  : 'con' command is executed.
+15:19:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:19:52 INFO  : Launch script is exported to file 'C:\eFPGA\6_PS_LED_AND_BUTTON\.sdk\launch_scripts\single_application_debug\debugger_6_ps_led_and_button_app-default.tcl'
+15:21:18 INFO  : Checking for BSP changes to sync application flags for project '6_PS_LED_AND_BUTTON_App'...
+15:21:24 INFO  : Disconnected from the channel tcfchan#2.
+15:21:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:21:25 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+15:21:25 INFO  : 'jtag frequency' command is executed.
+15:21:25 INFO  : Context for 'APU' is selected.
+15:21:25 INFO  : System reset is completed.
+15:21:28 INFO  : 'after 3000' command is executed.
+15:21:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:21:29 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit"
+15:21:29 INFO  : Context for 'APU' is selected.
+15:21:29 INFO  : Hardware design information is loaded from 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa'.
+15:21:29 INFO  : 'configparams force-mem-access 1' command is executed.
+15:21:29 INFO  : Context for 'APU' is selected.
+15:21:29 INFO  : Sourcing of 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl' is done.
+15:21:30 INFO  : 'ps7_init' command is executed.
+15:21:30 INFO  : 'ps7_post_config' command is executed.
+15:21:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:21:30 INFO  : The application 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:21:30 INFO  : 'configparams force-mem-access 0' command is executed.
+15:21:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:21:30 INFO  : Memory regions updated for context APU
+15:21:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:21:30 INFO  : 'con' command is executed.
+15:21:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:21:30 INFO  : Launch script is exported to file 'C:\eFPGA\6_PS_LED_AND_BUTTON\.sdk\launch_scripts\single_application_debug\debugger_6_ps_led_and_button_app-default.tcl'
+15:21:48 INFO  : Checking for BSP changes to sync application flags for project '6_PS_LED_AND_BUTTON_App'...
+15:21:54 INFO  : Disconnected from the channel tcfchan#3.
+15:21:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:21:55 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+15:21:55 INFO  : 'jtag frequency' command is executed.
+15:21:55 INFO  : Context for 'APU' is selected.
+15:21:55 INFO  : System reset is completed.
+15:21:58 INFO  : 'after 3000' command is executed.
+15:21:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:22:00 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit"
+15:22:00 INFO  : Context for 'APU' is selected.
+15:22:00 INFO  : Hardware design information is loaded from 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa'.
+15:22:00 INFO  : 'configparams force-mem-access 1' command is executed.
+15:22:00 INFO  : Context for 'APU' is selected.
+15:22:00 INFO  : Sourcing of 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl' is done.
+15:22:00 INFO  : 'ps7_init' command is executed.
+15:22:00 INFO  : 'ps7_post_config' command is executed.
+15:22:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:22:00 INFO  : The application 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:22:00 INFO  : 'configparams force-mem-access 0' command is executed.
+15:22:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:22:00 INFO  : Memory regions updated for context APU
+15:22:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:22:00 INFO  : 'con' command is executed.
+15:22:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:22:00 INFO  : Launch script is exported to file 'C:\eFPGA\6_PS_LED_AND_BUTTON\.sdk\launch_scripts\single_application_debug\debugger_6_ps_led_and_button_app-default.tcl'
+15:23:39 INFO  : Checking for BSP changes to sync application flags for project '6_PS_LED_AND_BUTTON_App'...
+15:23:44 INFO  : Disconnected from the channel tcfchan#4.
+15:23:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:23:46 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+15:23:46 INFO  : 'jtag frequency' command is executed.
+15:23:46 INFO  : Context for 'APU' is selected.
+15:23:46 INFO  : System reset is completed.
+15:23:49 INFO  : 'after 3000' command is executed.
+15:23:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:23:50 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit"
+15:23:50 INFO  : Context for 'APU' is selected.
+15:23:50 INFO  : Hardware design information is loaded from 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa'.
+15:23:50 INFO  : 'configparams force-mem-access 1' command is executed.
+15:23:50 INFO  : Context for 'APU' is selected.
+15:23:50 INFO  : Sourcing of 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl' is done.
+15:23:50 INFO  : 'ps7_init' command is executed.
+15:23:50 INFO  : 'ps7_post_config' command is executed.
+15:23:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:23:51 INFO  : The application 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:23:51 INFO  : 'configparams force-mem-access 0' command is executed.
+15:23:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:23:51 INFO  : Memory regions updated for context APU
+15:23:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:23:51 INFO  : 'con' command is executed.
+15:23:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:23:51 INFO  : Launch script is exported to file 'C:\eFPGA\6_PS_LED_AND_BUTTON\.sdk\launch_scripts\single_application_debug\debugger_6_ps_led_and_button_app-default.tcl'
+15:24:15 INFO  : Checking for BSP changes to sync application flags for project '6_PS_LED_AND_BUTTON_App'...
+15:24:22 INFO  : Disconnected from the channel tcfchan#5.
+15:24:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:24:23 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+15:24:23 INFO  : 'jtag frequency' command is executed.
+15:24:23 INFO  : Context for 'APU' is selected.
+15:24:23 INFO  : System reset is completed.
+15:24:26 INFO  : 'after 3000' command is executed.
+15:24:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:24:27 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit"
+15:24:27 INFO  : Context for 'APU' is selected.
+15:24:27 INFO  : Hardware design information is loaded from 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa'.
+15:24:27 INFO  : 'configparams force-mem-access 1' command is executed.
+15:24:27 INFO  : Context for 'APU' is selected.
+15:24:27 INFO  : Sourcing of 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl' is done.
+15:24:28 INFO  : 'ps7_init' command is executed.
+15:24:28 INFO  : 'ps7_post_config' command is executed.
+15:24:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:24:28 INFO  : The application 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:24:28 INFO  : 'configparams force-mem-access 0' command is executed.
+15:24:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:24:28 INFO  : Memory regions updated for context APU
+15:24:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:24:28 INFO  : 'con' command is executed.
+15:24:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:24:28 INFO  : Launch script is exported to file 'C:\eFPGA\6_PS_LED_AND_BUTTON\.sdk\launch_scripts\single_application_debug\debugger_6_ps_led_and_button_app-default.tcl'
+15:24:57 INFO  : Checking for BSP changes to sync application flags for project '6_PS_LED_AND_BUTTON_App'...
+15:25:03 INFO  : Disconnected from the channel tcfchan#6.
+15:25:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:04 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+15:25:04 INFO  : 'jtag frequency' command is executed.
+15:25:04 INFO  : Context for 'APU' is selected.
+15:25:04 INFO  : System reset is completed.
+15:25:07 INFO  : 'after 3000' command is executed.
+15:25:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:25:08 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit"
+15:25:08 INFO  : Context for 'APU' is selected.
+15:25:08 INFO  : Hardware design information is loaded from 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa'.
+15:25:08 INFO  : 'configparams force-mem-access 1' command is executed.
+15:25:08 INFO  : Context for 'APU' is selected.
+15:25:08 INFO  : Sourcing of 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl' is done.
+15:25:09 INFO  : 'ps7_init' command is executed.
+15:25:09 INFO  : 'ps7_post_config' command is executed.
+15:25:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:09 INFO  : The application 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:25:09 INFO  : 'configparams force-mem-access 0' command is executed.
+15:25:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:25:09 INFO  : Memory regions updated for context APU
+15:25:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:09 INFO  : 'con' command is executed.
+15:25:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:25:09 INFO  : Launch script is exported to file 'C:\eFPGA\6_PS_LED_AND_BUTTON\.sdk\launch_scripts\single_application_debug\debugger_6_ps_led_and_button_app-default.tcl'
+15:25:28 INFO  : Checking for BSP changes to sync application flags for project '6_PS_LED_AND_BUTTON_App'...
+15:25:33 INFO  : Disconnected from the channel tcfchan#7.
+15:25:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:35 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+15:25:35 INFO  : 'jtag frequency' command is executed.
+15:25:35 INFO  : Context for 'APU' is selected.
+15:25:35 INFO  : System reset is completed.
+15:25:38 INFO  : 'after 3000' command is executed.
+15:25:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:25:39 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit"
+15:25:39 INFO  : Context for 'APU' is selected.
+15:25:39 INFO  : Hardware design information is loaded from 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa'.
+15:25:39 INFO  : 'configparams force-mem-access 1' command is executed.
+15:25:39 INFO  : Context for 'APU' is selected.
+15:25:39 INFO  : Sourcing of 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl' is done.
+15:25:39 INFO  : 'ps7_init' command is executed.
+15:25:39 INFO  : 'ps7_post_config' command is executed.
+15:25:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:40 INFO  : The application 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:25:40 INFO  : 'configparams force-mem-access 0' command is executed.
+15:25:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:25:40 INFO  : Memory regions updated for context APU
+15:25:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:40 INFO  : 'con' command is executed.
+15:25:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:25:40 INFO  : Launch script is exported to file 'C:\eFPGA\6_PS_LED_AND_BUTTON\.sdk\launch_scripts\single_application_debug\debugger_6_ps_led_and_button_app-default.tcl'
+15:26:36 INFO  : Checking for BSP changes to sync application flags for project '6_PS_LED_AND_BUTTON_App'...
+15:27:01 INFO  : Disconnected from the channel tcfchan#8.
+15:27:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:27:03 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+15:27:03 INFO  : 'jtag frequency' command is executed.
+15:27:03 INFO  : Context for 'APU' is selected.
+15:27:03 INFO  : System reset is completed.
+15:27:06 INFO  : 'after 3000' command is executed.
+15:27:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:27:07 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit"
+15:27:07 INFO  : Context for 'APU' is selected.
+15:27:07 INFO  : Hardware design information is loaded from 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa'.
+15:27:07 INFO  : 'configparams force-mem-access 1' command is executed.
+15:27:07 INFO  : Context for 'APU' is selected.
+15:27:07 INFO  : Sourcing of 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl' is done.
+15:27:07 INFO  : 'ps7_init' command is executed.
+15:27:07 INFO  : 'ps7_post_config' command is executed.
+15:27:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:27:08 INFO  : The application 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:27:08 INFO  : 'configparams force-mem-access 0' command is executed.
+15:27:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:27:08 INFO  : Memory regions updated for context APU
+15:27:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:27:08 INFO  : 'con' command is executed.
+15:27:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:27:08 INFO  : Launch script is exported to file 'C:\eFPGA\6_PS_LED_AND_BUTTON\.sdk\launch_scripts\single_application_debug\debugger_6_ps_led_and_button_app-default.tcl'
+15:35:22 INFO  : Checking for BSP changes to sync application flags for project '6_PS_LED_AND_BUTTON_App'...
+15:35:27 INFO  : Disconnected from the channel tcfchan#11.
+15:35:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:35:28 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+15:35:28 INFO  : 'jtag frequency' command is executed.
+15:35:28 INFO  : Context for 'APU' is selected.
+15:35:28 INFO  : System reset is completed.
+15:35:31 INFO  : 'after 3000' command is executed.
+15:35:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:35:33 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit"
+15:35:33 INFO  : Context for 'APU' is selected.
+15:35:33 INFO  : Hardware design information is loaded from 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa'.
+15:35:33 INFO  : 'configparams force-mem-access 1' command is executed.
+15:35:33 INFO  : Context for 'APU' is selected.
+15:35:33 INFO  : Sourcing of 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl' is done.
+15:35:33 INFO  : 'ps7_init' command is executed.
+15:35:33 INFO  : 'ps7_post_config' command is executed.
+15:35:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:35:33 INFO  : The application 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:35:33 INFO  : 'configparams force-mem-access 0' command is executed.
+15:35:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:35:33 INFO  : Memory regions updated for context APU
+15:35:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:35:33 INFO  : 'con' command is executed.
+15:35:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:35:33 INFO  : Launch script is exported to file 'C:\eFPGA\6_PS_LED_AND_BUTTON\.sdk\launch_scripts\single_application_debug\debugger_6_ps_led_and_button_app-default.tcl'
+15:38:08 INFO  : Checking for BSP changes to sync application flags for project '6_PS_LED_AND_BUTTON_App'...
+15:39:22 INFO  : Checking for BSP changes to sync application flags for project '6_PS_LED_AND_BUTTON_App'...
+15:39:30 INFO  : Disconnected from the channel tcfchan#12.
+15:39:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:39:31 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+15:39:31 INFO  : 'jtag frequency' command is executed.
+15:39:31 INFO  : Context for 'APU' is selected.
+15:39:31 INFO  : System reset is completed.
+15:39:34 INFO  : 'after 3000' command is executed.
+15:39:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:39:35 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit"
+15:39:35 INFO  : Context for 'APU' is selected.
+15:39:35 INFO  : Hardware design information is loaded from 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa'.
+15:39:35 INFO  : 'configparams force-mem-access 1' command is executed.
+15:39:35 INFO  : Context for 'APU' is selected.
+15:39:35 INFO  : Sourcing of 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl' is done.
+15:39:36 INFO  : 'ps7_init' command is executed.
+15:39:36 INFO  : 'ps7_post_config' command is executed.
+15:39:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:39:36 INFO  : The application 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:39:36 INFO  : 'configparams force-mem-access 0' command is executed.
+15:39:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:39:36 INFO  : Memory regions updated for context APU
+15:39:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:39:36 INFO  : 'con' command is executed.
+15:39:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:39:36 INFO  : Launch script is exported to file 'C:\eFPGA\6_PS_LED_AND_BUTTON\.sdk\launch_scripts\single_application_debug\debugger_6_ps_led_and_button_app-default.tcl'
+15:46:47 INFO  : Disconnected from the channel tcfchan#13.
+15:46:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:46:48 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+15:46:49 INFO  : 'jtag frequency' command is executed.
+15:46:49 INFO  : Context for 'APU' is selected.
+15:46:49 INFO  : System reset is completed.
+15:46:52 INFO  : 'after 3000' command is executed.
+15:46:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+15:46:53 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit"
+15:46:53 INFO  : Context for 'APU' is selected.
+15:46:53 INFO  : Hardware design information is loaded from 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa'.
+15:46:53 INFO  : 'configparams force-mem-access 1' command is executed.
+15:46:53 INFO  : Context for 'APU' is selected.
+15:46:53 INFO  : Sourcing of 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl' is done.
+15:46:53 INFO  : 'ps7_init' command is executed.
+15:46:53 INFO  : 'ps7_post_config' command is executed.
+15:46:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:46:53 INFO  : The application 'C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:46:53 INFO  : 'configparams force-mem-access 0' command is executed.
+15:46:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App/Debug/6_PS_LED_AND_BUTTON_App.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:46:53 INFO  : Memory regions updated for context APU
+15:46:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:46:53 INFO  : 'con' command is executed.
+15:46:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:46:53 INFO  : Launch script is exported to file 'C:\eFPGA\6_PS_LED_AND_BUTTON\.sdk\launch_scripts\single_application_debug\debugger_6_ps_led_and_button_app-default.tcl'
+15:48:34 INFO  : Disconnected from the channel tcfchan#14.

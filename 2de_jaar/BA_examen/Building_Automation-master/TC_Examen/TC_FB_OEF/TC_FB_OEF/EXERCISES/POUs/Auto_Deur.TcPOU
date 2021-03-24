@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="Auto_Deur" Id="{39c07c60-e7fb-4580-a9a3-930a63e32cc2}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Auto_Deur
+VAR
+	TOF : TOF;
+END_VAR
+
+VAR_INPUT
+	SW_MAIN : BOOL;
+	SW_KASSA : BOOL;
+	SENSOR_DOOR : BOOL;
+END_VAR
+
+VAR_OUTPUT
+	CIL : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF SW_MAIN THEN
+	TOF(IN:= SW_KASSA OR SENSOR_DOOR, PT:= T#1S, Q=> CIL);
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="Auto_Deur">
+      <LineId Id="5" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

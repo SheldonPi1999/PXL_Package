@@ -1,0 +1,31 @@
+Nothing to build in platform 'EX_8_1_PL'
+
+12:54:08 **** Incremental Build of configuration Debug for project EX_8_1_PS_app ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/KasperPC/Desktop/EOS_Examen/EX8/EX8_1_PL/EX_8_1_PL/export/EX_8_1_PL/sw/EX_8_1_PL/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: EX_8_1_PS_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/KasperPC/Desktop/EOS_Examen/EX8/EX8_1_PL/EX_8_1_PL/export/EX_8_1_PL/sw/EX_8_1_PL/freertos10_xilinx_domain/bsplib/lib -o "EX_8_1_PS_app.elf"  ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: EX_8_1_PS_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EX_8_1_PS_app.elf  |tee "EX_8_1_PS_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  72520	   3360	  88800	 164680	  28348	EX_8_1_PS_app.elf
+'Finished building: EX_8_1_PS_app.elf.size'
+' '
+12:54:09 **** Incremental Build of configuration Debug for project EX_8_1_PS_app_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 55171 C:/Users/KasperPC/Desktop/EOS_Examen/EX8/EX8_1_PL/EX_8_1_PL/export/EX_8_1_PL/EX_8_1_PL.xpfm freertos10_xilinx_domain C:/Users/KasperPC/Desktop/EOS_Examen/EX8/EX8_1_PL/EX_8_1_PS_app_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/KasperPC/Desktop/EOS_Examen/EX8/EX8_1_PL/EX_8_1_PL/export/EX_8_1_PL/EX_8_1_PL.xpfm --sys_config EX_8_1_PL --bif C:/Users/KasperPC/Desktop/EOS_Examen/EX8/EX8_1_PL/EX_8_1_PS_app_system/Debug/system.bif --bitstream C:/Users/KasperPC/Desktop/EOS_Examen/EX8/EX8_1_PL/EX_8_1_PS_app/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/KasperPC/Desktop/EOS_Examen/EX8/EX8_1_PL/EX_8_1_PS_app/Debug/EX_8_1_PS_app.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/KasperPC/Desktop/EOS_Examen/EX8/EX8_1_PL/EX_8_1_PS_app/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/KasperPC/Desktop/EOS_Examen/EX8/EX8_1_PL/EX_8_1_PS_app_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

@@ -1,0 +1,43 @@
+Bijgevoegde bestanden:
+Bestand SQR.vhd (1,057 kB)
+Maak voor deze opdracht een nieuwe map aan op je computer waarin je zowel hardware platform alsook de software applicatie aanmaakt.
+Opdracht: Ontwikkeling van een FreeRTOS applicatie op een Zynq based hardware platform.
+
+
+Hardware Platform
+Ontwikkel een Zynq based SoC met Volgende IP blokken op het MiniZED board:
+
+- Zynq PS
+
+- PS LEDs
+- PL LEDs
+- PS BTN
+- Custom AXI IP blok (SQR.vhd, zie bijlage)
+
+- Exporteer je Hardware platform als xsa file.
+
+- Sla tevens je blockdesign op als pdf.
+
+
+
+Software Platform
+Bouw een FreeRTOS Applicatie met volgende vereisten:
+
+- Na 2s gaat er een Timer af die je naam uitprint in de seriële console.
+
+- Zorg dat je 2 Tasks aanmaakt:         
+
+Task 1: als de gebruiker op de BTN duwt wordt er een integer variabele doorgestuurd naar Task 2 via een queue mechanisme. Deze integer variabele is het aantal keer dat de gebruiker reeds op de BTN geduwt heeft.
+Task 2: leest de queue uit en print dan via de seriële console een value uit die de SQR AXI IP berekent heeft, print tevens uit de hoeveelste keer deze Task aangeroepen is uit via volgende string : "computed value 4: 16", in dit voorbeeld is het de 4e keer dat deze task aangeroepen werd en is de generated value via de SQR AXI IP 16.
+- Om de 5s togglen de PS en PL LEDs [00 01 10 11 00 01 ....] (via een Timer)
+- Zorg dat de software blijft lopen.
+
+- Exporteer je software via File => Export; zorg dat je alle projecten die nodig zijn include in deze Vitis zip.
+
+
+
+Upload de volledige map (hardware + software) waarin je gewerkt hebt voor deze opdracht naar Blackboard via een zip file.
+
+
+
+Je bent zelf verantwoordelijk voor een correcte upload van je opdracht.

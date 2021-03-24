@@ -1,0 +1,16 @@
+19:57:11 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\KasperPC\Desktop\EOS_Examen\EOS_OEFENING\EX12_STOLEN\Oefening12\temp_xsdb_launch_script.tcl
+19:57:11 INFO  : Registering command handlers for Vitis TCF services
+19:57:11 INFO  : Platform repository initialization has completed.
+19:57:13 INFO  : XSCT server has started successfully.
+19:57:13 INFO  : plnx-install-location is set to ''
+19:57:13 INFO  : Successfully done setting XSCT server connection channel  
+19:57:13 INFO  : Successfully done setting workspace for the tool. 
+19:57:13 INFO  : Successfully done query RDI_DATADIR 
+19:57:44 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\KasperPC\Desktop\EOS_Examen\EOS_OEFENING\EX12_STOLEN\Oefening12\temp_xsdb_launch_script.tcl
+19:57:44 INFO  : Registering command handlers for Vitis TCF services
+19:57:44 INFO  : Platform repository initialization has completed.
+19:57:45 INFO  : XSCT server has started successfully.
+19:57:45 INFO  : plnx-install-location is set to ''
+19:57:45 INFO  : Successfully done setting XSCT server connection channel  
+19:57:45 INFO  : Successfully done query RDI_DATADIR 
+19:57:45 INFO  : Successfully done setting workspace for the tool. 

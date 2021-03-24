@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include "xil_printf.h"
+#include "sleep.h"
+#include "xparameters.h"
+#include "xgpiops.h"
+
+#define MASK 0b111111111
+#define CHANNEL_PS 2
+// EMIO Is Mapped to Channel 2, Channel 0 and 1 is mapped to GPIO MIO => see UG585
+#define GPIO_DEVICE_ID_PS XPAR_XGPIOPS_0_DEVICE_ID
+
+XGpioPs GpioPs;
+
+void testfunctionPS(XGpioPs *gpiops);
+
+int main()
+{
+	int Status;
+	XGpioPs_Config *GPIOConfigPtr;
+
+
+    print("GPIO PS and PL Demo Application!\n\r");
+
+    GPIOConfigPtr = XGpioPs_LookupConfig(GPIO_DEVICE_ID_PS);
+    Status = XGpioPs_CfgInitialize(&GpioPs, GPIOConfigPtr,GPIOConfigPtr->BaseAddr);
+
+    	if (Status != XST_SUCCESS) {
+    		printf("status error \n\r");
+    		return XST_FAILURE;
+    	}
+
+	XGpioPs_SetDirection(&GpioPs, CHANNEL_PS, MASK);
+	XGpioPs_SetOutputEnable(&GpioPs, CHANNEL_PS, MASK);
+    print("GPIO PS and PL Demo Application!\n\r");
+
+    while(1){
+    	testfunctionPS(&GpioPs);
+    }
+
+    return 0;
+}
+
+void testfunctionPS(XGpioPs *gpioPs)
+{
+	int value=0b0000001;
+	for(int i=0;i<9;i++)
+	{
+		XGpioPs_Write(&GpioPs,CHANNEL_PS,value);
+		value=value<<1;
+		sleep_A9(1);
+		xil_printf("Value PS: %d %x\n\r",value,value);
+	}
+}

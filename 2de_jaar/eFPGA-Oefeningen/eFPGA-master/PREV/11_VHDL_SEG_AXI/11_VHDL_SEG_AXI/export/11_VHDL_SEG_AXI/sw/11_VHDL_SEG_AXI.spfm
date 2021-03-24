@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdx:platform sdx:vendor="xilinx.com"
+              sdx:library="sdx"
+              sdx:name="11_VHDL_SEG_AXI"
+              sdx:version="1.0"
+              sdx:schemaVersion="1.0"
+              xmlns:sdx="http://www.xilinx.com/sdx">
+    <sdx:description>
+11_VHDL_SEG_AXI
+    </sdx:description>
+    <sdx:systemConfigurations sdx:defaultConfiguration="11_VHDL_SEG_AXI">
+        <sdx:configuration sdx:name="11_VHDL_SEG_AXI"
+                           sdx:displayName="11_VHDL_SEG_AXI"
+                           sdx:defaultProcessorGroup="standalone_domain"
+                           sdx:runtimes="cpp">
+            <sdx:description>11_VHDL_SEG_AXI</sdx:description>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="11_VHDL_SEG_AXI/boot/11_VHDL_SEG_AXI.bif"
+                            sdx:readme="11_VHDL_SEG_AXI/boot/generic.readme"
+                            sdx:qemuArguments="11_VHDL_SEG_AXI/qemu/qemu_args.txt"
+                            />
+                <sdx:image sdx:name="standalone_domain"
+                            sdx:bif="11_VHDL_SEG_AXI/boot/11_VHDL_SEG_AXI.bif"
+                            sdx:readme="11_VHDL_SEG_AXI/boot/generic.readme"
+                            sdx:qemuArguments="11_VHDL_SEG_AXI/standalone_domain/qemu/qemu_args.txt"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="standalone_domain"
+                                sdx:displayName="standalone on ps7_cortexa9_0"
+                                sdx:cpuType="cortex-a9"
+                                sdx:cpuInstance="ps7_cortexa9_0">
+                <sdx:os sdx:name="standalone"
+                        sdx:displayName="standalone"
+                        sdx:bspLibraryPaths="11_VHDL_SEG_AXI/standalone_domain/bsplib/lib"
+                        sdx:bspIncludePaths="11_VHDL_SEG_AXI/standalone_domain/bspinclude/include"
+                        sdx:bspConfig="11_VHDL_SEG_AXI/standalone_domain/system.mss"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+    </sdx:systemConfigurations>
+</sdx:platform>

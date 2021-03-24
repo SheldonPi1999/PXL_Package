@@ -1,0 +1,9 @@
+TRACE::2020-06-02.18:40:23::SCWBifWriter::Found the complete platform C:/eFPGA/19_BRAM_Controller/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+TRACE::2020-06-02.18:40:24::SCWBifWriter::hardware databse : design_1_wrapper_1
+TRACE::2020-06-02.18:40:24::SCWBifWriter::bitstream found in the design
+TRACE::2020-06-02.18:40:24::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2020-06-02.18:40:24::SCWBifWriter::proc type : 
+TRACE::2020-06-02.18:40:24::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2020-06-02.18:40:24::SCWBifWriter::Device type is : zynq
+TRACE::2020-06-02.18:40:24::SCWBifWriter::Writing BIF to file : C:/eFPGA/19_BRAM_Controller/19_BRAM_Controller_APP_system/Debug/system.bif
+TRACE::2020-06-02.18:40:24::SCWBifWriter::Writing the Zynq Baremetal bif 

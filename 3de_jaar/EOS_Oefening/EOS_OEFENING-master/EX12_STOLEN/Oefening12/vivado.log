@@ -1,0 +1,148 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Jan 27 19:56:38 2021
+# Process ID: 2336
+# Current directory: C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5476 C:\Users\KasperPC\Desktop\EOS_Examen\EOS_OEFENING\EX12_STOLEN\Oefening12\Oefening12.xpr
+# Log file: C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/vivado.log
+# Journal file: C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.xpr
+INFO: [Project 1-313] Project file moved from 'C:/EmbeddedOperatingSystems/Oefeningen/Herhaling/Oefening12' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] Board Part Repository Path: Could not find the directory 'C:/Users/KasperPC/Desktop/Users/11600782/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store', nor could it be found using path 'C:/Users/11600782/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'.
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/IP_REPO', nor could it be found using path 'C:/EmbeddedOperatingSystems/Oefeningen/IP_REPO'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/IP_REPO'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_SevenSegmentDriver_0_0
+design_1_auto_pc_0
+design_1_axi_gpio_0_0
+design_1_ps7_0_axi_periph_0
+design_1_xbar_0
+
+INFO: [Project 1-230] Project 'Oefening12.xpr' upgraded for this version of Vivado.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1061.016 ; gain = 0.000
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:user:SevenSegmentDriver:1.0 - SevenSegmentDriver_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Successfully read diagram <design_1> from BD file <C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/design_1.bd>
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Wed Jan 27 19:58:30 2021] Launched synth_1...
+Run output will be captured here: C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.runs/synth_1/runme.log
+[Wed Jan 27 19:58:30 2021] Launched impl_1...
+Run output will be captured here: C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.runs/impl_1/runme.log
+set_property LOCK_UPGRADE 1 [get_bd_cells /SevenSegmentDriver_0]
+WARNING: [BD 41-2028] Locking SevenSegmentDriver to version 1.0. If the latest driver for the IP is not backwards compatible, software flow will assign a generic driver or no driver for this IP
+upgrade_ip [get_ips  {design_1_ps7_0_axi_periph_0 design_1_axi_gpio_0_0}] -log ip_upgrade.log
+Upgrading 'C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/design_1.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.runs/design_1_auto_pc_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.runs/design_1_axi_gpio_0_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.runs/design_1_xbar_0_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded design_1_axi_gpio_0_0 (AXI GPIO 2.0) from revision 21 to revision 23
+INFO: [IP_Flow 19-3422] Upgraded design_1_ps7_0_axi_periph_0 (AXI Interconnect 2.1) from revision 20 to revision 22
+INFO: [BD 41-1983] Skipping reset outputs for the ip SevenSegmentDriver_0, which is locked by user.
+Wrote  : <C:\Users\KasperPC\Desktop\EOS_Examen\EOS_OEFENING\EX12_STOLEN\Oefening12\Oefening12.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips {design_1_ps7_0_axi_periph_0 design_1_axi_gpio_0_0}] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <C:\Users\KasperPC\Desktop\EOS_Examen\EOS_OEFENING\EX12_STOLEN\Oefening12\Oefening12.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+WARNING: [IP_Flow 19-5160] IP 'design_1_processing_system7_0_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'design_1_processing_system7_0_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'design_1_processing_system7_0_0' detected simulation language mismatch. Simulation type 'tlm_dpi' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-5160] IP 'design_1_xbar_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'design_1_xbar_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'design_1_auto_pc_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'design_1_auto_pc_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2304.180 ; gain = 191.547
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_gpio_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_50M_0] }
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_rst_ps7_0_50M_0_synth_1 design_1_processing_system7_0_0_synth_1 design_1_axi_gpio_0_0_synth_1 design_1_xbar_0_synth_1 design_1_auto_pc_0_synth_1 -jobs 20
+[Wed Jan 27 19:59:27 2021] Launched design_1_rst_ps7_0_50M_0_synth_1, design_1_processing_system7_0_0_synth_1, design_1_axi_gpio_0_0_synth_1, design_1_xbar_0_synth_1, design_1_auto_pc_0_synth_1...
+Run output will be captured here:
+design_1_rst_ps7_0_50M_0_synth_1: C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.runs/design_1_rst_ps7_0_50M_0_synth_1/runme.log
+design_1_processing_system7_0_0_synth_1: C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_axi_gpio_0_0_synth_1: C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.runs/design_1_axi_gpio_0_0_synth_1/runme.log
+design_1_xbar_0_synth_1: C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.runs/design_1_xbar_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.runs/design_1_auto_pc_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.ip_user_files -ipstatic_source_dir C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.cache/compile_simlib/modelsim} {questa=C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.cache/compile_simlib/questa} {riviera=C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.cache/compile_simlib/riviera} {activehdl=C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Wed Jan 27 20:00:20 2021] Launched synth_1...
+Run output will be captured here: C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 20
+[Wed Jan 27 20:01:12 2021] Launched impl_1...
+Run output will be captured here: C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z007sclg225-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 2304.180 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.258 . Memory (MB): peak = 2304.180 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.258 . Memory (MB): peak = 2304.180 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2304.180 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2350.387 ; gain = 46.207
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Wed Jan 27 20:03:26 2021] Launched impl_1...
+Run output will be captured here: C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.runs/impl_1/runme.log
+set_property pfm_name {} [get_files -all {C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/Oefening12.srcs/sources_1/bd/design_1/design_1.bd}]
+write_hw_platform -fixed -include_bit -force -file C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/design_1_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/design_1_wrapper.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2020.1/data\embeddedsw) loading 0 seconds
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/KasperPC/Desktop/EOS_Examen/EOS_OEFENING/EX12_STOLEN/Oefening12/design_1_wrapper.xsa
+write_hw_platform: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2390.184 ; gain = 23.797
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 27 20:04:50 2021...

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="testClient2" Id="{b3f70d34-8b08-4369-a934-de708260f217}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM testClient2
+
+VAR_INPUT
+	bSetParameter : BOOL := TRUE;
+END_VAR
+
+VAR
+	FB_IotMqttClient : FB_IotMqttClient;
+	FB_IotMqttMessageQueue : FB_IotMqttMessageQueue;
+	FB_IotMqttMessage : FB_IotMqttMessage;
+	
+	bSubscribed    : BOOL;
+	sTopicSub      : STRING(255) := '$$SYS/broker/clients/connected';
+    {attribute 'TcEncoding':='UTF-8'}
+    sTopicRcv      : STRING(255);
+    {attribute 'TcEncoding':='UTF-8'}
+    sPayloadRcv    : STRING(5);
+	fbTimer: TON;
+	i: UINT;
+	sPayloadPub: STRING(255);
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bSetParameter THEN
+	FB_IotMqttClient.sHostName:= 'broker.hivemq.com';
+	FB_IotMqttClient.nHostPort:= 1883;
+	FB_IotMqttClient.ipMessageQueue:= FB_IotMqttMessageQueue;
+	bSetParameter:= FALSE;
+END_IF
+
+FB_IotMqttClient.Execute(TRUE);
+
+IF FB_IotMqttClient.bConnected THEN
+    fbTimer(IN:=TRUE);
+    IF fbTimer.Q THEN // publish new payload every second
+        fbTimer(IN:=FALSE);
+        i := i + 1;
+        sPayloadPub := 'Landen';
+        FB_IotMqttClient.Publish( sTopic:= 'PXLcommunicationRX', 
+                                  pPayload:= ADR(sPayloadPub), nPayloadSize:= LEN2(ADR(sPayloadPub))+1, 
+                                  eQoS:= TcIotMqttQos.AtMostOnceDelivery, bRetain:= FALSE, bQueue:= FALSE );
+    END_IF
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="testClient2">
+      <LineId Id="23" Count="7" />
+      <LineId Id="43" Count="11" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

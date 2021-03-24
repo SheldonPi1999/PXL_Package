@@ -1,0 +1,7 @@
+/*seven_seg_app*/
+the_ROM_image:
+{
+ [bootloader] <seven_seg_app/boot/fsbl.elf>
+ <bitstream>
+ <elf,ps7_cortexa9_0>
+}

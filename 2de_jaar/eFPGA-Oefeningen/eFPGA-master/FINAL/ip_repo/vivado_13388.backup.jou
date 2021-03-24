@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Jun  3 11:57:10 2020
+# Process ID: 13388
+# Current directory: C:/eFPGA/ip_repo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6244 C:\eFPGA\ip_repo\edit_ROTARY_ENCODER_v1_0.xpr
+# Log file: C:/eFPGA/ip_repo/vivado.log
+# Journal file: C:/eFPGA/ip_repo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/eFPGA/ip_repo/edit_ROTARY_ENCODER_v1_0.xpr
+ipx::open_ipxact_file C:/eFPGA/ip_repo/ROTARY_ENCODER_1.0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 5 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/eFPGA/ip_repo/ROTARY_ENCODER_1.0
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core {c:\eFPGA\ip_repo\ROTARY_ENCODER_1.0\xilinx.com_user_ROTARY_ENCODER_1.0.zip} [ipx::current_core]

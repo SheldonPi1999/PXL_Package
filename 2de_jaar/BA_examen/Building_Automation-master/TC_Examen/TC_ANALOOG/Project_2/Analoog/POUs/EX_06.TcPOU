@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="EX_06" Id="{59e6bb17-390e-4183-ab82-bdd0050f3b9d}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM EX_06
+
+VAR
+	TEMP_ASK : INT;
+	TEMP_LIVE : INT;
+END_VAR
+
+VAR_INPUT
+	potentio_ask: INT;
+	potentio_live: INT;
+END_VAR
+
+VAR_OUTPUT
+	LED : BOOL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[TEMP_ASK := SCALING(input:=potentio_ask, imin:= 0, imax:= 32767, omin:= 0, omax:= 30);
+TEMP_LIVE := SCALING(input:=potentio_live, imin:= 0, imax:= 32767, omin:= 0, omax:= 30);
+
+IF (TEMP_LIVE <= (TEMP_ASK-2))
+	THEN LED := TRUE;
+ELSIF (TEMP_LIVE >= (TEMP_ASK+2))
+	THEN LED := FALSE;
+END_IF
+]]></ST>
+    </Implementation>
+    <LineIds Name="EX_06">
+      <LineId Id="34" Count="0" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="32" Count="1" />
+      <LineId Id="30" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,252 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Jun  1 18:28:36 2020
+# Process ID: 16052
+# Current directory: C:/eFPGA/9_VHDL_7_SEG
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1468 C:\eFPGA\9_VHDL_7_SEG\9_VHDL_7_SEG.xpr
+# Log file: C:/eFPGA/9_VHDL_7_SEG/vivado.log
+# Journal file: C:/eFPGA/9_VHDL_7_SEG\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.xpr
+
+file mkdir C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.srcs/sources_1/new
+close [ open C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.srcs/sources_1/new/VHDL_7_SEG.vhd w ]
+add_files C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.srcs/sources_1/new/VHDL_7_SEG.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 24
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 24
+wait_on_run impl_1
+open_run impl_1
+place_ports {SEVEN_SEG[0]} M14
+place_ports {SEVEN_SEG[1]} L14
+place_ports {SEVEN_SEG[2]} M15
+place_ports {SEVEN_SEG[3]} L15
+place_ports {SEVEN_SEG[4]} N14
+place_ports {SEVEN_SEG[5]} N13
+place_ports {SEVEN_SEG[6]} L13
+place_ports {SEVEN_SEG[7]} K13
+file mkdir C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.srcs/constrs_1/new
+close [ open C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.srcs/constrs_1/new/XDC.xdc w ]
+add_files -fileset constrs_1 C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.srcs/constrs_1/new/XDC.xdc
+set_property target_constrs_file C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.srcs/constrs_1/new/XDC.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {SEVEN_SEG[7]} {SEVEN_SEG[6]} {SEVEN_SEG[5]} {SEVEN_SEG[4]} {SEVEN_SEG[3]} {SEVEN_SEG[2]} {SEVEN_SEG[1]} {SEVEN_SEG[0]}]]
+reset_run synth_1
+save_constraints -force
+save_constraints -force
+close_design
+launch_runs impl_1 -jobs 24
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+open_run impl_1
+reset_run impl_1 -prev_step 
+set_property IOSTANDARD LVCMOS33 [get_ports [list {SEVEN_SEG[7]} {SEVEN_SEG[6]} {SEVEN_SEG[5]} {SEVEN_SEG[4]} {SEVEN_SEG[3]} {SEVEN_SEG[2]} {SEVEN_SEG[1]} {SEVEN_SEG[0]}]]
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.runs/impl_1/VHDL_7_SEG.bit} [get_hw_devices xc7z007s_1]
+current_hw_device [get_hw_devices xc7z007s_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z007s_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.runs/impl_1/VHDL_7_SEG.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+close_hw_manager
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+add_files -norecurse C:/eFPGA/Extra/vhdlnoclock.vhd
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference vhdlnoclk vhdlnoclk_0
+create_bd_cell -type module -reference VHDL_7_SEG VHDL_7_SEG_0
+set_property location {1 92 -318} [get_bd_cells vhdlnoclk_0]
+connect_bd_net [get_bd_pins vhdlnoclk_0/clk65MHz] [get_bd_pins VHDL_7_SEG_0/clk_65MHz]
+set_property location {1 95 -313} [get_bd_cells vhdlnoclk_0]
+startgroup
+make_bd_pins_external  [get_bd_pins VHDL_7_SEG_0/SEVEN_SEG]
+endgroup
+save_bd_design
+make_wrapper -files [get_files C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+set_property package_pin "" [get_ports [list  clk_65MHz]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list clk_65MHz]]
+open_bd_design {C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.srcs/sources_1/bd/design_1/design_1.bd}
+update_module_reference design_1_VHDL_7_SEG_0_0
+save_constraints -force
+reset_run synth_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+launch_runs impl_1 -jobs 24
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+reset_run synth_1
+update_module_reference design_1_VHDL_7_SEG_0_0
+update_compile_order -fileset sources_1
+update_module_reference design_1_VHDL_7_SEG_0_0
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+connect_bd_net [get_bd_ports SEVEN_SEG_0] [get_bd_pins VHDL_7_SEG_0/enc_out]
+reset_run synth_1
+reset_run design_1_VHDL_7_SEG_0_0_synth_1
+save_bd_design
+launch_runs impl_1 -jobs 24
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+set_property IOSTANDARD LVCMOS33 [get_ports [list {SEVEN_SEG_0[7]} {SEVEN_SEG_0[6]} {SEVEN_SEG_0[5]} {SEVEN_SEG_0[4]} {SEVEN_SEG_0[3]} {SEVEN_SEG_0[2]} {SEVEN_SEG_0[1]} {SEVEN_SEG_0[0]}]]
+place_ports {SEVEN_SEG_0[0]} M14
+place_ports {SEVEN_SEG_0[1]} L14
+place_ports {SEVEN_SEG_0[2]} M15
+place_ports {SEVEN_SEG_0[3]} L15
+place_ports {SEVEN_SEG_0[4]} N14
+place_ports {SEVEN_SEG_0[5]} N13
+place_ports {SEVEN_SEG_0[6]} L13
+place_ports {SEVEN_SEG_0[7]} K13
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z007s_1]
+current_hw_device [get_hw_devices xc7z007s_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z007s_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+startgroup
+set_property package_pin "" [get_ports [list  {SEVEN_SEG_0[7]}]]
+place_ports {SEVEN_SEG_0[4]} K13
+endgroup
+place_ports {SEVEN_SEG_0[4]} P8
+place_ports {SEVEN_SEG_0[4]} N14
+place_ports {SEVEN_SEG_0[7]} K13
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+startgroup
+set_property package_pin "" [get_ports [list  {SEVEN_SEG_0[5]}]]
+place_ports {SEVEN_SEG_0[7]} N13
+endgroup
+place_ports {SEVEN_SEG_0[6]} M11
+place_ports {SEVEN_SEG_0[6]} L13
+place_ports {SEVEN_SEG_0[5]} K13
+startgroup
+set_property package_pin "" [get_ports [list  {SEVEN_SEG_0[0]}]]
+place_ports {SEVEN_SEG_0[4]} M14
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {SEVEN_SEG_0[1]}]]
+place_ports {SEVEN_SEG_0[3]} L14
+endgroup
+place_ports {SEVEN_SEG_0[1]} L15
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+set_property package_pin "" [get_ports [list  {SEVEN_SEG_0[0]}]]
+startgroup
+set_property package_pin "" [get_ports [list  {SEVEN_SEG_0[7]}]]
+place_ports {SEVEN_SEG_0[0]} N13
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {SEVEN_SEG_0[6]}]]
+place_ports {SEVEN_SEG_0[1]} L13
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {SEVEN_SEG_0[5]}]]
+place_ports {SEVEN_SEG_0[2]} K13
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {SEVEN_SEG_0[4]}]]
+place_ports {SEVEN_SEG_0[3]} M14
+endgroup
+place_ports {SEVEN_SEG_0[4]} L14
+place_ports {SEVEN_SEG_0[5]} M15
+place_ports {SEVEN_SEG_0[6]} L15
+set_property package_pin "" [get_ports [list  {SEVEN_SEG_0[7]}]]
+place_ports {SEVEN_SEG_0[7]} N14
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+startgroup
+set_property package_pin "" [get_ports [list  {SEVEN_SEG_0[6]}]]
+place_ports {SEVEN_SEG_0[0]} L15
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {SEVEN_SEG_0[5]}]]
+place_ports {SEVEN_SEG_0[1]} M15
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {SEVEN_SEG_0[4]}]]
+place_ports {SEVEN_SEG_0[2]} L14
+endgroup
+place_ports {SEVEN_SEG_0[4]} K13
+place_ports {SEVEN_SEG_0[5]} L13
+place_ports {SEVEN_SEG_0[6]} N13
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {C:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+wait_on_run impl_1
+reset_run impl_1

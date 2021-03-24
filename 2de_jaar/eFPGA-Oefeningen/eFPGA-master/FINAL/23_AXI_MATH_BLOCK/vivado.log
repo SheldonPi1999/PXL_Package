@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Jun  3 11:11:57 2020
+# Process ID: 12376
+# Current directory: C:/eFPGA/23_AXI_MATH_BLOCK
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13308 C:\eFPGA\23_AXI_MATH_BLOCK\23_AXI_MATH_BLOCK.xpr
+# Log file: C:/eFPGA/23_AXI_MATH_BLOCK/vivado.log
+# Journal file: C:/eFPGA/23_AXI_MATH_BLOCK\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/eFPGA/23_AXI_MATH_BLOCK/23_AXI_MATH_BLOCK.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+create_bd_design "design_1"
+Wrote  : <C:\eFPGA\23_AXI_MATH_BLOCK\23_AXI_MATH_BLOCK.srcs\sources_1\bd\design_1\design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 993.102 ; gain = 82.898
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  3 11:16:50 2020...

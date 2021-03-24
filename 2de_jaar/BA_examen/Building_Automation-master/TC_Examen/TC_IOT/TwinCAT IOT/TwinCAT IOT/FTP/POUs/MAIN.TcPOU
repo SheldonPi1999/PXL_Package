@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="MAIN" Id="{f973a88a-61ea-40eb-b91d-f96bd698dbe6}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+
+VAR_INPUT
+END_VAR
+
+VAR_OUTPUT
+	progressBar: UDINT;
+END_VAR
+
+VAR
+	FB_FTP_FileUploadEx: FB_FTP_FileUploadEx;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[FB_FTP_FileUploadEx(
+			sHost:= 'ftp.dlptest.com',
+			nPort:= 21, 
+			sUsername:= 'dlpuser@dlptest.com',
+			sPassword:= 'SzMf7rTE4pCrf9dV286GuNe4N',
+			sSrcFile:= 'C:\Users\Kasper\Desktop\JensIsJens.txt', 
+			sDesFile:= 'Casper2.csv', 
+			bExecute:= TRUE, 
+			tTimeout:= T#15S, 
+			bBusy=> , 
+			bError=> , 
+			nErrId=> , 
+			nProgress=> progressBar);
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="206" Count="0" />
+      <LineId Id="208" Count="10" />
+      <LineId Id="194" Count="0" />
+      <LineId Id="152" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

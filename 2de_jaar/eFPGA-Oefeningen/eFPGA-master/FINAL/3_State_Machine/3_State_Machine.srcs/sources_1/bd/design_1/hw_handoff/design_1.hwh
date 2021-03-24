@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun  1 13:32:21 2020" VIVADOVERSION="2019.2">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:minized:part0:1.2" DEVICE="7z007s" NAME="design_1" PACKAGE="clg225" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" NAME="LED_G" SIGIS="undef" SIGNAME="main_0_LED_G">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="main_0" PORT="LED_G"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="LED_R" SIGIS="undef" SIGNAME="main_0_LED_R">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="main_0" PORT="LED_R"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="light_reset_0" SIGIS="rst" SIGNAME="External_Ports_light_reset_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="main_0" PORT="light_reset"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/main_0" HWVERSION="1.0" INSTANCE="main_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="main" VLNV="xilinx.com:module_ref:main:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_main_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk_65MHz" SIGIS="undef" SIGNAME="vhdlnoclk_0_clk65MHz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vhdlnoclk_0" PORT="clk65MHz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="light_reset" SIGIS="rst" SIGNAME="External_Ports_light_reset_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="light_reset_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="LED_G" SIGIS="undef" SIGNAME="main_0_LED_G">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LED_G"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="LED_R" SIGIS="undef" SIGNAME="main_0_LED_R">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LED_R"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/vhdlnoclk_0" HWVERSION="1.0" INSTANCE="vhdlnoclk_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="vhdlnoclk" VLNV="xilinx.com:module_ref:vhdlnoclk:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_vhdlnoclk_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="clk65MHz" SIGIS="undef" SIGNAME="vhdlnoclk_0_clk65MHz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="main_0" PORT="clk_65MHz"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

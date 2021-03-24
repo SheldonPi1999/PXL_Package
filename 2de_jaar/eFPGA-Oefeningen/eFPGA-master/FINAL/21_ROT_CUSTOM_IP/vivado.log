@@ -1,0 +1,232 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Jun  3 11:18:19 2020
+# Process ID: 14612
+# Current directory: C:/eFPGA/21_ROT_CUSTOM_IP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9140 C:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.xpr
+# Log file: C:/eFPGA/21_ROT_CUSTOM_IP/vivado.log
+# Journal file: C:/eFPGA/21_ROT_CUSTOM_IP\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+create_bd_design "design_1"
+Wrote  : <C:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.srcs\sources_1\bd\design_1\design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 979.980 ; gain = 92.723
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+create_peripheral xilinx.com user ROTARY_ENCODER 1.0 -dir C:/eFPGA/21_ROT_CUSTOM_IP/../ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:ROTARY_ENCODER:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:ROTARY_ENCODER:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:ROTARY_ENCODER:1.0]
+set_property  ip_repo_paths  C:/eFPGA/21_ROT_CUSTOM_IP/../ip_repo/ROTARY_ENCODER_1.0 [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/eFPGA/ip_repo/ROTARY_ENCODER_1.0'.
+ipx::edit_ip_in_project -upgrade true -name edit_ROTARY_ENCODER_v1_0 -directory C:/eFPGA/21_ROT_CUSTOM_IP/../ip_repo c:/eFPGA/ip_repo/ROTARY_ENCODER_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/eFPGA/ip_repo/ROTARY_ENCODER_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+close [ open C:/eFPGA/ip_repo/ROTARY_ENCODER.vhd w ]
+add_files C:/eFPGA/ip_repo/ROTARY_ENCODER.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/eFPGA/ip_repo/ROTARY_ENCODER_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/eFPGA/ip_repo/ROTARY_ENCODER_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core {c:\eFPGA\ip_repo\ROTARY_ENCODER_1.0\xilinx.com_user_ROTARY_ENCODER_1.0.zip} [ipx::current_core]
+CRITICAL WARNING: [IP_Flow 19-5330] Component Referenced File 'c:/eFPGA/ip_repo/ROTARY_ENCODER.vhd' is outside of Component Directory: cannot archive the component.
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core {c:\eFPGA\ip_repo\ROTARY_ENCODER_1.0\xilinx.com_user_ROTARY_ENCODER_1.0.zip} [ipx::current_core]
+CRITICAL WARNING: [IP_Flow 19-5330] Component Referenced File 'c:/eFPGA/ip_repo/ROTARY_ENCODER.vhd' is outside of Component Directory: cannot archive the component.
+update_files -from_files C:/eFPGA/ip_repo/ROTARY_ENCODER_1.0/src/ROTARY_ENCODER.vhd -to_files C:/eFPGA/ip_repo/ROTARY_ENCODER.vhd -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'C:/eFPGA/ip_repo/ROTARY_ENCODER.vhd' with file 'C:/eFPGA/ip_repo/ROTARY_ENCODER_1.0/src/ROTARY_ENCODER.vhd'.
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/eFPGA/ip_repo/ROTARY_ENCODER_1.0/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_vhdlsynthesis (VHDL Synthesis)': File 'c:/eFPGA/ip_repo/ROTARY_ENCODER.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_vhdlbehavioralsimulation (VHDL Simulation)': File 'c:/eFPGA/ip_repo/ROTARY_ENCODER.vhd' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core {c:\eFPGA\ip_repo\ROTARY_ENCODER_1.0\xilinx.com_user_ROTARY_ENCODER_1.0.zip} [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project
+update_ip_catalog -rebuild -repo_path c:/eFPGA/ip_repo/ROTARY_ENCODER_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/eFPGA/ip_repo/ROTARY_ENCODER_1.0'
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/eFPGA/21_ROT_CUSTOM_IP/ip_repo [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/eFPGA/21_ROT_CUSTOM_IP/ip_repo'.
+open_bd_design {C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:ROTARY_ENCODER:1.0 ROTARY_ENCODER_0
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1}] [get_bd_cells processing_system7_0]
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/ROTARY_ENCODER_0/S00_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins ROTARY_ENCODER_0/S00_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Slave segment </ROTARY_ENCODER_0/S00_AXI/S00_AXI_reg> is being mapped into address space </processing_system7_0/Data> at <0x43C0_0000 [ 64K ]>
+startgroup
+make_bd_pins_external  [get_bd_pins ROTARY_ENCODER_0/ROT_VAL]
+endgroup
+make_wrapper -files [get_files C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/design_1.bd] -top
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/ROTARY_ENCODER_0/RT1
+/ROTARY_ENCODER_0/RT2
+
+Wrote  : <C:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+make_wrapper: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1437.281 ; gain = 118.477
+add_files -norecurse C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+startgroup
+make_bd_pins_external  [get_bd_pins ROTARY_ENCODER_0/RT1]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins ROTARY_ENCODER_0/RT2]
+endgroup
+save_bd_design
+Wrote  : <C:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+launch_runs impl_1 -jobs 24
+Wrote  : <C:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ROTARY_ENCODER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
+[Wed Jun  3 11:53:48 2020] Launched design_1_auto_pc_0_synth_1, design_1_ROTARY_ENCODER_0_0_synth_1, design_1_processing_system7_0_0_synth_1, design_1_rst_ps7_0_50M_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_auto_pc_0_synth_1: C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_ROTARY_ENCODER_0_0_synth_1: C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.runs/design_1_ROTARY_ENCODER_0_0_synth_1/runme.log
+design_1_processing_system7_0_0_synth_1: C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_rst_ps7_0_50M_0_synth_1: C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.runs/design_1_rst_ps7_0_50M_0_synth_1/runme.log
+synth_1: C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.runs/synth_1/runme.log
+[Wed Jun  3 11:53:48 2020] Launched impl_1...
+Run output will be captured here: C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1473.355 ; gain = 36.074
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/eFPGA/21_ROT_CUSTOM_IP/ip_repo/ROTARY_ENCODER_1.0/component.xml. It will be created.
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/eFPGA/21_ROT_CUSTOM_IP/ip_repo'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+report_ip_status -name ip_status
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/eFPGA [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/eFPGA'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/eFPGA' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/eFPGA/21_ROT_CUSTOM_IP'.)
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:module_ref:vhdlnoclk:1.0'. The one found in IP location 'c:/eFPGA/2_Simple_VHDL/2_Simple_VHDL.srcs/sources_1/bd/mref/vhdlnoclk' will take precedence over the same IP in locations: 
+   c:/eFPGA/3_State_Machine/3_State_Machine.srcs/sources_1/bd/mref/vhdlnoclk
+   c:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.srcs/sources_1/bd/mref/vhdlnoclk
+open_bd_design {C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/design_1.bd}
+set_property LOCK_UPGRADE 1 [get_bd_cells /ROTARY_ENCODER_0]
+WARNING: [BD 41-2028] Locking ROTARY_ENCODER to version 1.0. If the latest driver for the IP is not backwards compatible, software flow will assign a generic driver or no driver for this IP
+report_ip_status -name ip_status 
+set_property LOCK_UPGRADE 0 [get_bd_cells /ROTARY_ENCODER_0]
+upgrade_ip -vlnv xilinx.com:user:ROTARY_ENCODER:1.0 [get_ips  design_1_ROTARY_ENCODER_0_0] -log ip_upgrade.log
+Upgrading 'C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_ROTARY_ENCODER_0_0 (ROTARY_ENCODER_v1.0 1.0) from revision 4 to revision 5
+Wrote  : <C:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/eFPGA/21_ROT_CUSTOM_IP/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_ROTARY_ENCODER_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run impl_1
+launch_runs impl_1 -jobs 24
+Wrote  : <C:\eFPGA\21_ROT_CUSTOM_IP\21_ROT_CUSTOM_IP.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ROTARY_ENCODER_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = c6cafbd915f3e03f; cache size = 1.881 MB.
+INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
+[Wed Jun  3 11:58:33 2020] Launched design_1_ROTARY_ENCODER_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_ROTARY_ENCODER_0_0_synth_1: C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.runs/design_1_ROTARY_ENCODER_0_0_synth_1/runme.log
+synth_1: C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.runs/synth_1/runme.log
+[Wed Jun  3 11:58:33 2020] Launched impl_1...
+Run output will be captured here: C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1500.051 ; gain = 0.730
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/eFPGA'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/eFPGA' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/eFPGA/21_ROT_CUSTOM_IP'.)
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:module_ref:vhdlnoclk:1.0'. The one found in IP location 'c:/eFPGA/2_Simple_VHDL/2_Simple_VHDL.srcs/sources_1/bd/mref/vhdlnoclk' will take precedence over the same IP in locations: 
+   c:/eFPGA/3_State_Machine/3_State_Machine.srcs/sources_1/bd/mref/vhdlnoclk
+   c:/eFPGA/9_VHDL_7_SEG/9_VHDL_7_SEG.srcs/sources_1/bd/mref/vhdlnoclk

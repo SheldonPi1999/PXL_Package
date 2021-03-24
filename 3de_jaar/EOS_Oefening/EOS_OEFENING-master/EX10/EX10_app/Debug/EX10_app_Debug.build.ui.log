@@ -1,0 +1,44 @@
+2021-01-25T10:53:11.834030800255-10:53:11 **** Incremental Build of configuration Debug for project EX10_app ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building file: ../src/freertos_hello_world.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/KasperPC/Desktop/EOS_Examen/EX10/EX10/export/EX10/sw/EX10/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+000-../src/freertos_hello_world.c: In function 'main':
+000/EX10_app/src/freertos_hello_world.c125-1-1pointer targets in passing argument 2 of 'xTaskCreate' differ in signedness [-Wpointer-sign]1-../src/freertos_hello_world.c:125:32: warning: pointer targets in passing argument 2 of 'xTaskCreate' differ in signedness [-Wpointer-sign]
+000-  125 |      xTaskCreate( prvLed_Task, ( signed char * ) "LED_TASK",
+000-      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+000-      |                                |
+000-      |                                signed char *
+000-In file included from ../src/freertos_hello_world.c:49:
+000/EX10/export/EX10/sw/EX10/freertos10_xilinx_domain/bspinclude/include/task.h331-1-1expected 'const char * const' but argument is of type 'signed char *'0-C:/Users/KasperPC/Desktop/EOS_Examen/EX10/EX10/export/EX10/sw/EX10/freertos10_xilinx_domain/bspinclude/include/task.h:331:27: note: expected 'const char * const' but argument is of type 'signed char *'
+000-  331 |        const char * const pcName, /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+000-      |        ~~~~~~~~~~~~~~~~~~~^~~~~~
+000/EX10_app/src/freertos_hello_world.c133-1-1pointer targets in passing argument 1 of 'xTimerCreate' differ in signedness [-Wpointer-sign]1-../src/freertos_hello_world.c:133:30: warning: pointer targets in passing argument 1 of 'xTimerCreate' differ in signedness [-Wpointer-sign]
+000-  133 |      xTimer = xTimerCreate ( (const signed char *) "LedTimer",
+000-      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+000-      |                              |
+000-      |                              const signed char *
+000-In file included from ../src/freertos_hello_world.c:52:
+000/EX10/export/EX10/sw/EX10/freertos10_xilinx_domain/bspinclude/include/timers.h228-1-1expected 'const char * const' but argument is of type 'const signed char *'0-C:/Users/KasperPC/Desktop/EOS_Examen/EX10/EX10/export/EX10/sw/EX10/freertos10_xilinx_domain/bspinclude/include/timers.h:228:49: note: expected 'const char * const' but argument is of type 'const signed char *'
+000-  228 |  TimerHandle_t xTimerCreate( const char * const pcTimerName,   /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+000-      |                              ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+000-'Finished building: ../src/freertos_hello_world.c'
+000-' '
+000-'Building target: EX10_app.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/KasperPC/Desktop/EOS_Examen/EX10/EX10/export/EX10/sw/EX10/freertos10_xilinx_domain/bsplib/lib -o "EX10_app.elf"  ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+000-'Finished building target: EX10_app.elf'
+000-' '
+000-'Invoking: ARM v7 Print Size'
+000-arm-none-eabi-size EX10_app.elf  |tee "EX10_app.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  71200	   3344	  88768	 163312	  27df0	EX10_app.elf
+000-'Finished building: EX10_app.elf.size'
+000-' '
+00255-
+10:53:12 Build Finished (took 528ms)
+

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="HOME" Id="{13796924-a4a1-42f3-b5f4-567f21d4bf2f}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM HOME
+VAR
+	DATA : ARRAY[1..2, 1..20] OF STRING;
+	FB_LocalSystemTime : FB_LocalSystemTime;
+	Moving_Average : Moving_Average;
+	
+	TOF : TOF;
+	TON : TON;
+	i : INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[FB_LocalSystemTime(bEnable:= TRUE);
+
+Moving_Average(DATA:= Gelijkvloers.TEMP_Keuken_Array);
+
+TOF(IN:= TON.Q, PT:= T#0MS);
+TON(IN:= NOT(TOF.Q), PT:= T#10S);
+
+IF TOF.Q THEN
+	FOR i:=1 TO 19 BY 1 DO
+		DATA[1, i] := DATA[1, (i+1)];
+		DATA[2, i] := DATA[2, (i+1)];
+	END_FOR;
+	DATA[1, 20] := LREAL_TO_STRING(Moving_Average.Moving_Average);
+	DATA[2, 20] := SYSTEMTIME_TO_STRING(FB_LocalSystemTime.systemTime);
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="HOME">
+      <LineId Id="21" Count="1" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="25" Count="6" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="32" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="24" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

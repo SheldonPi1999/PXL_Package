@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# 
+# Start of session at: Tue Nov 12 11:21:12 2019
+# Process ID: 2096
+# Current directory: D:/Main/Embedded_Operating_System/Oefeningen/Vivado_Projects/Oef9_10_Mutex_Semaphore/Oef9_10_Mutex_Semaphore.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: D:/Main/Embedded_Operating_System/Oefeningen/Vivado_Projects/Oef9_10_Mutex_Semaphore/Oef9_10_Mutex_Semaphore.sdk/webtalk/webtalk.log
+# Journal file: D:/Main/Embedded_Operating_System/Oefeningen/Vivado_Projects/Oef9_10_Mutex_Semaphore/Oef9_10_Mutex_Semaphore.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

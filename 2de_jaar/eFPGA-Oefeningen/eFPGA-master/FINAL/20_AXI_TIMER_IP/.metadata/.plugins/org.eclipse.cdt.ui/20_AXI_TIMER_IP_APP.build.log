@@ -1,0 +1,33 @@
+10:59:47 **** Incremental Build of configuration Debug for project 20_AXI_TIMER_IP_APP ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/sw/20_AXI_TIMER_IP/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:20:9: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     int status;
+         ^~~~~~
+At top level:
+../src/helloworld.c:14:12: warning: 'led_data' defined but not used [-Wunused-variable]
+ static int led_data;
+            ^~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: 20_AXI_TIMER_IP_APP.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP/export/20_AXI_TIMER_IP/sw/20_AXI_TIMER_IP/standalone_domain/bsplib/lib -o "20_AXI_TIMER_IP_APP.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 20_AXI_TIMER_IP_APP.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size 20_AXI_TIMER_IP_APP.elf  |tee "20_AXI_TIMER_IP_APP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  60248	   2600	  23376	  86224	  150d0	20_AXI_TIMER_IP_APP.elf
+'Finished building: 20_AXI_TIMER_IP_APP.elf.size'
+' '
+
+10:59:47 Build Finished (took 665ms)
+

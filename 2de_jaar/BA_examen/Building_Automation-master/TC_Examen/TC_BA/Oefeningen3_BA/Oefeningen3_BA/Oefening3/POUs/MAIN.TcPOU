@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="MAIN" Id="{57b3caf0-d700-45fe-810b-6eedb51044b5}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+
+VAR_INPUT
+	requestedTemp : INT;
+	actualTemp : INT;
+END_VAR
+
+VAR_OUTPUT
+END_VAR
+
+VAR
+	verwarming : BOOL;
+	
+	Knipperlicht : FB_Knipperlicht;
+	i: INT;
+	
+	FB_LocalSystemTime : FB_LocalSystemTime;
+	FB_WeeklyTimeSwitch : FB_WeeklyTimeSwitch;
+	
+	OneSecondCount : BOOL;
+	tempUpdate : ARRAY [1..20] OF INT;
+	F_TRIG : F_TRIG;
+	//YEAR: STRING;
+	//MONTH: STRING;
+	//DAY: STRING;
+	//HOUR: STRING;
+	//MINUTE: STRING;
+	//SECOND: STRING;
+	TIMESTAMP: DATE_AND_TIME;
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[FB_LocalSystemTime(bEnable:= TRUE);
+
+
+//YEAR := WORD_TO_STRING(FB_LocalSystemTime.systemTime.wYear);
+//MONTH := WORD_TO_STRING(FB_LocalSystemTime.systemTime.wMonth);
+//DAY := WORD_TO_STRING(FB_LocalSystemTime.systemTime.wDay);
+//HOUR := WORD_TO_STRING(FB_LocalSystemTime.systemTime.wHour);
+//MINUTE := WORD_TO_STRING(FB_LocalSystemTime.systemTime.wMinute);
+//SECOND := WORD_TO_STRING(FB_LocalSystemTime.systemTime.wSecond);	
+//TIMESTAMP := CONCAT('DT#', YEAR);
+//TIMESTAMP := CONCAT(TIMESTAMP , '-');
+//TIMESTAMP := CONCAT(TIMESTAMP , MONTH);
+//TIMESTAMP := CONCAT(TIMESTAMP , '-');
+//TIMESTAMP := CONCAT(TIMESTAMP , DAY);
+//TIMESTAMP := CONCAT(TIMESTAMP , '-');
+//TIMESTAMP := CONCAT(TIMESTAMP , HOUR);
+//TIMESTAMP := CONCAT(TIMESTAMP , ':');
+//TIMESTAMP := CONCAT(TIMESTAMP , MINUTE);
+//TIMESTAMP := CONCAT(TIMESTAMP , ':');
+//TIMESTAMP := CONCAT(TIMESTAMP , SECOND);
+
+TIMESTAMP := SYSTEMTIME_TO_DT(TIMESTR:= FB_LocalSystemTime.systemTime);
+
+FB_WeeklyTimeSwitch(
+	bEnable:= TRUE, 
+	tCurrentDateTime:= TIMESTAMP,//FB_LocalSystemTime.systemTime, 
+	tSwitchOnTime:= TOD#08:00, 
+	tSwitchOffTime:= TOD#20:00, 
+	bSunday:= TRUE, 
+	bMonday:= TRUE, 
+	bTuesday:= TRUE, 
+	bWednesday:= TRUE, 
+	bThursday:= TRUE, 
+	bFriday:= TRUE, 
+	bSaturday:= TRUE);	
+	
+IF FB_WeeklyTimeSwitch.bOutput THEN
+	IF (actualTemp < requestedTemp) THEN
+		verwarming := TRUE;
+	ELSE
+		verwarming := FALSE;
+	END_IF
+ELSE
+	verwarming := FALSE;
+END_IF
+
+Knipperlicht(Enable:= TRUE, OnTime:= T#1S, OfTime:= T#0S, Q=> OneSecondCount);
+F_TRIG(CLK:= Knipperlicht.Q);
+
+IF F_TRIG.Q THEN
+	IF i <= 20 THEN;
+		tempUpdate[i+1] := actualTemp;
+		i := i + 1;
+	ELSE
+		i := 0;
+	END_IF
+END_IF
+
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="253" Count="2" />
+      <LineId Id="118" Count="2" />
+      <LineId Id="193" Count="0" />
+      <LineId Id="122" Count="1" />
+      <LineId Id="117" Count="0" />
+      <LineId Id="125" Count="0" />
+      <LineId Id="128" Count="2" />
+      <LineId Id="132" Count="0" />
+      <LineId Id="131" Count="0" />
+      <LineId Id="134" Count="1" />
+      <LineId Id="137" Count="1" />
+      <LineId Id="256" Count="0" />
+      <LineId Id="192" Count="0" />
+      <LineId Id="166" Count="0" />
+      <LineId Id="71" Count="11" />
+      <LineId Id="114" Count="0" />
+      <LineId Id="70" Count="0" />
+      <LineId Id="85" Count="4" />
+      <LineId Id="140" Count="1" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="200" Count="0" />
+      <LineId Id="199" Count="0" />
+      <LineId Id="197" Count="0" />
+      <LineId Id="211" Count="0" />
+      <LineId Id="206" Count="0" />
+      <LineId Id="215" Count="0" />
+      <LineId Id="208" Count="0" />
+      <LineId Id="219" Count="2" />
+      <LineId Id="218" Count="0" />
+      <LineId Id="209" Count="0" />
+      <LineId Id="196" Count="0" />
+      <LineId Id="195" Count="0" />
+      <LineId Id="33" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

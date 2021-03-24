@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/eFPGA/3_State_Machine/3_State_Machine.srcs/constrs_1/new/XDC.xdc rfile:../../../3_State_Machine.srcs/constrs_1/new/XDC.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS33 [get_ports clk_65MHz]
+set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS33 [get_ports light_reset]

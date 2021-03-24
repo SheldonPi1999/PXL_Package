@@ -1,0 +1,561 @@
+11:41:15 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\eFPGA\12_PS_7_SEG\temp_xsdb_launch_script.tcl
+11:41:17 INFO  : XSCT server has started successfully.
+11:41:17 INFO  : Successfully done setting XSCT server connection channel  
+11:41:18 INFO  : Registering command handlers for Vitis TCF services
+11:41:19 INFO  : plnx-install-location is set to ''
+11:41:19 INFO  : Successfully done setting workspace for the tool. 
+11:41:19 INFO  : Successfully done query RDI_DATADIR 
+11:53:02 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+11:53:02 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+11:53:12 INFO  : (SwPlaform) Successfully done setParamInSpec 
+11:53:14 INFO  : (SwPlaform) Successfully done setParamInSpec 
+11:53:14 INFO  : (SwPlatform) Successfully done update_mss 
+11:53:15 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+12:07:08 INFO  : Checking for BSP changes to sync application flags for project '12_PS_7_SEG_APP'...
+12:07:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:07:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+12:07:40 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+12:08:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:08:00 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:08:00 INFO  : 'jtag frequency' command is executed.
+12:08:01 INFO  : Context for 'APU' is selected.
+12:08:02 INFO  : System reset is completed.
+12:08:05 INFO  : 'after 3000' command is executed.
+12:08:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:08:07 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit"
+12:08:07 INFO  : Context for 'APU' is selected.
+12:08:07 INFO  : Hardware design information is loaded from 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa'.
+12:08:07 INFO  : 'configparams force-mem-access 1' command is executed.
+12:08:07 INFO  : Context for 'APU' is selected.
+12:08:07 INFO  : Sourcing of 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl' is done.
+12:08:08 INFO  : 'ps7_init' command is executed.
+12:08:08 INFO  : 'ps7_post_config' command is executed.
+12:08:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:08:08 INFO  : The application 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:08:08 INFO  : 'configparams force-mem-access 0' command is executed.
+12:08:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:08:08 INFO  : Memory regions updated for context APU
+12:08:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:08:08 INFO  : 'con' command is executed.
+12:08:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:08:08 INFO  : Launch script is exported to file 'C:\eFPGA\12_PS_7_SEG\.sdk\launch_scripts\single_application_debug\debugger_12_ps_7_seg_app-default.tcl'
+12:09:38 INFO  : Checking for BSP changes to sync application flags for project '12_PS_7_SEG_APP'...
+12:09:48 INFO  : Checking for BSP changes to sync application flags for project '12_PS_7_SEG_APP'...
+12:09:53 INFO  : Disconnected from the channel tcfchan#2.
+12:09:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:09:54 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:09:54 INFO  : 'jtag frequency' command is executed.
+12:09:54 INFO  : Context for 'APU' is selected.
+12:09:54 INFO  : System reset is completed.
+12:09:57 INFO  : 'after 3000' command is executed.
+12:09:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:09:58 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit"
+12:09:58 INFO  : Context for 'APU' is selected.
+12:09:58 INFO  : Hardware design information is loaded from 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa'.
+12:09:58 INFO  : 'configparams force-mem-access 1' command is executed.
+12:09:58 INFO  : Context for 'APU' is selected.
+12:09:58 INFO  : Sourcing of 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl' is done.
+12:09:59 INFO  : 'ps7_init' command is executed.
+12:09:59 INFO  : 'ps7_post_config' command is executed.
+12:09:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:09:59 INFO  : The application 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:09:59 INFO  : 'configparams force-mem-access 0' command is executed.
+12:09:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:09:59 INFO  : Memory regions updated for context APU
+12:09:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:09:59 INFO  : 'con' command is executed.
+12:09:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:09:59 INFO  : Launch script is exported to file 'C:\eFPGA\12_PS_7_SEG\.sdk\launch_scripts\single_application_debug\debugger_12_ps_7_seg_app-default.tcl'
+12:11:21 INFO  : Checking for BSP changes to sync application flags for project '12_PS_7_SEG_APP'...
+12:11:25 INFO  : Disconnected from the channel tcfchan#3.
+12:11:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:11:27 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:11:27 INFO  : 'jtag frequency' command is executed.
+12:11:27 INFO  : Context for 'APU' is selected.
+12:11:27 INFO  : System reset is completed.
+12:11:30 INFO  : 'after 3000' command is executed.
+12:11:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:11:31 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit"
+12:11:31 INFO  : Context for 'APU' is selected.
+12:11:31 INFO  : Hardware design information is loaded from 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa'.
+12:11:31 INFO  : 'configparams force-mem-access 1' command is executed.
+12:11:31 INFO  : Context for 'APU' is selected.
+12:11:31 INFO  : Sourcing of 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl' is done.
+12:11:31 INFO  : 'ps7_init' command is executed.
+12:11:31 INFO  : 'ps7_post_config' command is executed.
+12:11:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:11:32 INFO  : The application 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:11:32 INFO  : 'configparams force-mem-access 0' command is executed.
+12:11:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:11:32 INFO  : Memory regions updated for context APU
+12:11:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:11:32 INFO  : 'con' command is executed.
+12:11:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:11:32 INFO  : Launch script is exported to file 'C:\eFPGA\12_PS_7_SEG\.sdk\launch_scripts\single_application_debug\debugger_12_ps_7_seg_app-default.tcl'
+12:13:18 INFO  : Checking for BSP changes to sync application flags for project '12_PS_7_SEG_APP'...
+12:13:22 INFO  : Disconnected from the channel tcfchan#4.
+12:13:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:13:24 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:13:24 INFO  : 'jtag frequency' command is executed.
+12:13:24 INFO  : Context for 'APU' is selected.
+12:13:24 INFO  : System reset is completed.
+12:13:27 INFO  : 'after 3000' command is executed.
+12:13:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:13:28 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit"
+12:13:28 INFO  : Context for 'APU' is selected.
+12:13:28 INFO  : Hardware design information is loaded from 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa'.
+12:13:28 INFO  : 'configparams force-mem-access 1' command is executed.
+12:13:28 INFO  : Context for 'APU' is selected.
+12:13:28 INFO  : Sourcing of 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl' is done.
+12:13:28 INFO  : 'ps7_init' command is executed.
+12:13:28 INFO  : 'ps7_post_config' command is executed.
+12:13:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:13:28 INFO  : The application 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:13:28 INFO  : 'configparams force-mem-access 0' command is executed.
+12:13:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:13:29 INFO  : Memory regions updated for context APU
+12:13:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:13:29 INFO  : 'con' command is executed.
+12:13:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:13:29 INFO  : Launch script is exported to file 'C:\eFPGA\12_PS_7_SEG\.sdk\launch_scripts\single_application_debug\debugger_12_ps_7_seg_app-default.tcl'
+12:18:10 INFO  : Checking for BSP changes to sync application flags for project '12_PS_7_SEG_APP'...
+12:18:44 INFO  : Checking for BSP changes to sync application flags for project '12_PS_7_SEG_APP'...
+12:19:19 INFO  : Checking for BSP changes to sync application flags for project '12_PS_7_SEG_APP'...
+12:19:25 INFO  : Disconnected from the channel tcfchan#5.
+12:19:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:19:26 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:19:26 INFO  : 'jtag frequency' command is executed.
+12:19:26 INFO  : Context for 'APU' is selected.
+12:19:26 INFO  : System reset is completed.
+12:19:29 INFO  : 'after 3000' command is executed.
+12:19:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:19:30 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit"
+12:19:30 INFO  : Context for 'APU' is selected.
+12:19:30 INFO  : Hardware design information is loaded from 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa'.
+12:19:30 INFO  : 'configparams force-mem-access 1' command is executed.
+12:19:30 INFO  : Context for 'APU' is selected.
+12:19:30 INFO  : Sourcing of 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl' is done.
+12:19:31 INFO  : 'ps7_init' command is executed.
+12:19:31 INFO  : 'ps7_post_config' command is executed.
+12:19:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:19:31 INFO  : The application 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:19:31 INFO  : 'configparams force-mem-access 0' command is executed.
+12:19:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:19:31 INFO  : Memory regions updated for context APU
+12:19:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:19:31 INFO  : 'con' command is executed.
+12:19:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:19:31 INFO  : Launch script is exported to file 'C:\eFPGA\12_PS_7_SEG\.sdk\launch_scripts\single_application_debug\debugger_12_ps_7_seg_app-default.tcl'
+12:21:46 INFO  : Checking for BSP changes to sync application flags for project '12_PS_7_SEG_APP'...
+12:21:57 INFO  : Disconnected from the channel tcfchan#6.
+12:21:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:21:59 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:21:59 INFO  : 'jtag frequency' command is executed.
+12:21:59 INFO  : Context for 'APU' is selected.
+12:21:59 INFO  : System reset is completed.
+12:22:02 INFO  : 'after 3000' command is executed.
+12:22:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:22:03 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit"
+12:22:03 INFO  : Context for 'APU' is selected.
+12:22:03 INFO  : Hardware design information is loaded from 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa'.
+12:22:03 INFO  : 'configparams force-mem-access 1' command is executed.
+12:22:03 INFO  : Context for 'APU' is selected.
+12:22:03 INFO  : Sourcing of 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl' is done.
+12:22:03 INFO  : 'ps7_init' command is executed.
+12:22:03 INFO  : 'ps7_post_config' command is executed.
+12:22:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:22:03 INFO  : The application 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:22:03 INFO  : 'configparams force-mem-access 0' command is executed.
+12:22:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:22:03 INFO  : Memory regions updated for context APU
+12:22:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:22:04 INFO  : 'con' command is executed.
+12:22:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:22:04 INFO  : Launch script is exported to file 'C:\eFPGA\12_PS_7_SEG\.sdk\launch_scripts\single_application_debug\debugger_12_ps_7_seg_app-default.tcl'
+12:24:18 INFO  : Checking for BSP changes to sync application flags for project '12_PS_7_SEG_APP'...
+12:24:24 INFO  : Disconnected from the channel tcfchan#7.
+12:24:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:24:25 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:24:25 INFO  : 'jtag frequency' command is executed.
+12:24:25 INFO  : Context for 'APU' is selected.
+12:24:25 INFO  : System reset is completed.
+12:24:28 INFO  : 'after 3000' command is executed.
+12:24:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:24:29 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit"
+12:24:29 INFO  : Context for 'APU' is selected.
+12:24:29 INFO  : Hardware design information is loaded from 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa'.
+12:24:29 INFO  : 'configparams force-mem-access 1' command is executed.
+12:24:29 INFO  : Context for 'APU' is selected.
+12:24:29 INFO  : Sourcing of 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl' is done.
+12:24:29 INFO  : 'ps7_init' command is executed.
+12:24:29 INFO  : 'ps7_post_config' command is executed.
+12:24:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:24:30 INFO  : The application 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:24:30 INFO  : 'configparams force-mem-access 0' command is executed.
+12:24:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:24:30 INFO  : Memory regions updated for context APU
+12:24:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:24:30 INFO  : 'con' command is executed.
+12:24:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:24:30 INFO  : Launch script is exported to file 'C:\eFPGA\12_PS_7_SEG\.sdk\launch_scripts\single_application_debug\debugger_12_ps_7_seg_app-default.tcl'
+12:25:05 INFO  : Checking for BSP changes to sync application flags for project '12_PS_7_SEG_APP'...
+12:27:20 INFO  : Checking for BSP changes to sync application flags for project '12_PS_7_SEG_APP'...
+12:27:24 INFO  : Disconnected from the channel tcfchan#8.
+12:27:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:27:26 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:27:26 INFO  : 'jtag frequency' command is executed.
+12:27:26 INFO  : Context for 'APU' is selected.
+12:27:26 INFO  : System reset is completed.
+12:27:29 INFO  : 'after 3000' command is executed.
+12:27:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:27:30 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit"
+12:27:30 INFO  : Context for 'APU' is selected.
+12:27:30 INFO  : Hardware design information is loaded from 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa'.
+12:27:30 INFO  : 'configparams force-mem-access 1' command is executed.
+12:27:30 INFO  : Context for 'APU' is selected.
+12:27:30 INFO  : Sourcing of 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl' is done.
+12:27:30 INFO  : 'ps7_init' command is executed.
+12:27:30 INFO  : 'ps7_post_config' command is executed.
+12:27:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:27:30 INFO  : The application 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:27:30 INFO  : 'configparams force-mem-access 0' command is executed.
+12:27:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:27:31 INFO  : Memory regions updated for context APU
+12:27:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:27:31 INFO  : 'con' command is executed.
+12:27:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:27:31 INFO  : Launch script is exported to file 'C:\eFPGA\12_PS_7_SEG\.sdk\launch_scripts\single_application_debug\debugger_12_ps_7_seg_app-default.tcl'
+12:27:49 INFO  : Checking for BSP changes to sync application flags for project '12_PS_7_SEG_APP'...
+12:27:53 INFO  : Disconnected from the channel tcfchan#9.
+12:27:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:27:55 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:27:55 INFO  : 'jtag frequency' command is executed.
+12:27:55 INFO  : Context for 'APU' is selected.
+12:27:55 INFO  : System reset is completed.
+12:27:58 INFO  : 'after 3000' command is executed.
+12:27:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:27:59 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit"
+12:27:59 INFO  : Context for 'APU' is selected.
+12:27:59 INFO  : Hardware design information is loaded from 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa'.
+12:27:59 INFO  : 'configparams force-mem-access 1' command is executed.
+12:27:59 INFO  : Context for 'APU' is selected.
+12:27:59 INFO  : Sourcing of 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl' is done.
+12:27:59 INFO  : 'ps7_init' command is executed.
+12:27:59 INFO  : 'ps7_post_config' command is executed.
+12:27:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:27:59 INFO  : The application 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:27:59 INFO  : 'configparams force-mem-access 0' command is executed.
+12:27:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:28:00 INFO  : Memory regions updated for context APU
+12:28:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:28:00 INFO  : 'con' command is executed.
+12:28:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:28:00 INFO  : Launch script is exported to file 'C:\eFPGA\12_PS_7_SEG\.sdk\launch_scripts\single_application_debug\debugger_12_ps_7_seg_app-default.tcl'
+12:29:09 INFO  : Checking for BSP changes to sync application flags for project '12_PS_7_SEG_APP'...
+12:29:13 INFO  : Disconnected from the channel tcfchan#10.
+12:29:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:29:14 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:29:14 INFO  : 'jtag frequency' command is executed.
+12:29:14 INFO  : Context for 'APU' is selected.
+12:29:14 INFO  : System reset is completed.
+12:29:17 INFO  : 'after 3000' command is executed.
+12:29:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:29:19 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit"
+12:29:19 INFO  : Context for 'APU' is selected.
+12:29:19 INFO  : Hardware design information is loaded from 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa'.
+12:29:19 INFO  : 'configparams force-mem-access 1' command is executed.
+12:29:19 INFO  : Context for 'APU' is selected.
+12:29:19 INFO  : Sourcing of 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl' is done.
+12:29:19 INFO  : 'ps7_init' command is executed.
+12:29:19 INFO  : 'ps7_post_config' command is executed.
+12:29:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:29:19 INFO  : The application 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:29:19 INFO  : 'configparams force-mem-access 0' command is executed.
+12:29:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:29:19 INFO  : Memory regions updated for context APU
+12:29:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:29:19 INFO  : 'con' command is executed.
+12:29:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:29:19 INFO  : Launch script is exported to file 'C:\eFPGA\12_PS_7_SEG\.sdk\launch_scripts\single_application_debug\debugger_12_ps_7_seg_app-default.tcl'
+12:30:18 INFO  : Checking for BSP changes to sync application flags for project '12_PS_7_SEG_APP'...
+12:30:25 INFO  : Disconnected from the channel tcfchan#11.
+12:30:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:30:26 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:30:26 INFO  : 'jtag frequency' command is executed.
+12:30:26 INFO  : Context for 'APU' is selected.
+12:30:26 INFO  : System reset is completed.
+12:30:29 INFO  : 'after 3000' command is executed.
+12:30:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:30:31 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit"
+12:30:31 INFO  : Context for 'APU' is selected.
+12:30:31 INFO  : Hardware design information is loaded from 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa'.
+12:30:31 INFO  : 'configparams force-mem-access 1' command is executed.
+12:30:31 INFO  : Context for 'APU' is selected.
+12:30:31 INFO  : Sourcing of 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl' is done.
+12:30:31 INFO  : 'ps7_init' command is executed.
+12:30:31 INFO  : 'ps7_post_config' command is executed.
+12:30:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:30:31 INFO  : The application 'C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:30:31 INFO  : 'configparams force-mem-access 0' command is executed.
+12:30:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP/Debug/12_PS_7_SEG_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:30:31 INFO  : Memory regions updated for context APU
+12:30:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:30:31 INFO  : 'con' command is executed.
+12:30:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:30:31 INFO  : Launch script is exported to file 'C:\eFPGA\12_PS_7_SEG\.sdk\launch_scripts\single_application_debug\debugger_12_ps_7_seg_app-default.tcl'
+12:31:18 INFO  : Disconnected from the channel tcfchan#12.

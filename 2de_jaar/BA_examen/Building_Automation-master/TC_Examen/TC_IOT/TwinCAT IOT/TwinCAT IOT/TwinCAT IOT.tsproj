@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.7">
+	<Project ProjectGUID="{8BC755A8-197A-435D-A8E1-7E2BD8836353}" Target64Bit="true" ShowHideConfigurations="#x106">
+		<System>
+			<Settings DontCheckTarget="192.168.1.162.1.1"/>
+			<Licenses>
+				<Target>
+					<ManualSelect>{3EBB9639-5FF3-42B6-8847-35C70DC013C8}</ManualSelect>
+					<ManualSelect>{3E823FFB-0BB3-43BA-9023-5952947C15A8}</ManualSelect>
+				</Target>
+			</Licenses>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+				<Task Id="4" Priority="21" CycleTime="100000" AmsPort="351" AdtTasks="true">
+					<Name>PlcTask1</Name>
+				</Task>
+				<Task Id="5" Priority="22" CycleTime="100000" AmsPort="352" AdtTasks="true">
+					<Name>PlcTask2</Name>
+				</Task>
+				<Task Id="6" Priority="23" CycleTime="100000" AmsPort="353" AdtTasks="true">
+					<Name>PlcTask3</Name>
+				</Task>
+				<Task Id="7" Priority="24" CycleTime="100000" AmsPort="354" AdtTasks="true">
+					<Name>PlcTask4</Name>
+				</Task>
+				<Task Id="8" Priority="25" CycleTime="100000" AmsPort="355" AdtTasks="true">
+					<Name>PlcTask5</Name>
+				</Task>
+				<Task Id="9" Priority="26" CycleTime="100000" AmsPort="356" AdtTasks="true">
+					<Name>PlcTask6</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project Disabled="true" GUID="{751C2F95-41E8-414E-9C6D-266AE3AAA323}" Name="FTP" PrjFilePath="FTP\FTP.plcproj" TmcFilePath="FTP\FTP.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="FTP\FTP.tmc">
+					<Name>FTP Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+			<Project Disabled="true" GUID="{6188470E-E2B4-4094-A9BE-9CCB8C9493DE}" Name="TCP_IP_1" PrjFilePath="TCP_IP_1\TCP_IP_1.plcproj" TmcFilePath="TCP_IP_1\TCP_IP_1.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="TCP_IP_1\TCP_IP_1.tmc">
+					<Name>TCP_IP_1 Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<TaskPouOids>
+						<TaskPouOid Prio="21" OTCID="#x08502041"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+			<Project Disabled="true" GUID="{DCDFF9E3-9DE9-465C-89FA-55E86C597BF6}" Name="TCP_IP_2" PrjFilePath="TCP_IP_2\TCP_IP_2.plcproj" TmcFilePath="TCP_IP_2\TCP_IP_2.tmc" ReloadTmc="true" AmsPort="853" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502080" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+					<Name>TCP_IP_2 Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+				</Instance>
+			</Project>
+			<Project Disabled="true" GUID="{CC5462B3-A4ED-4A0C-8B77-EAFECE9E6180}" Name="JSON_OpenWeather" PrjFilePath="JSON_OpenWeather\JSON_OpenWeather.plcproj" TmcFilePath="JSON_OpenWeather\JSON_OpenWeather.tmc" ReloadTmc="true" AmsPort="854" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x085020c0" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="JSON_OpenWeather\JSON_OpenWeather.tmc">
+					<Name>JSON_OpenWeather Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<TaskPouOids>
+						<TaskPouOid Prio="23" OTCID="#x085020c1"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+			<Project Disabled="true" GUID="{1B2E38F9-6ADA-401B-8104-9909785255C5}" Name="JSON_Luchtvochtigheid" PrjFilePath="JSON_Luchtvochtigheid\JSON_Luchtvochtigheid.plcproj" TmcFilePath="JSON_Luchtvochtigheid\JSON_Luchtvochtigheid.tmc" ReloadTmc="true" AmsPort="855" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502100" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="JSON_Bodemvochtigheid\JSON_Bodemvochtigheid.tmc">
+					<Name>JSON_Luchtvochtigheid Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<TaskPouOids>
+						<TaskPouOid Prio="24" OTCID="#x08502101"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+			<Project Disabled="true" GUID="{0DC3038C-318D-4FB8-AF14-1DD689A2F098}" Name="MQTT_1" PrjFilePath="MQTT_1\MQTT_1.plcproj" TmcFilePath="MQTT_1\MQTT_1.tmc" ReloadTmc="true" AmsPort="856" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502140" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="MQTT_1\MQTT_1.tmc">
+					<Name>MQTT_1 Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<TaskPouOids>
+						<TaskPouOid Prio="25" OTCID="#x08502141"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+			<Project Disabled="true" GUID="{962FA228-3EEC-4994-B4E5-EA03417503BD}" Name="MQTT_2" PrjFilePath="MQTT_2\MQTT_2.plcproj" TmcFilePath="MQTT_2\MQTT_2.tmc" ReloadTmc="true" AmsPort="857" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502180" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="MQTT_2\MQTT_2.tmc">
+					<Name>MQTT_2 Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<TaskPouOids>
+						<TaskPouOid Prio="26" OTCID="#x08502181"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+	</Project>
+</TcSmProject>

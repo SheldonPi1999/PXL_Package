@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="Knipperlicht" Id="{0ce8e6bf-0513-4dc6-a868-160d6f014ac2}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Knipperlicht
+VAR
+	TOF : TOF;
+	TON : TON;
+END_VAR
+
+VAR_OUTPUT
+	LAMP : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[TOF(IN:= TON.Q, PT:= T#500MS, Q => LAMP);
+TON(IN:= NOT(TOF.Q), PT:= T#500ms);]]></ST>
+    </Implementation>
+    <LineIds Name="Knipperlicht">
+      <LineId Id="5" Count="0" />
+      <LineId Id="14" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

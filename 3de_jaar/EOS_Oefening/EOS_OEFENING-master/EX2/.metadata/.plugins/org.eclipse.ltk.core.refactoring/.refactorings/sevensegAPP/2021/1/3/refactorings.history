@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;sevensegAPP/src/sevenseg&apos; to &apos;sevenseg.h&apos;" description="Rename resource &apos;sevenseg&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/sevenseg" name="sevenseg.h" stamp="1611492311879" updateReferences="true"/>
+</session>

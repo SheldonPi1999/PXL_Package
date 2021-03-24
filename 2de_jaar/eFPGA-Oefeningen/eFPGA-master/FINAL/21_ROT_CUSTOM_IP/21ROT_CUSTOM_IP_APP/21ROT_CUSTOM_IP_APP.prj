@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="21ROT_CUSTOM_IP_APP" location="C:/eFPGA/21_ROT_CUSTOM_IP/21ROT_CUSTOM_IP_APP" platform="C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP/export/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP.xpfm" platformUID="xilinx:minized::0.0(custom)" systemProject="21ROT_CUSTOM_IP_APP_system" sysConfig="21_ROT_CUSTOM_IP" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="c42db4125140a41ac71b51ef78204dcb">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.2096973151">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1950098401" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

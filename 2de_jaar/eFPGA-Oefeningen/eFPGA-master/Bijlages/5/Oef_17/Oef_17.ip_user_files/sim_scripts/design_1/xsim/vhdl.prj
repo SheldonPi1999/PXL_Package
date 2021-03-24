@@ -1,0 +1,11 @@
+vhdl xil_defaultlib  \
+"c:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17/Oef_17.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_sim_netlist.vhdl" \
+"../../../bd/design_1/ipshared/39d5/hdl/PWM_v1_0_S00_AXI.vhd" \
+"../../../bd/design_1/PWMGen.vhd" \
+"../../../bd/design_1/ipshared/39d5/hdl/PWM_v1_0.vhd" \
+"../../../bd/design_1/ip/design_1_PWM_0_0/sim/design_1_PWM_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_rst_ps7_0_50M_0/sim/design_1_rst_ps7_0_50M_0.vhd" \
+"c:/Users/11702534/Desktop/Examen FPGA/Oef_FPGA/Oef_FPGA/Oef_17/Oef_17.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.vhdl" \
+"../../../bd/design_1/sim/design_1.vhd" \
+
+nosort

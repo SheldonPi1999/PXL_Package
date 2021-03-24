@@ -1,0 +1,29 @@
+17:00:09 **** Incremental Build of configuration Debug for project 7_6_VERDER_APP ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/sw/7_6_VERDER/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:106:6: warning: unused variable 'DataRead' [-Wunused-variable]
+  u32 DataRead;
+      ^~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: 7_6_VERDER_APP.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/sw/7_6_VERDER/standalone_domain/bsplib/lib -o "7_6_VERDER_APP.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 7_6_VERDER_APP.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size 7_6_VERDER_APP.elf  |tee "7_6_VERDER_APP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  69716	   3368	  23440	  96524	  1790c	7_6_VERDER_APP.elf
+'Finished building: 7_6_VERDER_APP.elf.size'
+' '
+
+17:00:09 Build Finished (took 594ms)
+

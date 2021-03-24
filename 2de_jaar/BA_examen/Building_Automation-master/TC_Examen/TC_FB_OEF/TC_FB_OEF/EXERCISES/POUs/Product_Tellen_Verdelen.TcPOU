@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="Product_Tellen_Verdelen" Id="{12ce658f-8693-447a-a605-91467ebffbed}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Product_Tellen_Verdelen
+VAR
+	R_TRIG : R_TRIG;
+	CTU : CTU;
+END_VAR
+
+VAR_INPUT
+	SENSOR : BOOL;
+	STAND_1 : BOOL;
+	STAND_2 : BOOL;
+END_VAR
+
+VAR_OUTPUT
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[R_TRIG(CLK := SENSOR);
+CTU(CU:= R_TRIG.Q); 
+
+IF CTU.CV < 10 THEN
+	CTU.RESET := FALSE;
+	STAND_1 := TRUE;
+	STAND_2 := FALSE;
+ELSIF CTU.CV < 30 THEN
+	STAND_1 := FALSE;
+	STAND_2 := TRUE;
+ELSE
+	CTU.RESET := R_TRIG.Q;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="Product_Tellen_Verdelen">
+      <LineId Id="5" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="67" Count="0" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="29" Count="1" />
+      <LineId Id="32" Count="1" />
+      <LineId Id="50" Count="1" />
+      <LineId Id="28" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

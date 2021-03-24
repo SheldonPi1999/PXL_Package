@@ -1,0 +1,44 @@
+2021-01-25T10:43:46.464358400255-10:43:46 **** Incremental Build of configuration Debug for project EX9_app ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building file: ../src/freertos_hello_world.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9/export/EX9/sw/EX9/freertos10_xilinx_domain/bspinclude/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+000-../src/freertos_hello_world.c: In function 'main':
+000/EX9_app/src/freertos_hello_world.c67-1-1pointer targets in passing argument 2 of 'xTaskCreate' differ in signedness [-Wpointer-sign]1-../src/freertos_hello_world.c:67:26: warning: pointer targets in passing argument 2 of 'xTaskCreate' differ in signedness [-Wpointer-sign]
+000-   67 |  xTaskCreate( prvLed_ON, ( signed char * ) "LED_ON",
+000-      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+000-      |                          |
+000-      |                          signed char *
+000-In file included from ../src/freertos_hello_world.c:24:
+000/EX9/export/EX9/sw/EX9/freertos10_xilinx_domain/bspinclude/include/task.h331-1-1expected 'const char * const' but argument is of type 'signed char *'0-C:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9/export/EX9/sw/EX9/freertos10_xilinx_domain/bspinclude/include/task.h:331:27: note: expected 'const char * const' but argument is of type 'signed char *'
+000-  331 |        const char * const pcName, /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+000-      |        ~~~~~~~~~~~~~~~~~~~^~~~~~
+000/EX9_app/src/freertos_hello_world.c70-1-1pointer targets in passing argument 2 of 'xTaskCreate' differ in signedness [-Wpointer-sign]1-../src/freertos_hello_world.c:70:27: warning: pointer targets in passing argument 2 of 'xTaskCreate' differ in signedness [-Wpointer-sign]
+000-   70 |  xTaskCreate( prvLed_OFF, ( signed char * ) "LED_OFF",
+000-      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+000-      |                           |
+000-      |                           signed char *
+000-In file included from ../src/freertos_hello_world.c:24:
+000/EX9/export/EX9/sw/EX9/freertos10_xilinx_domain/bspinclude/include/task.h331-1-1expected 'const char * const' but argument is of type 'signed char *'0-C:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9/export/EX9/sw/EX9/freertos10_xilinx_domain/bspinclude/include/task.h:331:27: note: expected 'const char * const' but argument is of type 'signed char *'
+000-  331 |        const char * const pcName, /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+000-      |        ~~~~~~~~~~~~~~~~~~~^~~~~~
+000-'Finished building: ../src/freertos_hello_world.c'
+000-' '
+000-'Building target: EX9_app.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/KasperPC/Desktop/EOS_Examen/EX9/EX9/export/EX9/sw/EX9/freertos10_xilinx_domain/bsplib/lib -o "EX9_app.elf"  ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+000-'Finished building target: EX9_app.elf'
+000-' '
+000-'Invoking: ARM v7 Print Size'
+000-arm-none-eabi-size EX9_app.elf  |tee "EX9_app.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  70912	   3344	  88768	 163024	  27cd0	EX9_app.elf
+000-'Finished building: EX9_app.elf.size'
+000-' '
+00255-
+10:43:46 Build Finished (took 505ms)
+

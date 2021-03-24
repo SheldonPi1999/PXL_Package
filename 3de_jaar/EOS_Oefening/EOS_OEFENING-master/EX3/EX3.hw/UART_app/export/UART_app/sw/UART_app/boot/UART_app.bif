@@ -1,0 +1,7 @@
+/*UART_app*/
+the_ROM_image:
+{
+  [bootloader]<UART_app/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

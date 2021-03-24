@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+
+#define AXI_GPIO_DEVICE_ID XPAR_GPIO_DEVICE_ID
+#define BYTES_BRAM (XPAR_AXI_BRAM_CTRL_0_S_AXI_HIGHADDR - XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR)
+
+int main()
+{
+	int number;
+
+    init_platform();
+
+    Xil_Out32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 0, number1);
+    Xil_In32(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + 0);
+
+    print("BRAM - EXERCISE\n\r");
+    print("---------------\n\r");
+
+    while(number != 'q')
+    {
+    	scanf("Please enter a number: %d", &number);
+    	printf("%d\n", number);
+    }
+
+    cleanup_platform();
+    return 0;
+}

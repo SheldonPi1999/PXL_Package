@@ -1,0 +1,16 @@
+com.xilinx.sdk.linkgen.prefs.19_BRAM_Controller_APP\:.bss=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.19_BRAM_Controller_APP\:.data=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.19_BRAM_Controller_APP\:.data1=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.19_BRAM_Controller_APP\:.fixup=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.19_BRAM_Controller_APP\:.rodata=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.19_BRAM_Controller_APP\:.rodata1=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.19_BRAM_Controller_APP\:.sbss=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.19_BRAM_Controller_APP\:.sbss2=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.19_BRAM_Controller_APP\:.sdata=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.19_BRAM_Controller_APP\:.sdata2=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.19_BRAM_Controller_APP\:.text=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.19_BRAM_Controller_APP\:heap=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.19_BRAM_Controller_APP\:heap-size=7340032
+com.xilinx.sdk.linkgen.prefs.19_BRAM_Controller_APP\:stack=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.19_BRAM_Controller_APP\:stack-size=7340032
+eclipse.preferences.version=1

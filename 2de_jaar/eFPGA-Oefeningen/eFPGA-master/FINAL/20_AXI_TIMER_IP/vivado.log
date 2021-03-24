@@ -1,0 +1,135 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Jun  2 18:59:40 2020
+# Process ID: 14896
+# Current directory: C:/eFPGA/20_AXI_TIMER_IP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15996 C:\eFPGA\20_AXI_TIMER_IP\20_AXI_TIMER_IP.xpr
+# Log file: C:/eFPGA/20_AXI_TIMER_IP/vivado.log
+# Journal file: C:/eFPGA/20_AXI_TIMER_IP\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+create_bd_design "design_1"
+Wrote  : <C:\eFPGA\20_AXI_TIMER_IP\20_AXI_TIMER_IP.srcs\sources_1\bd\design_1\design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1035.441 ; gain = 88.070
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1}] [get_bd_cells processing_system7_0]
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+endgroup
+set_property location {439 -358} [get_bd_intf_ports DDR]
+set_property location {446 -338} [get_bd_intf_ports FIXED_IO]
+startgroup
+make_bd_pins_external  [get_bd_pins axi_timer_0/pwm0]
+endgroup
+set_property name pwm [get_bd_ports pwm0_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_timer_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_timer_0/S_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Slave segment </axi_timer_0/S_AXI/Reg> is being mapped into address space </processing_system7_0/Data> at <0x4280_0000 [ 64K ]>
+set_property location {1209 -610} [get_bd_ports pwm]
+make_wrapper -files [get_files C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/sources_1/bd/design_1/design_1.bd] -top
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+Wrote  : <C:\eFPGA\20_AXI_TIMER_IP\20_AXI_TIMER_IP.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+make_wrapper: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1243.152 ; gain = 118.125
+add_files -norecurse C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+launch_runs impl_1 -jobs 24
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\eFPGA\20_AXI_TIMER_IP\20_AXI_TIMER_IP.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+Exporting to file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
+[Tue Jun  2 19:04:02 2020] Launched design_1_rst_ps7_0_50M_0_synth_1, design_1_auto_pc_0_synth_1, design_1_processing_system7_0_0_synth_1, design_1_axi_timer_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_rst_ps7_0_50M_0_synth_1: C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.runs/design_1_rst_ps7_0_50M_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_processing_system7_0_0_synth_1: C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_axi_timer_0_0_synth_1: C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.runs/design_1_axi_timer_0_0_synth_1/runme.log
+synth_1: C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.runs/synth_1/runme.log
+[Tue Jun  2 19:04:02 2020] Launched impl_1...
+Run output will be captured here: C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1265.711 ; gain = 22.559
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z007sclg225-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 1419.215 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 60 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.342 . Memory (MB): peak = 2095.824 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.342 . Memory (MB): peak = 2095.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2095.824 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 2269.086 ; gain = 955.383
+place_ports pwm E12
+set_property IOSTANDARD LVCMOS33 [get_ports [list pwm]]
+file mkdir C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/constrs_1/new
+close [ open C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/constrs_1/new/XDC.xdc w ]
+add_files -fileset constrs_1 C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/constrs_1/new/XDC.xdc
+set_property target_constrs_file C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/constrs_1/new/XDC.xdc [current_fileset -constrset]
+save_constraints -force
+open_bd_design {C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.srcs/sources_1/bd/design_1/design_1.bd}
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+[Tue Jun  2 19:08:37 2020] Launched synth_1...
+Run output will be captured here: C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.runs/synth_1/runme.log
+[Tue Jun  2 19:08:37 2020] Launched impl_1...
+Run output will be captured here: C:/eFPGA/20_AXI_TIMER_IP/20_AXI_TIMER_IP.runs/impl_1/runme.log
+open_hw_manager
+write_hw_platform -fixed -force  -include_bit -file C:/eFPGA/20_AXI_TIMER_IP/design_1_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: C:/eFPGA/20_AXI_TIMER_IP/design_1_wrapper.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2019.2/data\embeddedsw) loading 0 seconds
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/eFPGA/20_AXI_TIMER_IP/design_1_wrapper.xsa
+write_hw_platform: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2350.055 ; gain = 7.953

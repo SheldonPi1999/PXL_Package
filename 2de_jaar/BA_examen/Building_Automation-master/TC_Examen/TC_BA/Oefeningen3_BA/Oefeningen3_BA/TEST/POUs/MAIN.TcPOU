@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="MAIN" Id="{1de199bc-b2b2-41ed-be20-c017ba0a306a}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+
+VAR_INPUT
+	SWITCH : BOOL;
+END_VAR
+
+VAR_OUTPUT
+	LED : BOOL;
+END_VAR
+
+VAR
+	FB_SingleDoubleClick : FB_SingleDoubleClick; 
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[FB_SingleDoubleClick(bSwitch:= SWITCH, tSwitchTime:= T#500MS);
+
+IF FB_SingleDoubleClick.bSingleClick THEN
+	LED := TRUE;
+	SWITCH := FALSE;
+
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="24" Count="1" />
+      <LineId Id="20" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

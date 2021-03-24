@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/eFPGA/1_Simple_VHDL/1_Simple_VHDL.srcs/constrs_1/new/XDC_1.xdc rfile:../../../1_Simple_VHDL.srcs/constrs_1/new/XDC_1.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN E13 [get_ports LED_1]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN L15 [get_ports Switch_1]

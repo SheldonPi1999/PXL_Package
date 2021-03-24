@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="Check_Bounds_15_TO_24" Id="{a244a7eb-d7a3-4845-bc39-de4b1c82c6d7}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION Check_Bounds_15_TO_24 : BOOL
+
+VAR_INPUT
+	Value : UINT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF VALUE <= 24 AND VALUE >= 15 THEN
+	Check_Bounds_15_TO_24 := TRUE;
+ELSE
+	Check_Bounds_15_TO_24 := FALSE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="Check_Bounds_15_TO_24">
+      <LineId Id="7" Count="0" />
+      <LineId Id="10" Count="0" />
+      <LineId Id="16" Count="1" />
+      <LineId Id="11" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,224 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Jun  2 11:35:45 2020
+# Process ID: 5188
+# Current directory: C:/eFPGA/12_PS_7_SEG
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2856 C:\eFPGA\12_PS_7_SEG\12_PS_7_SEG.xpr
+# Log file: C:/eFPGA/12_PS_7_SEG/vivado.log
+# Journal file: C:/eFPGA/12_PS_7_SEG\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+create_bd_design "design_1"
+Wrote  : <C:\eFPGA\12_PS_7_SEG\12_PS_7_SEG.srcs\sources_1\bd\design_1\design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 976.066 ; gain = 0.000
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {pl_led_g ( pl_led_g ) } Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_0/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_0]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE pl_led_g [get_bd_cells /axi_gpio_0]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 pl_led_g
+INFO: [board_rule 100-100] connect_bd_intf_net /pl_led_g /axi_gpio_0/GPIO
+undo
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {pl_led_g ( pl_led_g ) } Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_0/GPIO]'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1}] [get_bd_cells processing_system7_0]
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_GPIO_EMIO_GPIO_IO {1}] [get_bd_cells processing_system7_0]
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+endgroup
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins processing_system7_0/GPIO_0]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {pl_led_g ( pl_led_g ) } Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_0/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_0]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE pl_led_g [get_bd_cells /axi_gpio_0]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 pl_led_g
+INFO: [board_rule 100-100] connect_bd_intf_net /pl_led_g /axi_gpio_0/GPIO
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Slave segment </axi_gpio_0/S_AXI/Reg> is being mapped into address space </processing_system7_0/Data> at <0x4120_0000 [ 64K ]>
+endgroup
+set_property name GPIO_SW [get_bd_intf_ports GPIO_0_0]
+make_wrapper -files [get_files C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/design_1.bd] -top
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+Wrote  : <C:\eFPGA\12_PS_7_SEG\12_PS_7_SEG.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+make_wrapper: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1235.871 ; gain = 115.172
+add_files -norecurse C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+launch_runs synth_1 -jobs 24
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\eFPGA\12_PS_7_SEG\12_PS_7_SEG.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+Exporting to file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
+[Tue Jun  2 11:40:04 2020] Launched design_1_processing_system7_0_0_synth_1, design_1_axi_gpio_0_0_synth_1, design_1_rst_ps7_0_50M_0_synth_1, design_1_auto_pc_0_synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_axi_gpio_0_0_synth_1: C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.runs/design_1_axi_gpio_0_0_synth_1/runme.log
+design_1_rst_ps7_0_50M_0_synth_1: C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.runs/design_1_rst_ps7_0_50M_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.runs/design_1_auto_pc_0_synth_1/runme.log
+[Tue Jun  2 11:40:04 2020] Launched synth_1...
+Run output will be captured here: C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1310.871 ; gain = 52.793
+launch_runs impl_1 -jobs 24
+[Tue Jun  2 11:41:36 2020] Launched impl_1...
+Run output will be captured here: C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z007sclg225-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1461.586 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.309 . Memory (MB): peak = 2117.168 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.309 . Memory (MB): peak = 2117.168 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2117.168 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
+
+open_run: Time (s): cpu = 00:00:21 ; elapsed = 00:00:16 . Memory (MB): peak = 2275.195 ; gain = 883.637
+set_property IOSTANDARD LVCMOS33 [get_ports [list {GPIO_SW_tri_io[0]}]]
+open_bd_design {C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/design_1.bd}
+set_property location {1013 -256} [get_bd_intf_ports pl_led_g]
+set_property location {1162 -413} [get_bd_intf_ports pl_led_g]
+startgroup
+set_property -dict [list CONFIG.C_GPIO_WIDTH {8} CONFIG.GPIO_BOARD_INTERFACE {Custom}] [get_bd_cells axi_gpio_0]
+endgroup
+save_bd_design
+Wrote  : <C:\eFPGA\12_PS_7_SEG\12_PS_7_SEG.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+set_property name SEVEN_SEG [get_bd_intf_ports pl_led_g]
+save_bd_design
+Wrote  : <C:\eFPGA\12_PS_7_SEG\12_PS_7_SEG.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run design_1_axi_gpio_0_0_synth_1
+reset_run synth_1
+file mkdir C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/constrs_1/new
+close [ open C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/constrs_1/new/XDC.xdc w ]
+add_files -fileset constrs_1 C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/constrs_1/new/XDC.xdc
+set_property target_constrs_file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/constrs_1/new/XDC.xdc [current_fileset -constrset]
+save_constraints -force
+launch_runs synth_1 -jobs 24
+Wrote  : <C:\eFPGA\12_PS_7_SEG\12_PS_7_SEG.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = c6cafbd915f3e03f; cache size = 2.022 MB.
+INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
+[Tue Jun  2 11:44:37 2020] Launched design_1_axi_gpio_0_0_synth_1...
+Run output will be captured here: C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.runs/design_1_axi_gpio_0_0_synth_1/runme.log
+[Tue Jun  2 11:44:37 2020] Launched synth_1...
+Run output will be captured here: C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 24
+[Tue Jun  2 11:45:57 2020] Launched impl_1...
+Run output will be captured here: C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 2396.453 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.305 . Memory (MB): peak = 2396.453 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.306 . Memory (MB): peak = 2396.453 ; gain = 0.000
+place_ports {SEVEN_SEG_tri_o[0]} M9
+place_ports {SEVEN_SEG_tri_o[0]} L15
+place_ports {SEVEN_SEG_tri_o[1]} M15
+place_ports {SEVEN_SEG_tri_o[2]} L14
+place_ports {SEVEN_SEG_tri_o[3]} M14
+place_ports {SEVEN_SEG_tri_o[4]} K13
+place_ports {SEVEN_SEG_tri_o[5]} L13
+place_ports {SEVEN_SEG_tri_o[6]} N13
+place_ports {SEVEN_SEG_tri_o[7]} N14
+set_property IOSTANDARD LVCMOS33 [get_ports [list {SEVEN_SEG_tri_o[7]} {SEVEN_SEG_tri_o[6]} {SEVEN_SEG_tri_o[5]} {SEVEN_SEG_tri_o[4]} {SEVEN_SEG_tri_o[3]} {SEVEN_SEG_tri_o[2]} {SEVEN_SEG_tri_o[1]} {SEVEN_SEG_tri_o[0]}]]
+place_ports {GPIO_SW_tri_io[0]} E11
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+[Tue Jun  2 11:50:42 2020] Launched impl_1...
+Run output will be captured here: C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.runs/impl_1/runme.log
+write_hw_platform -fixed -force  -include_bit -file C:/eFPGA/12_PS_7_SEG/design_1_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: C:/eFPGA/12_PS_7_SEG/design_1_wrapper.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2019.2/data\embeddedsw) loading 0 seconds
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/eFPGA/12_PS_7_SEG/design_1_wrapper.xsa
+write_hw_platform: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2573.152 ; gain = 33.184
+open_bd_design {C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG.srcs/sources_1/bd/design_1/design_1.bd}
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+set_property location {1159 -379} [get_bd_intf_ports GPIO_SW]
+undo
+INFO: [Common 17-17] undo 'set_property location {1159 -379} [get_bd_intf_ports GPIO_SW]'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  2 12:31:23 2020...

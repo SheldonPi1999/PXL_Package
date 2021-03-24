@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="EX_01" Id="{8a4e6c25-82b6-4622-aab6-347c33bf8482}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM EX_01
+
+VAR
+	output: BYTE;
+END_VAR
+
+VAR_INPUT
+	potentiometer: INT;
+END_VAR
+
+VAR_OUTPUT
+	LED_0: BOOL;
+	LED_1: BOOL;
+	LED_2: BOOL;
+	LED_3: BOOL;
+	LED_4: BOOL;
+	LED_5: BOOL;
+	LED_6: BOOL;
+	LED_7: BOOL;
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[output := INT_TO_BYTE(SCALING(input:=potentiometer, imin:= 0, imax:= 32767, omin:= 0, omax:= 255));
+
+LED_0 := output.0;	// LSB
+LED_1 := output.1; 
+LED_2 := output.2; 
+LED_3 := output.3; 
+LED_4 := output.4; 
+LED_5 := output.5; 
+LED_6 := output.6;
+LED_7 := output.7;	// MSB]]></ST>
+    </Implementation>
+    <LineIds Name="EX_01">
+      <LineId Id="9" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="11" Count="6" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

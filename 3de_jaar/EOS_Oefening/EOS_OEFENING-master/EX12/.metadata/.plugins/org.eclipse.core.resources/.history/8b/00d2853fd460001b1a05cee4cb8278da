@@ -1,0 +1,738 @@
+TRACE::2021-01-25.15:58:38::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.15:58:38::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.15:58:38::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.15:58:38::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.15:58:38::SCWBifWriter::proc type : 
+TRACE::2021-01-25.15:58:38::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.15:58:38::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.15:58:38::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.15:58:38::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.15:59:09::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.15:59:09::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.15:59:09::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.15:59:09::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.15:59:09::SCWBifWriter::proc type : 
+TRACE::2021-01-25.15:59:09::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.15:59:09::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.15:59:09::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.15:59:09::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.15:59:23::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.15:59:23::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.15:59:23::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.15:59:23::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.15:59:23::SCWBifWriter::proc type : 
+TRACE::2021-01-25.15:59:23::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.15:59:23::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.15:59:23::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.15:59:23::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:00:15::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:00:15::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:00:15::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:00:15::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:00:15::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:00:15::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:00:15::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:00:15::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:00:16::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:00:50::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:00:50::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:00:50::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:00:50::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:00:50::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:00:50::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:00:50::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:00:50::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:00:50::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:01:06::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:01:06::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:01:06::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:01:06::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:01:06::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:01:06::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:01:06::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:01:06::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:01:06::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:03:09::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:03:09::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:03:09::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:03:09::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:03:09::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:03:09::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:03:09::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:03:09::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:03:09::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:04:25::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:04:25::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:04:25::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:04:25::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:04:25::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:04:25::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:04:25::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:04:25::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:04:25::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:06:17::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:06:17::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:06:17::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:06:17::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:06:17::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:06:17::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:06:17::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:06:17::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:06:17::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:07:17::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:07:17::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:07:17::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:07:17::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:07:17::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:07:17::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:07:17::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:07:17::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:07:17::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:13:12::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:13:12::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:13:12::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:13:12::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:13:12::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:13:12::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:13:12::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:13:12::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:13:12::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:15:39::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:15:39::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:15:39::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:15:39::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:15:39::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:15:39::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:15:39::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:15:39::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:15:39::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:15:51::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:15:51::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:15:51::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:15:51::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:15:51::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:15:51::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:15:51::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:15:51::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:15:51::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:15:57::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:15:57::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:15:57::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:15:57::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:15:57::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:15:57::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:15:57::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:15:57::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:15:57::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:17:24::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:17:24::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:17:24::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:17:24::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:17:24::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:17:24::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:17:24::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:17:24::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:17:24::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:17:51::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:17:51::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:17:51::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:17:51::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:17:51::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:17:51::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:17:51::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:17:51::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:17:51::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:19:04::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:19:04::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:19:04::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:19:04::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:19:04::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:19:04::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:19:04::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:19:04::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:19:04::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:19:48::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:19:48::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:19:48::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:19:48::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:19:48::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:19:48::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:19:48::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:19:48::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:19:48::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:23:07::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:23:08::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:23:08::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:23:08::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:23:08::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:23:08::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:23:08::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:23:08::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:23:08::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:25:29::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:25:29::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:25:29::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:25:29::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:25:29::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:25:29::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:25:29::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:25:29::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:25:29::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:26:18::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:26:18::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:26:18::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:26:18::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:26:18::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:26:18::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:26:18::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:26:18::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:26:18::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:26:33::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:26:33::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:26:33::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:26:33::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:26:33::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:26:33::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:26:33::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:26:33::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:26:33::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:27:56::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:27:56::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:27:56::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:27:56::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:27:56::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:27:56::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:27:56::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:27:56::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:27:56::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:30:29::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:30:29::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:30:29::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:30:29::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:30:29::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:30:29::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:30:29::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:30:29::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:30:29::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:32:47::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:32:47::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:32:47::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:32:47::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:32:47::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:32:47::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:32:47::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:32:47::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:32:47::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:35:43::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:35:43::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:35:43::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:35:43::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:35:43::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:35:43::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:35:43::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:35:43::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:35:43::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:36:03::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:36:03::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:36:03::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:36:03::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:36:03::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:36:03::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:36:03::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:36:03::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:36:03::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:36:52::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:36:53::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:36:53::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:36:53::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:36:53::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:36:53::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:36:53::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:36:53::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:36:53::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:37:17::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:37:17::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:37:17::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:37:17::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:37:17::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:37:17::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:37:17::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:37:17::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:37:17::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:37:33::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:37:33::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:37:33::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:37:33::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:37:33::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:37:33::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:37:33::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:37:33::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:37:33::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:38:11::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:38:11::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:38:11::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:38:11::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:38:11::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:38:11::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:38:11::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:38:11::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:38:11::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:39:00::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:39:00::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:39:00::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:39:00::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:39:00::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:39:00::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:39:00::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:39:00::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:39:00::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:39:55::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:39:55::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:39:55::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:39:55::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:39:55::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:39:55::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:39:55::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:39:55::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:39:55::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.16:40:34::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.16:40:34::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-25.16:40:34::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.16:40:34::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.16:40:34::SCWBifWriter::proc type : 
+TRACE::2021-01-25.16:40:34::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.16:40:34::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.16:40:34::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.16:40:34::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:16:00::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:16:00::SCWBifWriter::hardware databse : design_1_wrapper
+TRACE::2021-01-25.18:16:00::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:16:00::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:16:00::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:16:00::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:16:00::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:16:00::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:16:00::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:16:45::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:16:45::SCWBifWriter::hardware databse : design_1_wrapper
+TRACE::2021-01-25.18:16:45::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:16:45::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:16:45::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:16:45::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:16:45::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:16:45::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:16:45::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:25:29::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:25:29::SCWBifWriter::hardware databse : design_1_wrapper_0
+TRACE::2021-01-25.18:25:29::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:25:29::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:25:29::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:25:29::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:25:29::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:25:29::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:25:29::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:25:42::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:25:42::SCWBifWriter::hardware databse : design_1_wrapper_0
+TRACE::2021-01-25.18:25:42::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:25:42::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:25:42::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:25:42::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:25:42::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:25:42::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:25:42::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:25:48::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:25:48::SCWBifWriter::hardware databse : design_1_wrapper_0
+TRACE::2021-01-25.18:25:48::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:25:48::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:25:48::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:25:48::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:25:48::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:25:48::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:25:48::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:26:19::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:26:19::SCWBifWriter::hardware databse : design_1_wrapper_0
+TRACE::2021-01-25.18:26:19::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:26:19::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:26:19::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:26:19::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:26:19::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:26:19::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:26:19::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:26:47::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:26:47::SCWBifWriter::hardware databse : design_1_wrapper_0
+TRACE::2021-01-25.18:26:47::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:26:47::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:26:47::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:26:47::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:26:47::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:26:47::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:26:47::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:27:16::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:27:16::SCWBifWriter::hardware databse : design_1_wrapper_0
+TRACE::2021-01-25.18:27:16::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:27:16::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:27:16::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:27:16::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:27:16::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:27:16::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:27:16::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:27:31::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:27:31::SCWBifWriter::hardware databse : design_1_wrapper_0
+TRACE::2021-01-25.18:27:31::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:27:31::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:27:31::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:27:31::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:27:31::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:27:31::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:27:31::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:27:57::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:27:57::SCWBifWriter::hardware databse : design_1_wrapper_0
+TRACE::2021-01-25.18:27:57::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:27:57::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:27:57::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:27:57::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:27:57::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:27:57::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:27:57::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:28:49::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:28:49::SCWBifWriter::hardware databse : design_1_wrapper_1
+TRACE::2021-01-25.18:28:49::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:28:49::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:28:49::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:28:49::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:28:49::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:28:49::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:28:49::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:30:39::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:30:39::SCWBifWriter::hardware databse : design_1_wrapper_2
+TRACE::2021-01-25.18:30:39::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:30:39::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:30:39::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:30:39::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:30:39::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:30:39::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:30:39::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:32:22::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:32:22::SCWBifWriter::hardware databse : design_1_wrapper_4
+TRACE::2021-01-25.18:32:22::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:32:22::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:32:22::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:32:22::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:32:22::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:32:22::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:32:22::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:34:00::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:34:00::SCWBifWriter::hardware databse : design_1_wrapper_5
+TRACE::2021-01-25.18:34:00::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:34:00::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:34:00::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:34:00::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:34:00::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:34:00::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:34:00::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:34:14::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:34:14::SCWBifWriter::hardware databse : design_1_wrapper_5
+TRACE::2021-01-25.18:34:14::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:34:14::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:34:14::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:34:14::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:34:14::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:34:14::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:34:14::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:36:09::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:36:09::SCWBifWriter::hardware databse : design_1_wrapper_6
+TRACE::2021-01-25.18:36:09::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:36:09::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:36:09::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:36:09::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:36:09::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:36:09::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:36:09::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:37:26::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:37:26::SCWBifWriter::hardware databse : design_1_wrapper_7
+TRACE::2021-01-25.18:37:26::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:37:26::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:37:26::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:37:26::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:37:26::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:37:26::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:37:26::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:38:45::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:38:45::SCWBifWriter::hardware databse : design_1_wrapper_8
+TRACE::2021-01-25.18:38:45::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:38:45::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:38:45::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:38:45::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:38:45::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:38:45::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:38:45::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:39:01::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:39:01::SCWBifWriter::hardware databse : design_1_wrapper_8
+TRACE::2021-01-25.18:39:01::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:39:01::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:39:01::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:39:01::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:39:01::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:39:01::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:39:01::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:39:28::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:39:28::SCWBifWriter::hardware databse : design_1_wrapper_8
+TRACE::2021-01-25.18:39:28::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:39:28::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:39:28::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:39:28::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:39:28::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:39:28::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:39:28::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:39:46::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:39:46::SCWBifWriter::hardware databse : design_1_wrapper_8
+TRACE::2021-01-25.18:39:46::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:39:46::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:39:46::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:39:46::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:39:46::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:39:46::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:39:46::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:40:57::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:40:57::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:40:57::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:40:57::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:40:57::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:40:57::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:40:57::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:40:57::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:40:57::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:41:59::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:42:00::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:42:00::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:42:00::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:42:00::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:42:00::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:42:00::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:42:00::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:42:00::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:43:02::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:43:02::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:43:02::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:43:02::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:43:02::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:43:02::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:43:02::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:43:02::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:43:02::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:45:11::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:45:11::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:45:11::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:45:11::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:45:11::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:45:11::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:45:11::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:45:11::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:45:11::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:46:39::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:46:39::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:46:39::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:46:39::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:46:39::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:46:39::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:46:39::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:46:39::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:46:39::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:47:16::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:47:16::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:47:16::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:47:16::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:47:16::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:47:16::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:47:16::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:47:16::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:47:16::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:47:44::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:47:44::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:47:44::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:47:44::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:47:44::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:47:44::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:47:44::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:47:44::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:47:44::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:48:30::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:48:30::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:48:30::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:48:30::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:48:30::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:48:30::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:48:30::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:48:30::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:48:30::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:51:01::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:51:02::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:51:02::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:51:02::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:51:02::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:51:02::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:51:02::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:51:02::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:51:02::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:52:02::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:52:02::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:52:02::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:52:02::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:52:02::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:52:02::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:52:02::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:52:02::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:52:02::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:53:32::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:53:33::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:53:33::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:53:33::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:53:33::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:53:33::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:53:33::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:53:33::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:53:33::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:53:45::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:53:45::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:53:45::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:53:45::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:53:45::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:53:45::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:53:45::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:53:45::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:53:45::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:54:10::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:54:10::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:54:10::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:54:10::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:54:10::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:54:10::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:54:10::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:54:10::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:54:10::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:54:58::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:54:58::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:54:58::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:54:58::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:54:58::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:54:58::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:54:58::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:54:58::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:54:58::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:56:08::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:56:08::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:56:08::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:56:08::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:56:08::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:56:08::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:56:08::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:56:08::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:56:08::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:58:13::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:58:13::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:58:13::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:58:13::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:58:13::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:58:13::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:58:13::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:58:13::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:58:13::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.18:58:49::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.18:58:49::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.18:58:49::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.18:58:49::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.18:58:49::SCWBifWriter::proc type : 
+TRACE::2021-01-25.18:58:49::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.18:58:49::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.18:58:49::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.18:58:49::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.19:00:03::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.19:00:03::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.19:00:03::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.19:00:03::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.19:00:03::SCWBifWriter::proc type : 
+TRACE::2021-01-25.19:00:03::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.19:00:03::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.19:00:03::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.19:00:03::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.19:01:03::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.19:01:04::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.19:01:04::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.19:01:04::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.19:01:04::SCWBifWriter::proc type : 
+TRACE::2021-01-25.19:01:04::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.19:01:04::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.19:01:04::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.19:01:04::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.19:02:17::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.19:02:17::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.19:02:17::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.19:02:17::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.19:02:17::SCWBifWriter::proc type : 
+TRACE::2021-01-25.19:02:17::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.19:02:17::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.19:02:17::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.19:02:17::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-25.19:02:45::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-25.19:02:45::SCWBifWriter::hardware databse : design_1_wrapper_10
+TRACE::2021-01-25.19:02:45::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-25.19:02:45::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-25.19:02:45::SCWBifWriter::proc type : 
+TRACE::2021-01-25.19:02:45::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-25.19:02:45::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-25.19:02:45::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-25.19:02:45::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-26.11:14:40::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-26.11:14:40::SCWBifWriter::hardware databse : design_1_wrapper_0
+TRACE::2021-01-26.11:14:40::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-26.11:14:40::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-26.11:14:40::SCWBifWriter::proc type : 
+TRACE::2021-01-26.11:14:40::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-26.11:14:40::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-26.11:14:40::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-26.11:14:40::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-26.11:38:28::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-26.11:38:28::SCWBifWriter::hardware databse : design_1_wrapper_2
+TRACE::2021-01-26.11:38:28::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-26.11:38:28::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-26.11:38:28::SCWBifWriter::proc type : 
+TRACE::2021-01-26.11:38:28::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-26.11:38:28::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-26.11:38:28::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-26.11:38:28::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-26.11:38:42::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-26.11:38:42::SCWBifWriter::hardware databse : design_1_wrapper_2
+TRACE::2021-01-26.11:38:42::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-26.11:38:42::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-26.11:38:42::SCWBifWriter::proc type : 
+TRACE::2021-01-26.11:38:42::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-26.11:38:42::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-26.11:38:42::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-26.11:38:42::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-26.11:39:01::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-26.11:39:01::SCWBifWriter::hardware databse : design_1_wrapper_2
+TRACE::2021-01-26.11:39:01::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-26.11:39:01::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-26.11:39:01::SCWBifWriter::proc type : 
+TRACE::2021-01-26.11:39:01::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-26.11:39:01::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-26.11:39:01::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-26.11:39:01::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-26.11:40:22::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-26.11:40:22::SCWBifWriter::hardware databse : design_1_wrapper_3
+TRACE::2021-01-26.11:40:22::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-26.11:40:22::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-26.11:40:22::SCWBifWriter::proc type : 
+TRACE::2021-01-26.11:40:22::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-26.11:40:22::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-26.11:40:22::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-26.11:40:22::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-01-26.11:41:03::SCWBifWriter::Found the complete platform C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12/export/EX12/EX12.xpfm
+TRACE::2021-01-26.11:41:03::SCWBifWriter::hardware databse : design_1_wrapper_4
+TRACE::2021-01-26.11:41:03::SCWBifWriter::bitstream found in the design
+TRACE::2021-01-26.11:41:03::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-01-26.11:41:03::SCWBifWriter::proc type : 
+TRACE::2021-01-26.11:41:03::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-01-26.11:41:03::SCWBifWriter::Device type is : zynq
+TRACE::2021-01-26.11:41:03::SCWBifWriter::Writing BIF to file : C:/Users/KasperPC/Desktop/EOS_Examen/EX12/EX12_app_system/Debug/system.bif
+TRACE::2021-01-26.11:41:03::SCWBifWriter::Writing the Zynq Baremetal bif 

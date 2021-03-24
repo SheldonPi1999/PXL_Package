@@ -1,0 +1,31 @@
+Nothing to build in platform '5_PRINT_STRING_PS'
+
+14:32:08 **** Incremental Build of configuration Debug for project 5_PRINT_STRING_PS_APP ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/eFPGA/5_PRINT_STRING_PS/5_PRINT_STRING_PS/export/5_PRINT_STRING_PS/sw/5_PRINT_STRING_PS/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: 5_PRINT_STRING_PS_APP.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/eFPGA/5_PRINT_STRING_PS/5_PRINT_STRING_PS/export/5_PRINT_STRING_PS/sw/5_PRINT_STRING_PS/standalone_domain/bsplib/lib -o "5_PRINT_STRING_PS_APP.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 5_PRINT_STRING_PS_APP.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size 5_PRINT_STRING_PS_APP.elf  |tee "5_PRINT_STRING_PS_APP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19052	   1144	  22568	  42764	   a70c	5_PRINT_STRING_PS_APP.elf
+'Finished building: 5_PRINT_STRING_PS_APP.elf.size'
+' '
+14:32:09 **** Incremental Build of configuration Debug for project 5_PRINT_STRING_PS_APP_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 58130 C:/eFPGA/5_PRINT_STRING_PS/5_PRINT_STRING_PS/export/5_PRINT_STRING_PS/5_PRINT_STRING_PS.xpfm standalone_domain C:/eFPGA/5_PRINT_STRING_PS/5_PRINT_STRING_PS_APP_system/Debug/system.bif
+sdcard_gen --xpfm C:/eFPGA/5_PRINT_STRING_PS/5_PRINT_STRING_PS/export/5_PRINT_STRING_PS/5_PRINT_STRING_PS.xpfm --sys_config 5_PRINT_STRING_PS --bif C:/eFPGA/5_PRINT_STRING_PS/5_PRINT_STRING_PS_APP_system/Debug/system.bif --bitstream C:/eFPGA/5_PRINT_STRING_PS/5_PRINT_STRING_PS_APP/_ide/bitstream/design_1_wrapper.bit --elf C:/eFPGA/5_PRINT_STRING_PS/5_PRINT_STRING_PS_APP/Debug/5_PRINT_STRING_PS_APP.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/eFPGA/5_PRINT_STRING_PS/5_PRINT_STRING_PS_APP/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2019.2/bin/bootgen  -image C:/eFPGA/5_PRINT_STRING_PS/5_PRINT_STRING_PS_APP_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

@@ -1,0 +1,25 @@
+2020-06-01T18:25:42.781086800255-18:25:42 **** Incremental Build of configuration Debug for project 8_PS_PL_LED_AXI_APP ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building file: ../src/helloworld.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/eFPGA/8_PS_PL_LED_AXI/8_PS_PL_LED_AXI/export/8_PS_PL_LED_AXI/sw/8_PS_PL_LED_AXI/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+000-'Finished building: ../src/helloworld.c'
+000-' '
+000-'Building target: 8_PS_PL_LED_AXI_APP.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/eFPGA/8_PS_PL_LED_AXI/8_PS_PL_LED_AXI/export/8_PS_PL_LED_AXI/sw/8_PS_PL_LED_AXI/standalone_domain/bsplib/lib -o "8_PS_PL_LED_AXI_APP.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-'Finished building target: 8_PS_PL_LED_AXI_APP.elf'
+000-' '
+000-'Invoking: ARM v7 Print Size'
+000-arm-none-eabi-size 8_PS_PL_LED_AXI_APP.elf  |tee "8_PS_PL_LED_AXI_APP.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  31048	   1560	  23288	  55896	   da58	8_PS_PL_LED_AXI_APP.elf
+000-'Finished building: 8_PS_PL_LED_AXI_APP.elf.size'
+000-' '
+00255-
+18:25:43 Build Finished (took 543ms)
+

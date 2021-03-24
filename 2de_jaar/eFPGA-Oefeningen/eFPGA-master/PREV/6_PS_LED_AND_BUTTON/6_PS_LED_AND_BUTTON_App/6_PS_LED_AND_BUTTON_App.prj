@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="6_PS_LED_AND_BUTTON_App" location="C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON_App" platform="C:/eFPGA/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON/export/6_PS_LED_AND_BUTTON/6_PS_LED_AND_BUTTON.xpfm" platformUID="xilinx:minized::0.0(custom)" systemProject="6_PS_LED_AND_BUTTON_App_system" sysConfig="6_PS_LED_AND_BUTTON" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="3ec57583f3610e74babf06f82a19ab33">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1781835376" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.951629779" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

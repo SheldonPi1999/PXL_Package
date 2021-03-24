@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="MAIN" Id="{161c6f1e-27b3-484c-96fc-7af11f9619c6}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+    // trigger command execution for OpenWeatherMap samples
+    bGetOpenWeatherMap: BOOL;	
+	bGetContentResult: BOOL;
+	
+	sContent : STRING(511);
+	
+	eRequestType: STRING(INT#4);
+	RisingEdge: R_TRIG;
+	
+	FB_IotHttpRequest: FB_IotHttpRequest;
+	FB_IotHttpClient: FB_IotHttpClient :=(sHostName := 'api.openweathermap.org', bKeepAlive := TRUE, tConnectionTimeout := T#10S);
+END_VAR
+
+VAR_OUTPUT
+	jsonDoc: SJsonValue;
+	jsonSerial: SJsonValue;
+	jsonSerial2: SJsonValue;
+	fbJson: FB_JsonDomParser;
+	sunrise : LREAL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF NOT FB_IotHttpClient.bConfigured THEN 
+    FB_IotHttpClient.stTLS.sCA:= 'C:\Users\Kasper\Desktop\1.cer';
+    FB_IotHttpClient.nHostPort:= 443;
+    FB_IotHttpClient.stTLS.bNoServerCertCheck:= TRUE;
+	
+ELSIF FB_IotHttpClient.bConfigured THEN
+	bGetOpenWeatherMap := TRUE;
+END_IF
+
+RisingEdge(CLK:= bGetOpenWeatherMap);
+
+IF RisingEdge.Q THEN
+	IF FB_IotHttpRequest.SendRequest(sUri := '/data/2.5/weather?q=Landen&appid=de723680ed89838613a79c19d2986342', fbClient := FB_IotHttpClient, eRequestType := ETcIotHttpRequestType.HTTP_Get, 0, 0, 0) THEN
+		bGetContentResult:= FB_IotHttpRequest.GetContent(pContent:= ADR(sContent), nContentSize:= SIZEOF(sContent), bSetNullTermination:= TRUE);
+	END_IF
+END_IF
+
+IF NOT(FB_IotHttpRequest.bBusy) THEN
+	jsonDoc := FB_IotHttpRequest.GetJsonDomContent(fbJson);
+	jsonSerial := fbJson.FindMember(jsonDoc, 'sys');
+	jsonSerial2 := fbJson.FindMember(jsonSerial, 'sunrise');
+	sunrise := fbJson.GetDouble(jsonSerial2);
+END_IF
+
+FB_IotHttpClient.Execute();]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="70" Count="3" />
+      <LineId Id="151" Count="1" />
+      <LineId Id="101" Count="0" />
+      <LineId Id="68" Count="0" />
+      <LineId Id="229" Count="0" />
+      <LineId Id="182" Count="0" />
+      <LineId Id="230" Count="0" />
+      <LineId Id="183" Count="7" />
+      <LineId Id="232" Count="0" />
+      <LineId Id="237" Count="0" />
+      <LineId Id="233" Count="0" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="207" Count="0" />
+      <LineId Id="206" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

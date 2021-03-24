@@ -1,0 +1,122 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Jan 24 12:58:16 2021
+# Process ID: 4840
+# Current directory: C:/Users/KasperPC/Desktop/EOS_Examen/EX2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3708 C:\Users\KasperPC\Desktop\EOS_Examen\EX2\EX2.xpr
+# Log file: C:/Users/KasperPC/Desktop/EOS_Examen/EX2/vivado.log
+# Journal file: C:/Users/KasperPC/Desktop/EOS_Examen/EX2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/KasperPC/Desktop/EOS_Examen/EX2'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_sevenseg_ip_0_0
+
+open_bd_design {C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+Adding component instance block -- xilinx.com:user:sevenseg_ip:1.0 - sevenseg_ip_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Successfully read diagram <design_1> from BD file <C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1059.773 ; gain = 0.000
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/Users/KasperPC/Desktop/EOS_Examen/EX2/ip_repo [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/KasperPC/Desktop/EOS_Examen/EX2/ip_repo'.
+open_bd_design {C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/design_1.bd}
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:sevenseg_ip:1.0 [get_ips  design_1_sevenseg_ip_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_sevenseg_ip_0_0 (sevenseg_ip_v1.0 1.0) from revision 3 to revision 4
+Wrote  : <C:\Users\KasperPC\Desktop\EOS_Examen\EX2\EX2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/KasperPC/Desktop/EOS_Examen/EX2/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_sevenseg_ip_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/design_1.bd]
+CRITICAL WARNING: [BD 41-1367] The port name 'OUTPUT' of cell '/sevenseg_ip_0' is a reserved keyword in a Hardware Description Language. Please consider renaming the port.
+Wrote  : <C:\Users\KasperPC\Desktop\EOS_Examen\EX2\EX2.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/synth/design_1.vhd
+VHDL Output written to : C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP1'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sevenseg_ip_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s01_couplers/auto_pc .
+Exporting to file C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1369.992 ; gain = 0.000
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_sevenseg_ip_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_50M_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_1] }
+export_ip_user_files -of_objects [get_files C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_processing_system7_0_0_synth_1 design_1_sevenseg_ip_0_0_synth_1 design_1_xbar_0_synth_1 design_1_rst_ps7_0_50M_0_synth_1 design_1_auto_pc_0_synth_1 design_1_auto_pc_1_synth_1 -jobs 20
+[Sun Jan 24 12:59:44 2021] Launched design_1_processing_system7_0_0_synth_1, design_1_sevenseg_ip_0_0_synth_1, design_1_xbar_0_synth_1, design_1_rst_ps7_0_50M_0_synth_1, design_1_auto_pc_0_synth_1, design_1_auto_pc_1_synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_sevenseg_ip_0_0_synth_1: C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.runs/design_1_sevenseg_ip_0_0_synth_1/runme.log
+design_1_xbar_0_synth_1: C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.runs/design_1_xbar_0_synth_1/runme.log
+design_1_rst_ps7_0_50M_0_synth_1: C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.runs/design_1_rst_ps7_0_50M_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_auto_pc_1_synth_1: C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.runs/design_1_auto_pc_1_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.ip_user_files -ipstatic_source_dir C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.cache/compile_simlib/modelsim} {questa=C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.cache/compile_simlib/questa} {riviera=C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.cache/compile_simlib/riviera} {activehdl=C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_nets sevenseg_ip_0_OUTPUT] [get_bd_cells sevenseg_ip_0]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_DDR] [get_bd_intf_nets processing_system7_0_FIXED_IO] [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_intf_nets processing_system7_0_M_AXI_GP1] [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_cells processing_system7_0]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK0] [get_bd_nets rst_ps7_0_50M_peripheral_aresetn] [get_bd_cells ps7_0_axi_periph]
+delete_bd_objs [get_bd_cells rst_ps7_0_50M]
+delete_bd_objs [get_bd_intf_ports FIXED_IO]
+delete_bd_objs [get_bd_intf_ports DDR]
+delete_bd_objs [get_bd_ports OUTPUT_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+set_property -dict [list CONFIG.PCW_USE_M_AXI_GP1 {1}] [get_bd_cells processing_system7_0]
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:sevenseg_ip:1.0 sevenseg_ip_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+apply_bd_automation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1542.762 ; gain = 0.000
+save_bd_design
+Wrote  : <C:\Users\KasperPC\Desktop\EOS_Examen\EX2\EX2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/KasperPC/Desktop/EOS_Examen/EX2/EX2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 24 13:21:46 2021...

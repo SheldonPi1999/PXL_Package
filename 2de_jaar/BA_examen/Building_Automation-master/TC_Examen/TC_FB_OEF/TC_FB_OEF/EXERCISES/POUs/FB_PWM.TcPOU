@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="FB_PWM" Id="{03e53112-2629-4d5a-8c7f-1d98a7430fde}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_PWM
+
+VAR_INPUT
+	DUTY : UINT;
+	PERIOD_MS : UINT;
+END_VAR
+
+VAR_OUTPUT
+	PWM_SIGNAL : BOOL;
+END_VAR
+
+VAR
+	ON_TIME_STR : STRING;
+	OFF_TIME_STR : STRING;
+	
+	ON_TIME : TIME;
+	OFF_TIME : TIME;
+	
+	TON : TON;
+	TOF : TOF;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[ON_TIME_STR := UINT_TO_STRING(DUTY * PERIOD_MS / 100);
+ON_TIME_STR := CONCAT('T#', ON_TIME_STR);
+ON_TIME_STR := CONCAT(ON_TIME_STR, 'ms');
+ON_TIME := STRING_TO_TIME(ON_TIME_STR);
+	
+OFF_TIME_STR := UINT_TO_STRING(PERIOD_MS - (DUTY * PERIOD_MS / 100));
+OFF_TIME_STR := CONCAT('T#', OFF_TIME_STR);
+OFF_TIME_STR := CONCAT(OFF_TIME_STR, 'ms');
+OFF_TIME := STRING_TO_TIME(OFF_TIME_STR);
+
+TOF(IN:= TON.Q, PT:= ON_TIME, Q => PWM_SIGNAL);
+TON(IN:= NOT(TOF.Q), PT:= OFF_TIME);]]></ST>
+    </Implementation>
+    <LineIds Name="FB_PWM">
+      <LineId Id="24" Count="0" />
+      <LineId Id="30" Count="2" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="15" Count="2" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="EX_08" Id="{33839870-0899-44a7-8734-82f8cf25c14d}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM EX_08
+VAR
+	GEWICHT : INT;
+	mengen: TOF;
+	MENG_NU : BOOL;
+	R_TRIG : R_TRIG;
+END_VAR
+
+VAR_INPUT
+	BALANS : INT;
+	EMPTY : BOOL;
+END_VAR
+
+VAR_OUTPUT
+	STOF_A_DIS : BOOL;
+	STOF_B_DIS : BOOL;
+	STOF_C_DIS : BOOL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[GEWICHT := SCALING(input:=BALANS, imin:= 0, imax:= 32767, omin:= 0, omax:= 100);
+R_TRIG(CLK := MENG_NU);
+mengen(IN:=R_TRIG.Q, PT:= T#5000MS);
+
+IF(GEWICHT < 50)
+	THEN MENG_NU := FALSE; 
+		 STOF_A_DIS := TRUE;
+	     STOF_B_DIS := FALSE;
+	     STOF_C_DIS := FALSE;
+ELSIF(GEWICHT < 60)
+	THEN STOF_A_DIS := FALSE;
+		 STOF_B_DIS := TRUE;
+ELSIF(GEWICHT = 60)
+	THEN STOF_A_DIS := FALSE;
+		 STOF_B_DIS := FALSE;
+		 MENG_NU := TRUE;
+ELSIF(GEWICHT < 100) 
+	THEN MENG_NU := FALSE;
+		 STOF_C_DIS := TRUE;
+ELSIF(GEWICHT = 100)
+	THEN MENG_NU := TRUE;
+END_IF
+
+IF EMPTY THEN 
+	GEWICHT := 0;
+	BALANS := 0;
+	STOF_A_DIS := FALSE;
+	STOF_B_DIS := FALSE;
+	STOF_C_DIS := FALSE;
+END_IF
+]]></ST>
+    </Implementation>
+    <LineIds Name="EX_08">
+      <LineId Id="5" Count="0" />
+      <LineId Id="157" Count="0" />
+      <LineId Id="148" Count="0" />
+      <LineId Id="91" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="32" Count="0" />
+      <LineId Id="154" Count="0" />
+      <LineId Id="115" Count="1" />
+      <LineId Id="34" Count="2" />
+      <LineId Id="42" Count="2" />
+      <LineId Id="149" Count="0" />
+      <LineId Id="119" Count="1" />
+      <LineId Id="155" Count="0" />
+      <LineId Id="121" Count="1" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="126" Count="0" />
+      <LineId Id="65" Count="0" />
+      <LineId Id="146" Count="1" />
+      <LineId Id="113" Count="1" />
+      <LineId Id="112" Count="0" />
+      <LineId Id="111" Count="0" />
+      <LineId Id="66" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

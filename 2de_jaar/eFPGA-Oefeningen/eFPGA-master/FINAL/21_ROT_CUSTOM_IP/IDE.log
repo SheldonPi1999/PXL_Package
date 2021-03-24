@@ -1,0 +1,125 @@
+11:59:06 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\eFPGA\21_ROT_CUSTOM_IP\temp_xsdb_launch_script.tcl
+11:59:08 INFO  : XSCT server has started successfully.
+11:59:08 INFO  : plnx-install-location is set to ''
+11:59:08 INFO  : Registering command handlers for Vitis TCF services
+11:59:10 INFO  : Successfully done setting XSCT server connection channel  
+11:59:10 INFO  : Successfully done query RDI_DATADIR 
+11:59:10 INFO  : Successfully done setting workspace for the tool. 
+12:09:30 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+12:09:30 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+12:09:40 INFO  : (SwPlaform) Successfully done setParamInSpec 
+12:09:41 INFO  : (SwPlaform) Successfully done setParamInSpec 
+12:09:42 INFO  : (SwPlatform) Successfully done update_mss 
+12:09:42 INFO  : Successfully done sdx_reload_mss "C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+12:16:48 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:16:59 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:17:38 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:18:13 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:18:31 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:18:43 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:18:57 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:19:07 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:19:27 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:19:46 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:19:59 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:20:12 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:20:44 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:21:19 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:22:16 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:23:42 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:24:06 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:24:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:24:26 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:24:26 INFO  : 'jtag frequency' command is executed.
+12:24:27 INFO  : Context for 'APU' is selected.
+12:24:27 INFO  : System reset is completed.
+12:24:30 INFO  : 'after 3000' command is executed.
+12:24:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:24:32 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/21_ROT_CUSTOM_IP/21ROT_CUSTOM_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+12:24:33 INFO  : Context for 'APU' is selected.
+12:24:33 INFO  : Hardware design information is loaded from 'C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP/export/21_ROT_CUSTOM_IP/hw/design_1_wrapper.xsa'.
+12:24:33 INFO  : 'configparams force-mem-access 1' command is executed.
+12:24:34 INFO  : Context for 'APU' is selected.
+12:24:34 INFO  : Sourcing of 'C:/eFPGA/21_ROT_CUSTOM_IP/21ROT_CUSTOM_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+12:24:34 INFO  : 'ps7_init' command is executed.
+12:24:34 INFO  : 'ps7_post_config' command is executed.
+12:24:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:24:35 INFO  : The application 'C:/eFPGA/21_ROT_CUSTOM_IP/21ROT_CUSTOM_IP_APP/Debug/21ROT_CUSTOM_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:24:35 INFO  : 'configparams force-mem-access 0' command is executed.
+12:24:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/21_ROT_CUSTOM_IP/21ROT_CUSTOM_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP/export/21_ROT_CUSTOM_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/21_ROT_CUSTOM_IP/21ROT_CUSTOM_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/21_ROT_CUSTOM_IP/21ROT_CUSTOM_IP_APP/Debug/21ROT_CUSTOM_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:24:35 INFO  : Memory regions updated for context APU
+12:24:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:24:35 INFO  : 'con' command is executed.
+12:24:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:24:35 INFO  : Launch script is exported to file 'C:\eFPGA\21_ROT_CUSTOM_IP\.sdk\launch_scripts\single_application_debug\debugger_21rot_custom_ip_app-default.tcl'
+12:27:14 INFO  : Checking for BSP changes to sync application flags for project '21ROT_CUSTOM_IP_APP'...
+12:27:21 INFO  : Disconnected from the channel tcfchan#2.
+12:27:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:27:23 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+12:27:23 INFO  : 'jtag frequency' command is executed.
+12:27:23 INFO  : Context for 'APU' is selected.
+12:27:23 INFO  : System reset is completed.
+12:27:26 INFO  : 'after 3000' command is executed.
+12:27:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+12:27:27 INFO  : FPGA configured successfully with bitstream "C:/eFPGA/21_ROT_CUSTOM_IP/21ROT_CUSTOM_IP_APP/_ide/bitstream/design_1_wrapper.bit"
+12:27:27 INFO  : Context for 'APU' is selected.
+12:27:27 INFO  : Hardware design information is loaded from 'C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP/export/21_ROT_CUSTOM_IP/hw/design_1_wrapper.xsa'.
+12:27:27 INFO  : 'configparams force-mem-access 1' command is executed.
+12:27:27 INFO  : Context for 'APU' is selected.
+12:27:27 INFO  : Sourcing of 'C:/eFPGA/21_ROT_CUSTOM_IP/21ROT_CUSTOM_IP_APP/_ide/psinit/ps7_init.tcl' is done.
+12:27:28 INFO  : 'ps7_init' command is executed.
+12:27:28 INFO  : 'ps7_post_config' command is executed.
+12:27:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:27:28 INFO  : The application 'C:/eFPGA/21_ROT_CUSTOM_IP/21ROT_CUSTOM_IP_APP/Debug/21ROT_CUSTOM_IP_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:27:28 INFO  : 'configparams force-mem-access 0' command is executed.
+12:27:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file C:/eFPGA/21_ROT_CUSTOM_IP/21ROT_CUSTOM_IP_APP/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/eFPGA/21_ROT_CUSTOM_IP/21_ROT_CUSTOM_IP/export/21_ROT_CUSTOM_IP/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/eFPGA/21_ROT_CUSTOM_IP/21ROT_CUSTOM_IP_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/eFPGA/21_ROT_CUSTOM_IP/21ROT_CUSTOM_IP_APP/Debug/21ROT_CUSTOM_IP_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:27:28 INFO  : Memory regions updated for context APU
+12:27:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:27:28 INFO  : 'con' command is executed.
+12:27:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:27:28 INFO  : Launch script is exported to file 'C:\eFPGA\21_ROT_CUSTOM_IP\.sdk\launch_scripts\single_application_debug\debugger_21rot_custom_ip_app-default.tcl'
+12:28:30 INFO  : Disconnected from the channel tcfchan#3.

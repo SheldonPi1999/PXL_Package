@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="FB_PULSE_PER_X_SEC" Id="{9b4890f4-1008-42a4-8bd7-d25a193de936}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_PULSE_PER_X_SEC
+VAR_INPUT
+	ON_OFF : BOOL;
+	X_Sec : UINT;
+END_VAR
+
+VAR_OUTPUT
+	PULSE : BOOL;
+END_VAR
+
+VAR
+	R_TRIG : R_TRIG;
+	TIMETIME : TIME;
+	TIME_TIJD : STRING;
+	TON : TON;
+	TOF : TOF;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[TIME_TIJD := CONCAT('T#', UINT_TO_STRING(X_Sec));
+TIME_TIJD := CONCAT(TIME_TIJD, 's');
+
+TOF(IN:= TON.Q, PT:= T#0MS);
+TON(IN:= NOT(TOF.Q), PT:= STRING_TO_TIME(TIME_TIJD), Q => Pulse);
+]]></ST>
+    </Implementation>
+    <LineIds Name="FB_PULSE_PER_X_SEC">
+      <LineId Id="22" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="21" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="EX10_app" location="C:/Users/KasperPC/Desktop/EOS_Examen/EX10/EX10_app" platform="C:/Users/KasperPC/Desktop/EOS_Examen/EX10/EX10/export/EX10/EX10.xpfm" platformUID="xilinx:zybo::0.0(custom)" systemProject="EX10_app_system" sysConfig="EX10" runtime="C/C++" cpu="freertos10_xilinx_domain" cpuInstance="ps7_cortexa9_0" os="freertos10_xilinx" mssSignature="12eca3841a94a714dbb0f6ed2d0d916f">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.172987899">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1708206644" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="freertos_hello_world"/>
+</sdkproject:SdkProject>

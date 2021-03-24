@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="EX_10" Id="{c68eb5f5-4a05-49eb-b8b5-49550a0803d2}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM EX_10
+VAR
+
+END_VAR
+
+VAR_INPUT
+	potentio_2k : INT;
+	potentio_3k : INT;
+	potentio_5k : INT;
+END_VAR
+
+VAR_OUTPUT
+	slider_2k : INT;
+	slider_3k : INT;
+	slider_5k : INT;
+	slider_10k : INT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[slider_2k := potentio_2k;
+slider_3k := potentio_3k;
+slider_5k := potentio_5k;
+slider_10k := potentio_2k + potentio_3k + potentio_5k;]]></ST>
+    </Implementation>
+    <LineIds Name="EX_10">
+      <LineId Id="5" Count="0" />
+      <LineId Id="23" Count="2" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

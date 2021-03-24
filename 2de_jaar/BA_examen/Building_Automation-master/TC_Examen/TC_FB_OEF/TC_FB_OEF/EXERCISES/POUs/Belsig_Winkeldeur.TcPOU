@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="Belsig_Winkeldeur" Id="{52b2101d-d7eb-4cc4-983e-1496b9d70059}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Belsig_Winkeldeur
+VAR
+	CTU : CTU;
+	R_TRIG : R_TRIG;
+	R_TRIG2 : R_TRIG;
+END_VAR
+
+VAR_INPUT
+	S01 : BOOL;
+	S02 : BOOL;
+END_VAR
+
+VAR_OUTPUT
+	Q00 : BOOL;
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CTU(CU := R_TRIG.Q);
+R_TRIG(CLK := Q00);
+R_TRIG2(CLK := S02);
+
+IF S01 THEN
+	IF R_TRIG2.Q THEN
+		Q00 := TRUE;
+	END_IF
+	
+ELSIF Q00 THEN
+	IF S02 THEN
+		Q00 := TRUE;
+	ELSE
+		Q00 := FALSE;
+	END_IF
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="Belsig_Winkeldeur">
+      <LineId Id="45" Count="0" />
+      <LineId Id="49" Count="0" />
+      <LineId Id="67" Count="0" />
+      <LineId Id="78" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="20" Count="1" />
+      <LineId Id="86" Count="0" />
+      <LineId Id="57" Count="0" />
+      <LineId Id="81" Count="1" />
+      <LineId Id="84" Count="1" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="19" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

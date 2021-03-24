@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="12_PS_7_SEG_APP" location="C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG_APP" platform="C:/eFPGA/12_PS_7_SEG/12_PS_7_SEG/export/12_PS_7_SEG/12_PS_7_SEG.xpfm" platformUID="xilinx:minized::0.0(custom)" systemProject="12_PS_7_SEG_APP_system" sysConfig="12_PS_7_SEG" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="b1795418fdbd5e36ee735ceadd88bbea">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1992315802">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1023766615" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

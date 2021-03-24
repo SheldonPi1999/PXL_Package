@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="FC_SCALE" Id="{4e3f2179-37be-4507-84ea-21e3f58c9968}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION FC_SCALE : LREAL
+
+VAR_INPUT
+	RawValue : LREAL;
+	Rvmin : LREAL;
+	Rvmax : LREAL;
+	SVmin : LREAL;
+	SVmax : LREAL;
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[FC_SCALE := SVmin + (RawValue / ((Rvmax-Rvmin)/(SVmax-SVmin)));]]></ST>
+    </Implementation>
+    <LineIds Name="FC_SCALE">
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

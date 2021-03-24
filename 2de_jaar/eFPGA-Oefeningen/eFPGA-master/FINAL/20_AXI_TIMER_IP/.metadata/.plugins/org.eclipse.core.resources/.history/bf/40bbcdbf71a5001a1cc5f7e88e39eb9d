@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include "sleep.h"
+#include "platform.h"
+
+#include "xparameters.h"
+#include "xil_printf.h"
+#include "xtmrctr.h"
+
+#define TIMER_DEVICE_ID_PL XPAR_TMRCTR_0_DEVICE_ID
+
+#define TMR_LOAD 0x00F00000
+
+XTmrCtr TMRInst;
+
+static int led_data;
+
+int main()
+{
+    init_platform();
+
+	led_data = 0;
+	int status = 0;
+	unsigned int start;
+
+	status = XTmrCtr_Initialize(&TMRInst, TIMER_DEVICE_ID_PL);
+	if(status != XST_SUCCESS)
+	{
+		xil_printf("XTmrCtr_Initialize() failed.\r\n");
+		return XST_FAILURE;
+	}
+
+	XTmrCtr_SetResetValue(&TMRInst, 0, TMR_LOAD);
+	XTmrCtr_SetOptions(&TMRInst, 0, XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION);
+	XTmrCtr_PwmEnable(&TMRInst);
+	XTmrCtr_Start(&TMRInst, 0);
+	XTmrCtr_PwmConfigure(&TMRInst, 10000000, 5000000);
+
+	while(1)
+	{
+
+
+		start  = XTmrCtr_GetValue(&TMRInst, 0);
+		printf("Hierse -> %u\n", start);
+		msleep_A9(500);
+	}
+
+    cleanup_platform();
+    return 0;
+}

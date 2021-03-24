@@ -1,0 +1,7 @@
+/*EX11_app*/
+the_ROM_image:
+{
+  [bootloader]<EX11_app/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

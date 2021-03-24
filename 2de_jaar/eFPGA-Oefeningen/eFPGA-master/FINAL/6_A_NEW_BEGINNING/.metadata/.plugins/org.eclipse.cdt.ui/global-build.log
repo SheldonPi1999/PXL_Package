@@ -1,0 +1,24 @@
+Nothing to build in platform '6_A_NEW_BEGINNING'
+
+21:04:15 **** Incremental Build of configuration Debug for project 6_A_NEW_BEGINNING_APP ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/eFPGA/6_A_NEW_BEGINNING/6_A_NEW_BEGINNING/export/6_A_NEW_BEGINNING/sw/6_A_NEW_BEGINNING/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: 6_A_NEW_BEGINNING_APP.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/eFPGA/6_A_NEW_BEGINNING/6_A_NEW_BEGINNING/export/6_A_NEW_BEGINNING/sw/6_A_NEW_BEGINNING/standalone_domain/bsplib/lib -o "6_A_NEW_BEGINNING_APP.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: 6_A_NEW_BEGINNING_APP.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size 6_A_NEW_BEGINNING_APP.elf  |tee "6_A_NEW_BEGINNING_APP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64188	   2600	  23376	  90164	  16034	6_A_NEW_BEGINNING_APP.elf
+'Finished building: 6_A_NEW_BEGINNING_APP.elf.size'
+' '

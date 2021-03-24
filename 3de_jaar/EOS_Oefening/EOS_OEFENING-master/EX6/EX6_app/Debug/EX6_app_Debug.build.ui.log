@@ -1,0 +1,10 @@
+2021-01-24T16:31:21.497817900255-16:31:21 **** Incremental Build of configuration Debug for project EX6_app ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-make[1]: Nothing to be done for 'main-build'.
+00255-
+16:31:21 Build Finished (took 213ms)
+

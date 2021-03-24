@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="MAIN" Id="{d615a485-8267-4d7c-8e56-25201e3e8add}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+
+VAR_INPUT
+	schakelaar_1 : BOOL;
+	schakelaar_2 : BOOL;
+	schakelaar_3 : BOOL;
+END_VAR
+
+VAR_OUTPUT
+	kantoorlicht : BOOL;
+END_VAR
+
+VAR
+	// CONTROLS THE INPUT
+	START : INT;
+	
+	// Variable that checks the hour
+	hourToStop : WORD;
+	
+	// F_TRIG
+	F_TRIG : F_TRIG;
+	
+	// TwinCAT FB
+	FB_LocalSystemTime : FB_LocalSystemTime;
+	FB_ShortLongClick: FB_ShortLongClick;
+	FB_SingleDoubleClick : FB_SingleDoubleClick;
+
+	// Eigen FB
+	Knipperlicht : FB_Knipperlicht;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[FB_SingleDoubleClick(bSwitch:= schakelaar_1, tSwitchTime:= T#1S);
+
+IF FB_SingleDoubleClick.bSingleClick THEN
+	START := 1;
+	Knipperlicht.CyclesReset := FALSE;
+END_IF
+
+IF (START > 0) THEN
+	schakelaar_1 := FALSE;
+	FB_LocalSystemTime(bEnable:= TRUE);
+	kantoorlicht := TRUE;
+	IF (FB_LocalSystemTime.systemTime.wMinute >= hourToStop) AND (Knipperlicht.Cycles <= 3) THEN
+		Knipperlicht(Enable:= TRUE, OnTime:= T#500MS, OfTime:= T#500MS, Q=> kantoorlicht);
+	ELSIF (Knipperlicht.Cycles > 3) THEN
+		Knipperlicht(Enable:= TRUE, OnTime:= T#30S, OfTime:= T#0S, Q=> kantoorlicht);
+		F_TRIG(CLK:= Knipperlicht.Q);
+		
+		IF FB_SingleDoubleClick.bDoubleClick THEN
+			START := 2;
+		END_IF
+		
+		IF (START > 1) THEN
+			kantoorlicht := TRUE;
+			FB_ShortLongClick(bSwitch:= schakelaar_1, tSwitchTime:= T#100MS);
+			IF FB_ShortLongClick.bLongClick THEN
+				START := 0;
+			END_IF
+		ELSIF F_TRIG.Q THEN
+			START := 0;
+		END_IF
+	END_IF
+
+ELSE
+	schakelaar_1 := FALSE;
+	kantoorlicht := FALSE;
+	Knipperlicht(Enable:= TRUE, CyclesReset:=TRUE);
+	
+	IF schakelaar_3 THEN
+		schakelaar_2 := FALSE;
+		hourToStop := hourToStop + 1;
+		schakelaar_3 := FALSE;
+	ELSIF schakelaar_2 THEN
+		schakelaar_3 := FALSE;
+		hourToStop := hourToStop - 1;
+		schakelaar_2 := FALSE;
+	END_IF
+END_IF;
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="130" Count="0" />
+      <LineId Id="177" Count="2" />
+      <LineId Id="260" Count="0" />
+      <LineId Id="223" Count="0" />
+      <LineId Id="131" Count="0" />
+      <LineId Id="2" Count="0" />
+      <LineId Id="217" Count="0" />
+      <LineId Id="135" Count="0" />
+      <LineId Id="185" Count="0" />
+      <LineId Id="193" Count="0" />
+      <LineId Id="136" Count="0" />
+      <LineId Id="194" Count="0" />
+      <LineId Id="198" Count="0" />
+      <LineId Id="202" Count="0" />
+      <LineId Id="201" Count="0" />
+      <LineId Id="226" Count="1" />
+      <LineId Id="225" Count="0" />
+      <LineId Id="228" Count="0" />
+      <LineId Id="211" Count="1" />
+      <LineId Id="229" Count="0" />
+      <LineId Id="232" Count="0" />
+      <LineId Id="253" Count="0" />
+      <LineId Id="234" Count="0" />
+      <LineId Id="209" Count="0" />
+      <LineId Id="256" Count="0" />
+      <LineId Id="204" Count="0" />
+      <LineId Id="196" Count="0" />
+      <LineId Id="199" Count="0" />
+      <LineId Id="176" Count="0" />
+      <LineId Id="216" Count="0" />
+      <LineId Id="200" Count="0" />
+      <LineId Id="249" Count="0" />
+      <LineId Id="246" Count="0" />
+      <LineId Id="238" Count="7" />
+      <LineId Id="237" Count="0" />
+      <LineId Id="132" Count="0" />
+      <LineId Id="20" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

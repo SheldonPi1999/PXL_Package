@@ -1,0 +1,33 @@
+2020-06-03T15:10:11.323959200255-15:10:11 **** Incremental Build of configuration Debug for project 7_6_VERDER_APP ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building file: ../src/helloworld.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/sw/7_6_VERDER/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+000-../src/helloworld.c: In function 'main':
+000/7_6_VERDER_APP/src/helloworld.c93-1-1variable 'status' set but not used [-Wunused-but-set-variable]1-../src/helloworld.c:93:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+000-  int status;
+000-      ^~~~~~
+000-At top level:
+000/7_6_VERDER_APP/src/helloworld.c18-1-1'btn_value' defined but not used [-Wunused-variable]1btn_value../src/helloworld.c:18:12: warning: 'btn_value' defined but not used [-Wunused-variable]
+000- static int btn_value;
+000-            ^~~~~~~~~
+000-'Finished building: ../src/helloworld.c'
+000-' '
+000-'Building target: 7_6_VERDER_APP.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/eFPGA/7_6_VERDER/7_6_VERDER/export/7_6_VERDER/sw/7_6_VERDER/standalone_domain/bsplib/lib -o "7_6_VERDER_APP.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-'Finished building target: 7_6_VERDER_APP.elf'
+000-' '
+000-'Invoking: ARM v7 Print Size'
+000-arm-none-eabi-size 7_6_VERDER_APP.elf  |tee "7_6_VERDER_APP.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  25140	   1952	  22632	  49724	   c23c	7_6_VERDER_APP.elf
+000-'Finished building: 7_6_VERDER_APP.elf.size'
+000-' '
+00255-
+15:10:11 Build Finished (took 540ms)
+

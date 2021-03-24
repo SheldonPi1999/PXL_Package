@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="EX_03" Id="{8d253e67-1a53-40b3-a487-383dd7e03169}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM EX_03
+
+VAR_INPUT
+	potentiometer : INT;
+END_VAR
+
+VAR_OUTPUT
+	display_00 : INT;
+	display_01 : INT;
+	display_02 : INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[display_00 := SCALING(input:=potentiometer, imin:= 0, imax:= 32767, omin:= -1000, omax:= 3000);
+display_01 := SCALING(input:=potentiometer, imin:= 0, imax:= 32767, omin:= 0, omax:= 100);
+display_02 := SCALING(input:=potentiometer, imin:= 0, imax:= 32767, omin:= 0, omax:= 2000);
+
+// 0V	-1000	0		0
+// 5V	500		50		1000
+// 10V	2000	100		2000]]></ST>
+    </Implementation>
+    <LineIds Name="EX_03">
+      <LineId Id="5" Count="0" />
+      <LineId Id="27" Count="1" />
+      <LineId Id="7" Count="0" />
+      <LineId Id="6" Count="0" />
+      <LineId Id="8" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

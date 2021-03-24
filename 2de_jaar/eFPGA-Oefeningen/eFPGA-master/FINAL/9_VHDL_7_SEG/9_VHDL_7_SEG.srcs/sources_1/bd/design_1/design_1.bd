@@ -1,0 +1,72 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xA51E147AA51E147A",
+      "device": "xc7z007sclg225-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "vhdlnoclk_0": "",
+      "VHDL_7_SEG_0": ""
+    },
+    "ports": {
+      "SEVEN_SEG_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      }
+    },
+    "components": {
+      "vhdlnoclk_0": {
+        "vlnv": "xilinx.com:module_ref:vhdlnoclk:1.0",
+        "xci_name": "design_1_vhdlnoclk_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "vhdlnoclk",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk65MHz": {
+            "direction": "O"
+          }
+        }
+      },
+      "VHDL_7_SEG_0": {
+        "vlnv": "xilinx.com:module_ref:VHDL_7_SEG:1.0",
+        "xci_name": "design_1_VHDL_7_SEG_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "VHDL_7_SEG",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "enc_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "clk_65MHz": {
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "nets": {
+      "vhdlnoclk_0_clk65MHz": {
+        "ports": [
+          "vhdlnoclk_0/clk65MHz",
+          "VHDL_7_SEG_0/clk_65MHz"
+        ]
+      },
+      "VHDL_7_SEG_0_SEVEN_SEG": {
+        "ports": [
+          "VHDL_7_SEG_0/enc_out",
+          "SEVEN_SEG_0"
+        ]
+      }
+    }
+  }
+}

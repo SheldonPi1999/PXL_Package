@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "sleep.h"
+#include "xparameters.h"
+#include "xgpiops.h"
+#include "xgpio.h"
+
+
+#define MASK 0b11
+#define CHANNEL_PL 1
+
+#define GPIO_DEVICE_ID_PL XPAR_AXI_GPIO_0_DEVICE_ID
+
+/*
+ * GPIO PS PINs:				GPIO PL PINs:
+ * [7]	M14						[7]		N12
+ * [6]	L14						[6]		N11
+ * [5]	M15						[5]		P14
+ * [4]	L15						[4]		P13
+ * [3]	N14						[3]		R13
+ * [2]	N13						[2]		R12
+ * [1]	L13						[1]		R15
+ * [0]	K13						[0]		P15
+ *
+ */
+
+XGpio Gpio;
+void testfunctionPL(XGpio *gpio);
+
+int main()
+{
+	int Status;
+
+    init_platform();
+
+    Status = XGpio_Initialize(&Gpio, GPIO_DEVICE_ID_PL);
+
+	if (Status != XST_SUCCESS) {
+		xil_printf("GpioPl Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	XGpio_SetDataDirection(&Gpio, CHANNEL_PL, ~MASK);
+    print("GPIO PS and PL Demo Application!\n\r");
+
+
+    while(1)
+    {
+    	testfunctionPL(&Gpio);
+    	sleep_A9(1);
+    }
+
+    cleanup_platform();
+    return 0;
+}
+
+void testfunctionPL(XGpio *gpio)
+{
+	XGpio_DiscreteWrite(&Gpio,CHANNEL_PL, MASK);
+	xil_printf("Value PL: %x\n\r", MASK);
+}

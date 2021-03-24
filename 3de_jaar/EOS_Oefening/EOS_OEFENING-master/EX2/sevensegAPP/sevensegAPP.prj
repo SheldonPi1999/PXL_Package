@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="sevensegAPP" location="C:/Users/KasperPC/Desktop/EOS_Examen/EX2/sevensegAPP" platform="C:/Users/KasperPC/Desktop/EOS_Examen/EX2/seven_seg_app/export/seven_seg_app/seven_seg_app.xpfm" platformUID="xilinx:minized::0.0(custom)" systemProject="sevensegAPP_system" sysConfig="seven_seg_app" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="4c4f6fecede3926af7100dbcc57a4396">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1772635316">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.190660176" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>
